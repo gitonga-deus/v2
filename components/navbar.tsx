@@ -11,14 +11,29 @@ import { GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
 
 const navItems = [
 	{
+		icon: '',
 		href: '/blog',
-		text: 'blog'
+		text: 'articles'
 	},
 	{
+		icon: '',
 		href: '/guestbook',
 		text: 'guestbook'
 	},
 ];
+
+const socialLinks = [
+	{
+		icon: <GitHub />,
+		href: "https://github.com/gitonga-deus",
+		text: 'GitHub'
+	},
+	{
+		icon: <LinkedIn />,
+		href: "https://linkedin.com/in/gitonga-deus/",
+		text: 'LinkedIn'
+	}
+]
 
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
 	return (
@@ -44,8 +59,10 @@ const MobileMenu = ({ navShow, onToggleNav }: any) => {
 }
 
 const Navbar = () => {
-
-	const pathname = usePathname()
+	let pathname = usePathname()
+	if (pathname.includes('/blog/')) {
+		pathname = '/blog';
+	}
 	const [navShow, setNavShow] = useState(false);
 
 	const onToggleNav = () => {
@@ -60,54 +77,52 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/60 border-b saturate-[1.8] backdrop-blur-[10px]">
+			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/20 border-b saturate-[1.8] backdrop-blur">
 				<div className="mx-auto flex h-[100px]  px-8 items-center justify-between">
-					<div className="hover:text-accent-5">
-						<Link
-							href='/'
-						>
-							<Home />
-						</Link>
-					</div>
+					<Link
+						href='/'
+					>
+						<Home />
+					</Link>
+
 
 					<div className="flex items-center gap-2">
 						<ul className="hidden space-x-1 md:flex items-center">
 							{navItems.map((navLink, i) => (
-								<>
-									<li key={i}>
-										<Link
-											href={navLink.href}
-											className={clsx('rounded py-1.5 px-4 text-sm font-[500] transition-colors duration-300',
-												{
-													['text-[#555] dark:text-white hover:bg-[#555] hover:text-white']: navLink.href !== pathname
-												},
-												{
-													['bg-[#555] text-white']: navLink.href === pathname
-												}
-											)}
-										>
-											{navLink.text}
-										</Link>
-									</li>
-								</>
+								<li key={i}>
+									<Link
+										href={navLink.href}
+										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
+											{
+												['text-[#555] hover:bg-gray-200 hover:text-black']: navLink.href !== pathname
+											},
+											{
+												['bg-gray-200 text-black']: navLink.href === pathname
+											}
+										)}
+									>
+										{navLink.text}
+									</Link>
+								</li>
 							))}
 							<div className='w-[1px] h-[20px] mx-[5px] bg-accent-5' />
 						</ul>
 
 						<div className="items-center flex gap-3">
-							<Link
-								href=''
-								target='_blank'
-							>
-								<LinkedIn />
-							</Link>
+							{socialLinks.map((link, i) => {
+								const { icon, href } = link
 
-							<Link
-								href=''
-								target='_blank'
-							>
-								<GitHub />
-							</Link>
+								return (
+
+									<Link
+										key={i}
+										href={href}
+										target='_blank'
+									>
+										{icon}
+									</Link>
+								)
+							})}
 						</div>
 
 						<div className="md:hidden">
