@@ -1,23 +1,7 @@
-type GitHubProps = {
-	width: string
-	height: string
-}
-
-type MenuCloseProps = {
-	width: string
-	height: string
-}
-
-type LinkedInProps = {
-	width: string
-	height: string
-}
-
-export function GitHub({ width, height }: GitHubProps) {
+export function GitHub() {
 	return (
 		<svg
-			width={width}
-			height={height}
+			className='w-6 h-6'
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +21,10 @@ export function GitHub({ width, height }: GitHubProps) {
 	)
 }
 
-export function MenuClose({ width, height }: MenuCloseProps) {
+export function MenuClose() {
 	return (
 		<svg
-			width={width} height={height} viewBox="0 0 24 24"
+			className='w-6 h-6' viewBox="0 0 24 24"
 			stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
 			strokeLinejoin="round" fill="none" shapeRendering="geometricPrecision"
 		>
@@ -59,10 +43,10 @@ export function Menu() {
 	)
 }
 
-export function LinkedIn({ width, height }: LinkedInProps) {
+export function LinkedIn() {
 	return (
 		<svg
-			width={width} height={height}
+			className='w-6 h-6'
 			viewBox="0 0 15 15" fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>

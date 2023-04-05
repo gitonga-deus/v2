@@ -7,16 +7,16 @@ import { usePathname } from 'next/navigation'
 
 import clsx from 'clsx'
 
-import { GitHub, MenuClose, Menu, LinkedIn } from './icons'
+import { GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
 
 const navItems = [
 	{
-		href: '/',
-		text: 'Home'
+		href: '/blog',
+		text: 'blog'
 	},
 	{
-		href: '/blog',
-		text: 'Blog'
+		href: '/guestbook',
+		text: 'guestbook'
 	},
 ];
 
@@ -60,28 +60,55 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 z-40 bg-white/60 shadow-sm saturate-[1.8] backdrop-blur-[10px]">
-				<div className="mx-auto md:flex-row-reverse flex h-[90px] max-w-3xl px-8 items-center justify-between">
+			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/60 border-b saturate-[1.8] backdrop-blur-[10px]">
+				<div className="mx-auto flex h-[100px]  px-8 items-center justify-between">
+					<div className="hover:text-accent-5">
+						<Link
+							href='/'
+						>
+							<Home />
+						</Link>
+					</div>
+
 					<div className="flex items-center gap-2">
-						<ul className="hidden space-x-2 md:flex">
+						<ul className="hidden space-x-1 md:flex items-center">
 							{navItems.map((navLink, i) => (
-								<li key={i}>
-									<Link
-										href={navLink.href}
-										className={clsx('rounded-md py-2 px-4 text-sm font-[500] transition-colors duration-300',
-											{
-												['text-[#555] dark:text-white hover:bg-[#151718F7] hover:text-white']: navLink.href !== pathname
-											},
-											{
-												['bg-[#151718F7] text-white']: navLink.href === pathname
-											}
-										)}
-									>
-										{navLink.text}
-									</Link>
-								</li>
+								<>
+									<li key={i}>
+										<Link
+											href={navLink.href}
+											className={clsx('rounded py-1.5 px-4 text-sm font-[500] transition-colors duration-300',
+												{
+													['text-[#555] dark:text-white hover:bg-[#555] hover:text-white']: navLink.href !== pathname
+												},
+												{
+													['bg-[#555] text-white']: navLink.href === pathname
+												}
+											)}
+										>
+											{navLink.text}
+										</Link>
+									</li>
+								</>
 							))}
+							<div className='w-[1px] h-[20px] mx-[5px] bg-accent-5' />
 						</ul>
+
+						<div className="items-center flex gap-3">
+							<Link
+								href=''
+								target='_blank'
+							>
+								<LinkedIn />
+							</Link>
+
+							<Link
+								href=''
+								target='_blank'
+							>
+								<GitHub />
+							</Link>
+						</div>
 
 						<div className="md:hidden">
 							<button
@@ -91,28 +118,12 @@ const Navbar = () => {
 								onClick={onToggleNav}
 							>
 								{navShow ? (
-									<MenuClose width='25' height='25' />
+									<MenuClose />
 								) : (
-									<Menu width='25' height='25' />
+									<Menu />
 								)}
 							</button>
 						</div>
-					</div>
-
-					<div className="text-zinc-800 flex gap-2 items-center">
-						<Link
-							href=''
-							target='_blank'
-						>
-							<LinkedIn width='20px' height='20px' />
-						</Link>
-						<div className='w-[2px] h-[20px] mx-[5px] bg-black' />
-						<Link
-							href=''
-							target='_blank'
-						>
-							<GitHub width='20px' height='20px' />
-						</Link>
 					</div>
 				</div>
 			</header >
