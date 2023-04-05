@@ -8,17 +8,7 @@ type MenuCloseProps = {
 	height: string
 }
 
-type MenuProps = {
-	width: string
-	height: string
-}
-
 type LinkedInProps = {
-	width: string
-	height: string
-}
-
-type SearchIconProps = {
 	width: string
 	height: string
 }
@@ -60,16 +50,12 @@ export function MenuClose({ width, height }: MenuCloseProps) {
 	)
 }
 
-export function Menu({ width, height }: MenuProps) {
+export function Menu() {
 	return (
-		<svg
-			width={width} height={height}
-			viewBox='0 0 15 15' fill='none'
-			xmlns='http://www.w3.org/2000/svg'
-		>
-			<path d="M2 4.5C2 4.22386 2.22386 4 2.5 4H12.5C12.7761 4 13 4.22386 13 4.5C13 4.77614 12.7761 5 12.5 5H2.5C2.22386 5 2 4.77614 2 4.5ZM2 7.5C2 7.22386 2.22386 7 2.5 7H7.5C7.77614 7 8 7.22386 8 7.5C8 7.77614 7.77614 8 7.5 8H2.5C2.22386 8 2 7.77614 2 7.5ZM2 10.5C2 10.2239 2.22386 10 2.5 10H10.5C10.7761 10 11 10.2239 11 10.5C11 10.7761 10.7761 11 10.5 11H2.5C2.22386 11 2 10.7761 2 10.5Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"
-			></path>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+			<path fillRule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clipRule="evenodd" />
 		</svg>
+
 	)
 }
 
@@ -86,18 +72,13 @@ export function LinkedIn({ width, height }: LinkedInProps) {
 	)
 }
 
-export function SearchIcon({ width, height }: SearchIconProps) {
+export function Home() {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			className='icon icon-tabler icon-tabler-search absolute top-1/2 left-4 -translate-y-1/2'
-			width={width} height={height}
-			viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none"
-			strokeLinecap="round" strokeLinejoin="round"
-		>
-			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-			<circle cx="10" cy="10" r="7" />
-			<line x1="21" y1="21" x2="15" y2="15" />
+			fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
 		</svg>
+
 	)
 }
