@@ -1,0 +1,51 @@
+---
+title: "Better Code with GitHub Conventional Commits"
+summary: "Commit like a pro"
+publishedAt: "2023-02-14"
+---
+
+Conventional commit is a specific form of committing which gives software developers a uniform system for organizing and describing their changes, making it easier to keep track of updates.
+This type of commit generally follows a strict and consistent format, making it easier to understand what changes were made and why.
+
+The conventional commit typically follows a specific format, such as:
+
+```bash
+<type>[optional scope]: <description>
+```
+
+Where the `type` is subject of the commit, it indicates the type of change that was made and should be one of the following types:
+
+- **fix**: a commit of the type `fix` typically indicates that you have made changes to the codebase that correct a bug or error in the functionality of the code. This might include changes such as resolving issues with input validation, correcting logic errors, or fixing broken functionality.
+- **feat**: a commit of the type `feat` typically indicates that you have added a new feature or functionality to the codebase. This might include changes such as implementing new functionality, adding new user interfaces, or introducing new APIs or libraries.
+- **refactor**: a commit of the type `refactor` typically indicates that you have made changes to the codebase that do not change its functionality but improve its internal structure or organization.
+- **style**: a commit of the type `style` typically indicates that you have made changes to the codebase that do not change its functionality, but improve its presentation or formatting.
+- **docs**: a commit of the type `docs` typically indicates that you have made changes to the codebase that relate to documentation or comments. This might include changes such as updating the README file, adding or modifying comments within the code, or documenting new functionality or APIs.
+- **perf**: a commit of the type `perf` typically indicates that you have made changes to the codebase that improve its performance or efficiency. This might include changes such as optimizing algorithms or data structures, reducing the amount of memory or processing power required by the code, or improving the speed or responsiveness of the system.
+- **chore**: a commit of the type `chore` typically indicates that you have made changes to the codebase that are related to the development process, rather than to the functionality or behavior of the code itself. This might include changes such as updating dependencies, configuring build or test tools, or making changes to the project structure or code formatting.
+
+The `scope` is optional and is used to indicate the part of the project that was changed, such as **api**, **ui**, **database**, **authentication** etc.
+
+The `description` is a short description of the change, it should be written in the imperative mood, such as "change" instead of "changed" or "changes".
+
+Example:
+
+```js
+feat(ui): redesign landing page to improve user engagement
+```
+
+### Why use Conventional Commits?
+
+Conventional Commits help standardize the way commit messages are written, making it easier to understand what changes were made and why. They also help with automation by allowing tools to analyze commit messages and automatically determine version numbers, generate changelogs, and perform other tasks. 
+
+Conventional Commits can also help with code review, as they make it easier to see the intent behind a change.
+
+### Conclusion
+
+Conventional Commits provide a standardized way to write commit messages that help improve collaboration, automation, and code review. They are easy to adopt and can provide significant benefits for software development teams. By following the Conventional Commits standard, you can make your commit messages more informative and easier to understand, which will help improve the quality of your codebase.
+
+> Happy committing
+
+#### Useful Links
+
+Here are some of the resources that inspired this article:
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)

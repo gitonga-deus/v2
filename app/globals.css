@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--gitonga-bg: #fff;
+	--gitonga-fg: #2C3333;
+
+	--accent-5: #6b7280;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	@apply bg-gitonga-fg;
+}
+
+kbd,
+pre,
+code,
+samp {
+	font-family: "Cascadia Code", monospace;
+}
+
+.prose blockquote {
+	font-style: normal;
+	font-weight: normal;
+}
