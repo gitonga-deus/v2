@@ -3,8 +3,6 @@ import { format, parseISO } from 'date-fns';
 import { allArticles } from 'contentlayer/generated';
 import { getMDXComponent } from 'next-contentlayer/hooks';
 
-import MDXComponents from '@/components/MDXComponents';
-
 export const generateStaticParams = async () => {
 	return (
 		allArticles.map((article: any) => ({ slug: article._raw.flattenedPath }))
@@ -24,10 +22,6 @@ const ArticleLayout = ({ params }: { params: { slug: string } }) => {
 	const article = allArticles.find(
 		(article: any) => article._raw.flattenedPath === params.slug
 	);
-
-	const components = {
-		MDXComponents
-	}
 
 	let MDXContent;
 
@@ -53,7 +47,7 @@ const ArticleLayout = ({ params }: { params: { slug: string } }) => {
 			</div>
 
 			<article className='prose max-w-none text-base tracking-tight'>
-				<MDXContent components={{ ...components }} />
+				<MDXContent />
 			</article>
 		</div>
 	);
