@@ -19,14 +19,41 @@
 	@apply bg-gitonga-fg;
 }
 
-kbd,
-pre,
-code,
-samp {
+.prose pre {
+	padding: 10px 20px;
+	border-radius: 5px;
+	overflow: auto;
+	font-size: 0.9rem;
+	margin: 20px 0;
+	max-width: 80vw;
 	font-family: "Cascadia Code", monospace;
 }
 
-.prose blockquote {
-	font-style: normal;
-	font-weight: normal;
+.prose code {
+	background-color: #F3F3F3;
+	padding: 2px 7px;
+	border-radius: 5px;
+	font-size: 0.9rem;
+	border: 1px solid #E9E8E9;
+	font-family: "Cascadia Code", monospace;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0px;
+    font-size: auto;
+    border: none;
+  }
+
+.prose p {
+	font-size: 15px;
+}
+
+.prose li {
+	font-size: 15px;
+}
+
+.prose a {
+	text-decoration: none;
 }
