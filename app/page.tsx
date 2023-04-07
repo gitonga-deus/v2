@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import Intro from '@/components/intro'
-import CustomLink from '@/components/link';
 
 import { allArticles } from 'contentlayer/generated';
 
@@ -24,11 +23,13 @@ const Home = () => {
 							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200'
 							href={`article/${slug}`}
 						>
-							<div className='flex py-1 items-center text-accent-5 gap-2 text-sm tracking-tight'>
+							<div className='flex pt-1 items-center text-accent-5 text-sm tracking-tight'>
 								<time dateTime={publishedAt}>
 									{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 								</time>
-								&#8226;
+								<div className="mx-1">
+									&#8226;
+								</div>
 								<span>{readingTime.text}</span>
 							</div>
 
@@ -40,12 +41,12 @@ const Home = () => {
 			}
 
 			<div className='flex'>
-				<CustomLink
-					href='/blog'
-					className='my-2 bg-gray-200 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
+				<Link
+					href='/article'
+					className='my-2 bg-gray-200 hover:bg-gray-300 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
 				>
 					more posts...
-				</CustomLink>
+				</Link>
 			</div>
 		</section>
 	)
