@@ -12,7 +12,7 @@ import { GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
 const navItems = [
 	{
 		icon: '',
-		href: '/blog',
+		href: '/article',
 		text: 'articles'
 	},
 	{
@@ -60,8 +60,8 @@ const MobileMenu = ({ navShow, onToggleNav }: any) => {
 
 const Navbar = () => {
 	let pathname = usePathname()
-	if (pathname.includes('/blog/')) {
-		pathname = '/blog';
+	if (pathname.includes('/article/')) {
+		pathname = '/article';
 	}
 	const [navShow, setNavShow] = useState(false);
 
