@@ -2,7 +2,7 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm";
-import rehypePrism from "rehype-prism-plus/";
+import rehypePrism from "rehype-prism-plus";
 import remarkExternalLinks from "remark-external-links";
 
 const Article = defineDocumentType(() => ({
@@ -52,13 +52,13 @@ const rehypeOptions = {
 		node.properties.className.push("highlighted");
 	},
 
-	onVisitHighlightedWord(node: any, id: any) {
+	onVisitHighlightedWord(node: any) {
 		node.properties.className = ["word"]
 	}
 }
 
 export default makeSource({
-	contentDirPath: "content",
+	contentDirPath: "articles",
 	documentTypes: [Article],
 	mdx: {
 		rehypePlugins: [[rehypePrettyCode, rehypeOptions, rehypePrism]],
