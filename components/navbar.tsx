@@ -12,7 +12,7 @@ import { GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
 const navItems = [
 	{
 		icon: '',
-		href: '/article',
+		href: '/articles',
 		text: 'articles'
 	},
 	{
