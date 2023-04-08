@@ -60,8 +60,8 @@ const MobileMenu = ({ navShow, onToggleNav }: any) => {
 
 const Navbar = () => {
 	let pathname = usePathname()
-	if (pathname.includes('/article/')) {
-		pathname = '/article';
+	if (pathname.includes('/articles/')) {
+		pathname = '/articles';
 	}
 	const [navShow, setNavShow] = useState(false);
 
