@@ -13,7 +13,8 @@ const Home = () => {
 
 			<h1 className='text-base tracking-tight font-semibold leading-8'>Recent Articles</h1>
 
-			{allArticles.slice(0, 4).sort((a, b) => (compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
+			{allArticles.slice(0, 4).sort((a, b) => (
+				compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
 				.map((article) => {
 					const { slug, title, summary, publishedAt, readingTime } = article;
 
@@ -21,7 +22,7 @@ const Home = () => {
 						<Link
 							key={slug}
 							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200'
-							href={`article/${slug}`}
+							href={`articles/${slug}`}
 						>
 							<div className='flex pt-1 items-center text-accent-5 text-sm tracking-tight'>
 								<time dateTime={publishedAt}>
@@ -42,7 +43,7 @@ const Home = () => {
 
 			<div className='flex'>
 				<Link
-					href='/article'
+					href='/articles'
 					className='my-2 bg-gray-200 hover:bg-gray-300 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
 				>
 					more posts...
