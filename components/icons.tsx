@@ -1,7 +1,7 @@
 export function GitHub() {
 	return (
 		<svg
-			className='w-5 h-5 text-accent-5 hover:text-black duration-300 transition-colors'
+			className='w-5 h-5'
 			viewBox="0 0 24 24"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export function GitHub() {
 export function MenuClose() {
 	return (
 		<svg
-			className='w-6 h-6' viewBox="0 0 24 24"
+			className='w-5 h-5' viewBox="0 0 24 24"
 			stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
 			strokeLinejoin="round" fill="none" shapeRendering="geometricPrecision"
 		>
@@ -36,7 +36,7 @@ export function MenuClose() {
 
 export function Menu() {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
 			<path fillRule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clipRule="evenodd" />
 		</svg>
 
@@ -46,7 +46,7 @@ export function Menu() {
 export function LinkedIn() {
 	return (
 		<svg
-			className='w-5 h-5 text-accent-5 hover:text-black duration-300 transition-colors'
+			className='w-5 h-5'
 			viewBox="0 0 15 15" fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
@@ -74,6 +74,52 @@ export function ArrowUpRight() {
 			className='w-4 h-4 relative mx-[2px] inline-block'
 			xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
 			<path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+		</svg>
+	)
+}
+
+export function Code() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+			/>
+		</svg>
+
+	)
+}
+
+export function Link() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none" viewBox="0 0 24 24"
+			strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+			/>
+		</svg>
+
+	)
+}
+
+export function Command() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 font-bold"
+			viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+			fill="none" strokeLinecap="round" strokeLinejoin="round"
+		>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10" />
 		</svg>
 	)
 }
