@@ -15,7 +15,10 @@ export const generateMetadata = ({ params }: any) => {
 		(article: any) => article._raw.flattenedPath === params.slug
 	)
 
-	return { title: article?.title, description: article?.summary };
+	return {
+		title: article?.title,
+		description: article?.summary
+	};
 };
 
 

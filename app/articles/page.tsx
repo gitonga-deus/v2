@@ -40,9 +40,9 @@ export default function Page() {
 
 	return (
 		<section className='py-8'>
-			<h1 className="font-bold text-zinc-800 tracking-tight text-2xl mb-2">Articles</h1>
+			<h1 className="font-bold text-zinc-800 tracking-tight text-2xl mb-1">Articles</h1>
 
-			<p className='text-[15px] py-1 leading-7 tracking-tight text-accent-5'>
+			<p className='text-[15px] leading-7 tracking-tight text-accent-5'>
 				Collection of random thoughts.
 			</p>
 
