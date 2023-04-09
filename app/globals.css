@@ -6,7 +6,9 @@
 	--gitonga-bg: #fff;
 	--gitonga-fg: #2C3333;
 
-	--accent-5: #6b7280;
+	--shade-1: #eaeaea;
+	--shade-2: #999;
+	--shade-3: #6b7280;
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +39,7 @@
 	font-size: 0.9rem;
 	border: 1px solid #E9E8E9;
 	font-family: "Cascadia Code", monospace;
+	font-weight: 400;
 }
 
 .prose pre code {

@@ -2,9 +2,9 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 
+import KBar from '@/components/kbar'
 import Navbar from '@/components/navbar'
-
-import { inter } from '@/utils/fonts'
+import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
 	title: {
@@ -23,21 +23,18 @@ export const metadata: Metadata = {
 	}
 }
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html
 			lang='en'
-			className={inter.className}
 		>
-
-			<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-24 pb-10 px-8'>
-				<Navbar />
-				{children}
-			</body>
+			<KBar>
+				<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-24 px-8'>
+					<Navbar />
+					{children}
+					<Footer />
+				</body>
+			</KBar>
 		</html>
 	)
 }

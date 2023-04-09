@@ -6,8 +6,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import clsx from 'clsx'
+import { useKBar } from 'kbar'
 
-import { GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
+import { Command, GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
 
 const navItems = [
 	{
@@ -59,6 +60,8 @@ const MobileMenu = ({ navShow, onToggleNav }: any) => {
 }
 
 const Navbar = () => {
+	let { query } = useKBar()
+
 	let pathname = usePathname()
 	if (pathname.includes('/articles/')) {
 		pathname = '/articles';
@@ -77,16 +80,17 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/20 border-b saturate-[1.8] backdrop-blur">
+			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/80 border-b saturate-[1.8] backdrop-blur">
 				<div className="mx-auto flex h-[100px]  px-8 items-center justify-between">
 					<Link
 						href='/'
+						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
 					>
 						<Home />
 					</Link>
 
 
-					<div className="flex items-center gap-2">
+					<div className="flex items-center space-x-1">
 						<ul className="hidden space-x-1 md:flex items-center">
 							{navItems.map((navLink, i) => (
 								<li key={i}>
@@ -94,10 +98,10 @@ const Navbar = () => {
 										href={navLink.href}
 										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
-												['text-[#555] hover:bg-gray-200 hover:text-black']: navLink.href !== pathname
+												['text-[#555] hover:bg-shade-1 hover:text-black']: navLink.href !== pathname
 											},
 											{
-												['bg-gray-200 text-black']: navLink.href === pathname
+												['bg-shade-1 text-black']: navLink.href === pathname
 											}
 										)}
 									>
@@ -105,25 +109,19 @@ const Navbar = () => {
 									</Link>
 								</li>
 							))}
-							<div className='w-[1px] h-[20px] mx-[5px] bg-accent-5' />
+							<div className='w-[1px] h-[20px] mx-[5px] bg-shade-3' />
 						</ul>
 
-						<div className="items-center flex gap-3">
-							{socialLinks.map((link, i) => {
-								const { icon, href } = link
 
-								return (
+						<button
+							className='flex py-2 px-3 items-center justify-center rounded duration-300 hover:bg-shade-1 hover:text-black'
+							onClick={() => query.toggle()}
+							type='button'
+							aria-label='Command Bar'
+						>
+							<Command />
+						</button>
 
-									<Link
-										key={i}
-										href={href}
-										target='_blank'
-									>
-										{icon}
-									</Link>
-								)
-							})}
-						</div>
 
 						<div className="md:hidden">
 							<button
