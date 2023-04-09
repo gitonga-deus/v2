@@ -42,7 +42,7 @@ const ArticleLayout = ({ params }: { params: { slug: string } }) => {
 				{article.title}
 			</h1>
 
-			<div className='flex py-2 items-center text-accent-5 text-sm gap-2 tracking-tight'>
+			<div className='flex py-2 items-center text-shade-3 text-sm gap-2 tracking-tight'>
 				<time dateTime={article.publishedAt}>
 					{format(parseISO(article.publishedAt), 'MMM dd, yyyy')}
 				</time>
