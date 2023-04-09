@@ -1,12 +1,15 @@
+import NowPlaying from "./nowPlaying";
+
 const Footer = () => {
 	return (
-		<footer className="max-w-3xl my-2">
-
+		<footer className="max-w-3xl my-8">
 			<hr className="my-4 -mx-2 text-shade-3" />
+			<div className="flex flex-col items-center justify-between mt-6 md:flex-row-reverse">
+				<div className="text-sm items-center py-1 font-medium text-black">
+					&copy; {new Date().getFullYear()}
+				</div>
 
-
-			<div className="text-sm leading-7 items-center py-1 font-[500] text-black dark:text-white uppercase">
-				<span className="text-base">&copy; </span>{new Date().getFullYear()}
+				<NowPlaying />
 			</div>
 		</footer>
 	)
