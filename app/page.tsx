@@ -21,10 +21,10 @@ const Home = () => {
 					return <>
 						<Link
 							key={slug}
-							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200'
+							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-shade-1'
 							href={`articles/${slug}`}
 						>
-							<div className='flex pt-1 items-center text-accent-5 text-sm tracking-tight'>
+							<div className='flex pt-1 items-center text-shade-3 text-sm tracking-tight'>
 								<time dateTime={publishedAt}>
 									{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 								</time>
@@ -35,7 +35,7 @@ const Home = () => {
 							</div>
 
 							<h2 className='py-1 text-base font-semibold leading-6 tracking-tight'>{title}</h2>
-							<p className='text-[15px] tracking-tight text-accent-5'>{summary}</p>
+							<p className='text-[15px] tracking-tight text-shade-3'>{summary}</p>
 						</Link>
 					</>
 				})
@@ -44,7 +44,7 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 bg-gray-200 hover:bg-gray-300 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
+					className='my-2 hover:bg-shade-1 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
 				>
 					more posts...
 				</Link>
