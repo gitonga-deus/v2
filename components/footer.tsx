@@ -1,4 +1,4 @@
-import NowPlaying from "./nowPlaying";
+import NowPlaying from './nowPlaying'
 
 const Footer = () => {
 	return (
