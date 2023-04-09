@@ -12,9 +12,11 @@ module.exports = {
 		extend: {
 			colors: {
 				"gitonga-bg": "var(--gitonga-bg)",
-
 				"gitonga-fg": "var(--gitonga-fg)",
-				"accent-5": "var(--accent-5)",
+
+				"shade-1": "var(--shade-1)",
+				"shade-2": "var(--shade-2)",
+				"shade-3": "var(--shade-3)",
 			}
 		},
 	},
