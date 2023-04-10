@@ -3,8 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 import KBar from '@/components/kbar'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import { Navbar, Footer } from '@/components/layout'
 
 export const metadata: Metadata = {
 	title: {

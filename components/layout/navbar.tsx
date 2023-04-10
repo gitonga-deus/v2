@@ -8,33 +8,18 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useKBar } from 'kbar'
 
-import { Command, GitHub, MenuClose, Menu, LinkedIn, Home } from './icons'
+import { Command, MenuClose, Menu, Home } from '@/components/icons'
 
 const navItems = [
 	{
-		icon: '',
 		href: '/articles',
 		text: 'articles'
 	},
 	{
-		icon: '',
 		href: '/guestbook',
 		text: 'guestbook'
 	},
 ];
-
-const socialLinks = [
-	{
-		icon: <GitHub />,
-		href: "https://github.com/gitonga-deus",
-		text: 'GitHub'
-	},
-	{
-		icon: <LinkedIn />,
-		href: "https://linkedin.com/in/gitonga-deus/",
-		text: 'LinkedIn'
-	}
-]
 
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
 	return (
