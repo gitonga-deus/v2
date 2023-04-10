@@ -81,7 +81,7 @@ const Navbar = () => {
 	return (
 		<>
 			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/80 border-b saturate-[1.8] backdrop-blur">
-				<div className="mx-auto flex h-[100px]  px-8 items-center justify-between">
+				<div className="mx-auto flex h-[90px]  px-8 items-center justify-between">
 					<Link
 						href='/'
 						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
