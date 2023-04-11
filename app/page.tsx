@@ -35,7 +35,7 @@ const Home = () => {
 							</div>
 
 							<h2 className='py-1 text-base font-semibold leading-6 tracking-tight'>{title}</h2>
-							<p className='text-[15px] tracking-tight text-shade-3'>{summary}</p>
+							<p className='text-[15px] tracking-tight text-shade-3'>{summary}...</p>
 						</Link>
 					</>
 				})
