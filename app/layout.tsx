@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			className={inter.className}
 		>
 			<KBar>
-				<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-24 px-8'>
+				<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-8'>
 					<Navbar />
 					{children}
 					<Footer />

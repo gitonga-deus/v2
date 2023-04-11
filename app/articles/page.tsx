@@ -23,7 +23,9 @@ function ArticleCard(article: Article) {
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
-				&#8226;
+				<div className="mx-1">
+					&#8226;
+				</div>
 				<span>{readingTime.text}</span>
 			</div>
 
