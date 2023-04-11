@@ -6,9 +6,9 @@
 
 ## ToDo
 
-- [] Working on the **About** and **Guestbook** page.
-- [] Custom `404` page.
-- [] Dark Theme
+- [ ] Working on the **About** and **Guestbook** page.
+- [ ] Custom `404` page.
+- [ ] Dark Theme
 
 ## Running locally
 1. Clone the repo
