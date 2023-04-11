@@ -15,7 +15,7 @@ const Intro = () => {
 			<div className='flex flex-col-reverse gap-8 md:flex-row md:justify-between'>
 				<div className='space-y-4 max-w-3xl'>
 					<h1 className={clsx('mb-1 text-4xl tracking-tight text-zinc-800 md:text-6xl', abril.className)}>
-						Hey, I&#39;m Deus,
+						Hey, I&#39;m Deus
 					</h1>
 					{introText.map((paragraph, i) => (
 						<p className='text-[15px] leading-7 tracking-normal text-shade-3' key={i}>

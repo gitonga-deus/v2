@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 import KBar from '@/components/kbar'
+import { inter } from '@/utils/fonts'
 import { Navbar, Footer } from '@/components/layout'
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
+			className={inter.className}
 		>
 			<KBar>
 				<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-24 px-8'>
