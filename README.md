@@ -3,8 +3,9 @@
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Content**: [MDX](https://mdxjs.com) and [Contentlayer](https://contentlayer.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-## ToDo
+## Future updates and changes
 
 - [ ] Working on the **About** and **Guestbook** page.
 - [ ] Custom `404` page.
