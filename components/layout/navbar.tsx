@@ -13,11 +13,11 @@ import { Command, MenuClose, Menu, Home } from '@/components/icons'
 const navItems = [
 	{
 		href: '/articles',
-		text: 'articles'
+		text: 'Articles'
 	},
 	{
 		href: '/guestbook',
-		text: 'guestbook'
+		text: 'Guestbook'
 	},
 ];
 
@@ -81,7 +81,7 @@ const Navbar = () => {
 								<li key={i}>
 									<Link
 										href={navLink.href}
-										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
+										className={clsx('rounded-md py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
 												['text-[#555] hover:bg-shade-1 hover:text-black']: navLink.href !== pathname
 											},
