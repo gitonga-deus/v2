@@ -25,7 +25,7 @@ const Intro = () => {
 						<p
 							className="text-shade-3 font-regular text-[15px] leading-relaxed"
 						>
-							Welcome to my digital nook. I'm a frontend and javascript developer based in Nairobi and here, I share my thoughts on software development, design, and other things I find interesting.
+							Welcome to my digital nook. I&apos;m a frontend and javascript developer based in Nairobi and here, I share my thoughts on software development, design, and other things I find interesting.
 						</p>
 					</div>
 				</div>
