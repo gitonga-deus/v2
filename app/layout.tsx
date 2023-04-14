@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<span
 						className={clsx(
 							"rounded-full bg-gradient-to-r from-blue-300 via-cyan-200 to-green-300 opacity-70",
-							"-z-50 aspect-square w-full max-w-screen-lg blur-3xl filter",
+							"-z-50 aspect-square w-full blur-3xl filter",
 							"bottom-[calc(100%-200px)]",
 							"absolute"
 						)}
