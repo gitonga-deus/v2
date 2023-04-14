@@ -1,10 +1,6 @@
 import clsx from 'clsx';
 import { cormorant } from "@/utils/fonts";
 
-const introText = [
-	'I\'m a frontend and javascript developer based in Nairobi, Kenya.',
-]
-
 const Intro = () => {
 	return (
 		<div
