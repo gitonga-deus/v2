@@ -20,7 +20,7 @@ const Intro = () => {
 								cormorant.className
 							)}
 						>
-							hello, i'm Gitonga
+							hello, i&apos;m Gitonga
 						</h1>
 						<h2 className='font-medium text-gitonga-fg text-base md:text-lg'>
 							Developer • Writer
