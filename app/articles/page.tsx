@@ -43,7 +43,7 @@ export default function Page() {
 			<h1 className="font-bold text-zinc-800 tracking-tight text-2xl mb-1">Articles</h1>
 
 			<p className='text-[15px] leading-7 tracking-tight text-shade-3'>
-				Collection of random thoughts.
+				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 
 			{posts.map((post, i) => (
