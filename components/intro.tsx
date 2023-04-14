@@ -10,8 +10,6 @@ const Intro = () => {
 		>
 			<div className='flex flex-col-reverse gap-8 md:flex-row md:justify-between'>
 				<div className='space-y-4 max-w-3xl'>
-
-
 					<div className='space-y-4'>
 						<h1
 							className={clsx(
@@ -25,16 +23,13 @@ const Intro = () => {
 							Developer • Writer
 						</h2>
 
-						<p
-							className="text-shade-3 font-regular text-[15px] leading-relaxed"
-						>
+						<p className="text-shade-3 font-regular text-[15px] leading-relaxed">
 							Welcome to my digital nook. I&apos;m a frontend and javascript developer based in Nairobi and here, I share my thoughts on software development, design, and other things I find interesting.
 						</p>
-
 					</div>
 				</div>
-				<hr className='mt-4 -mx-2 text-shade-3' />
 			</div>
+			<hr className='my-4 w-[5rem] text-shade-3' />
 		</div>
 	)
 }
