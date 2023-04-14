@@ -31,14 +31,8 @@
 }
 
 .prose code {
-	background-color: #F3F3F3;
-	color: #0170F2;
-	padding: 2px 6px;
-	border-radius: 5px;
 	font-size: 0.9rem;
-	border: 1px solid #E9E8E9;
 	font-family: "Cascadia Code", monospace;
-	font-weight: 400;
 }
 
 .prose pre code {
@@ -47,10 +41,6 @@
 	border-radius: 0px;
 	font-size: auto;
 	border: none;
-}
-
-.prose p {
-	font-size: 15px;
 }
 
 .prose li {
