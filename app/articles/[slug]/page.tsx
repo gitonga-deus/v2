@@ -50,7 +50,7 @@ const ArticleLayout = ({ params }: { params: { slug: string } }) => {
 				<span>{article.readingTime.text}</span>
 			</div>
 
-			<article className='prose max-w-none text-[15px] tracking-tight'>
+			<article className='prose max-w-none text-base tracking-tight'>
 				<MDXContent />
 			</article>
 		</div>

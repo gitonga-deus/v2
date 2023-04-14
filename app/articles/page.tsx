@@ -19,13 +19,11 @@ function ArticleCard(article: Article) {
 			className="block select-none p-2 my-2 -mx-2 rounded-md duration-500 transition-colors hover:bg-shade-1"
 			href={`/articles/${slug}`}
 		>
-			<div className="flex py-1 items-center text-shade-3 text-sm tracking-tight">
+			<div className="flex py-1 items-center text-shade-3 gap-2 text-sm tracking-tight">
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
-				<div className="mx-1">
-					&#8226;
-				</div>
+				&#8226;
 				<span>{readingTime.text}</span>
 			</div>
 
@@ -45,7 +43,7 @@ export default function Page() {
 			<h1 className="font-bold text-zinc-800 tracking-tight text-2xl mb-1">Articles</h1>
 
 			<p className='text-[15px] leading-7 tracking-tight text-shade-3'>
-				Collection of random thoughts, explorations, and how-to guides.
+				Collection of random thoughts.
 			</p>
 
 			{posts.map((post, i) => (

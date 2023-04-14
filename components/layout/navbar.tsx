@@ -13,25 +13,25 @@ import { Command, MenuClose, Menu, Home } from '@/components/icons'
 const navItems = [
 	{
 		href: '/articles',
-		text: 'Articles'
+		text: 'articles'
 	},
 	{
 		href: '/guestbook',
-		text: 'Guestbook'
+		text: 'guestbook'
 	},
 ];
 
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
 	return (
 		<div className='md:hidden'>
-			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur`}>
+			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} bg-white/90 saturate-[1.8] backdrop-blur-[10px]`}>
 				<nav className='relative space-y-2 z-40'>
 					{navItems.map((navLink, i) => (
 						<div key={i} className='px-7'>
 							<Link
 								href={navLink.href}
 								title={navLink.text}
-								className='flex my-3 border-gray-600 border-b-[1px] items-center text-sm font-[500] leading-8 tracking-normal text-black'
+								className='flex my-3 border-b border-gray-300 items-center text-sm font-[500] leading-8 tracking-normal text-gray-700'
 								onClick={onToggleNav}
 							>
 								{navLink.text}
@@ -65,8 +65,8 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 z-40 backdrop-blur">
-				<div className="flex h-[90px] border-b px-8 mx-auto max-w-3xl items-center justify-between">
+			<header className="fixed top-0 left-0 right-0 max-w-3xl mx-auto z-40 bg-white/80 border-b saturate-[1.8] backdrop-blur">
+				<div className="mx-auto flex h-[90px]  px-8 items-center justify-between">
 					<Link
 						href='/'
 						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
@@ -81,7 +81,7 @@ const Navbar = () => {
 								<li key={i}>
 									<Link
 										href={navLink.href}
-										className={clsx('rounded-md py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
+										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
 												['text-[#555] hover:bg-shade-1 hover:text-black']: navLink.href !== pathname
 											},

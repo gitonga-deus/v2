@@ -3,13 +3,12 @@
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Content**: [MDX](https://mdxjs.com) and [Contentlayer](https://contentlayer.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
 
-## Future updates and changes
+## ToDo
 
-- [ ] Working on the **About** and **Guestbook** page.
-- [ ] Custom `404` page.
-- [ ] Dark Theme
+- [] Working on the **About** and **Guestbook** page.
+- [] Custom `404` page.
+- [] Dark Theme
 
 ## Running locally
 1. Clone the repo

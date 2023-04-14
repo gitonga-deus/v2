@@ -1,4 +1,4 @@
-import { Inter, Cormorant_Garamond } from 'next/font/google'
+import { Inter, Abril_Fatface } from 'next/font/google'
 
 export const inter = Inter({
 	display: "swap",
@@ -7,9 +7,9 @@ export const inter = Inter({
 	weight: ["400", "500", "600", "700"],
 });
 
-export const cormorant = Cormorant_Garamond({
+export const abril = Abril_Fatface({
 	display: "swap",
 	subsets: ["latin"],
-	variable: "--font-cormorant",
-	weight: ["400", "500", "600", "700"],
+	variable: "--font-arvo",
+	weight: ["400"],
 });

@@ -51,6 +51,22 @@ const KBar = (props: KBarProps) => {
 				window.open('https://github.com/gitonga-deus/v2', '_blank'),
 			icon: <Code />,
 		},
+		// {
+		// 	id: 'light-mode',
+		// 	name: 'Light Mode',
+		// 	keywords: 'light mode',
+		// 	section: 'Settings',
+		// 	perform: () => setTheme('light'),
+		// 	icon: <IconSun />,
+		// },
+		// {
+		// 	id: 'dark-mode',
+		// 	name: 'Dark Mode',
+		// 	keywords: 'dark mode',
+		// 	section: 'Settings',
+		// 	perform: () => setTheme('dark'),
+		// 	icon: <IconMoon />,
+		// },
 		{
 			id: 'github',
 			name: 'GitHub',
@@ -74,7 +90,7 @@ const KBar = (props: KBarProps) => {
 			<KBarProvider actions={actions}>
 				<KBarPortal>
 					<KBarPositioner className='z-50 bg-[#0d1117]/10 backdrop-blur'>
-						<KBarAnimator className='w-full max-w-lg rounded-lg border bg-white'>
+						<KBarAnimator className='w-full max-w-lg rounded border bg-white'>
 							<KBarSearch
 								className='w-full bg-transparent px-4 py-3 outline-none'
 								defaultPlaceholder='Type command or search'
