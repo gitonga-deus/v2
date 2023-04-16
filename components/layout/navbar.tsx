@@ -66,7 +66,7 @@ const Navbar = () => {
 	return (
 		<>
 			<header className="fixed top-0 left-0 right-0 z-40 backdrop-blur">
-				<div className="flex h-[90px] border-b px-8 mx-auto max-w-3xl items-center justify-between">
+				<div className="flex h-[90px] border-b px-4 mx-auto max-w-3xl items-center justify-between">
 					<Link
 						href='/'
 						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
