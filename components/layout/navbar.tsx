@@ -15,10 +15,6 @@ const navItems = [
 		href: '/articles',
 		text: 'articles'
 	},
-	{
-		href: '/guestbook',
-		text: 'guestbook'
-	},
 ];
 
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
