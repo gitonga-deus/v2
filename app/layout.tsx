@@ -1,6 +1,7 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 import KBar from '@/components/kbar'
 import { inter } from '@/utils/fonts'
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<Navbar />
 					{children}
 					<Footer />
+					<Analytics />
 				</body>
 			</KBar>
 		</html>
