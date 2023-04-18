@@ -3,8 +3,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
+import clsx from 'clsx'
 import KBar from '@/components/kbar'
-import { inter } from '@/utils/fonts'
+import { firaCode, inter } from '@/utils/fonts'
 import { Navbar, Footer } from '@/components/layout'
 
 export const metadata: Metadata = {
@@ -28,10 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={inter.className}
+			className={clsx(inter.className, firaCode.variable)}
 		>
 			<KBar>
-				<body className='antialiased select-none overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-4'>
+				<body className='antialiased overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-4'>
 					<Navbar />
 					{children}
 					<Footer />
