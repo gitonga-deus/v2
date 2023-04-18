@@ -74,7 +74,7 @@ module.exports = {
 						pre: {
 							opacity: 0.98,
 							backgroundColor: 'var(--gitonga-bg)',
-							padding: '12px 0',
+							padding: '10px 0',
 							lineHeight: 2,
 							borderRadius: '4px',
 							border: '1px solid var(--shade-5)',
@@ -120,7 +120,6 @@ module.exports = {
 							padding: '4px',
 							fontSize: '14px !important',
 							borderRadius: '4px',
-							border: '1px solid var(--shade-2)',
 						},
 					}
 				},
