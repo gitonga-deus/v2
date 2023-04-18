@@ -1,60 +1,105 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
-import { format, parseISO } from 'date-fns';
+// import { format, parseISO } from 'date-fns';
+import { Article, WithContext } from 'schema-dts'
 
 import { allArticles } from 'contentlayer/generated';
-import { getMDXComponent } from 'next-contentlayer/hooks';
 
-export const generateStaticParams = async () => {
-	return (
-		allArticles.map((article: any) => ({ slug: article._raw.flattenedPath }))
-	)
+import Header from './header'
+import Content from './content';
+import { site } from '@/config/site'
+
+type ArticlesPageProp = {
+	params: {
+		slug: string
+	}
 }
 
-export const generateMetadata = ({ params }: any) => {
-	const article = allArticles.find(
-		(article: any) => article._raw.flattenedPath === params.slug
-	)
+export const generateStaticParams = () => {
+	return allArticles.map((article) => ({
+		slug: article.slug,
+	}))
+}
 
-	return {
-		title: article?.title,
-		description: article?.summary
-	};
-};
+export const generateMetadata = (props: ArticlesPageProp): Metadata => {
+	const { params } = props
 
-
-const ArticleLayout = ({ params }: { params: { slug: string } }) => {
-	const article = allArticles.find(
-		(article: any) => article._raw.flattenedPath === params.slug
-	);
-
-	let MDXContent;
+	const article = allArticles.find((article) => article.slug === params.slug)
 
 	if (!article) {
-		return notFound();
-	} else {
-		MDXContent = getMDXComponent(article!.body.code);
+		return {}
+	}
+
+	return {
+		title: article.title,
+		description: article.summary,
+		// alternates: {
+		// 	canonical: `${site.url}/blog/${params.slug}`,
+		// },
+		openGraph: {
+			url: `${site.url}/blog/${params.slug}`,
+			type: 'article',
+			title: article.title,
+			siteName: site.name,
+			description: article.summary,
+			locale: 'en-US',
+			authors: site.url,
+			// images: [
+			// 	{
+			// 		url: `${site.url}/static/images/og/posts/${post.slug}.png`,
+			// 		width: 1200,
+			// 		height: 630,
+			// 		alt: post.title,
+			// 		type: 'image/png',
+			// 	},
+			// ],
+		},
+	}
+}
+
+const ArticlesPage = (props: ArticlesPageProp) => {
+	const { slug } = props.params;
+
+	const article = allArticles.find((article) => article.slug === slug);
+
+	if (!article) {
+		notFound()
+	}
+
+	const { title, summary, publishedAt } = article;
+
+	const jsonLd: WithContext<Article> = {
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+
+		headline: title,
+		description: summary,
+		datePublished: publishedAt,
+		// image: `${site.url}/static/images/og/posts/${slug}.png`,
+		author: {
+			'@type': 'Person',
+			name: site.name,
+			url: site.url,
+		},
+		publisher: {
+			'@type': 'Person',
+			name: site.name,
+			url: site.url,
+		},
 	}
 
 	return (
-		<div className='py-8'>
+		<>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
 
-			<h1 className='text-slate-900 text-xl tracking-tight font-bold'>
-				{article.title}
-			</h1>
+			{/* Main Content */}
+			<Header title={title} readingTime={article.readingTime.text} date={publishedAt} />
+			<Content slug={slug} article={article} />
+		</>
+	)
+}
 
-			<div className='flex py-2 items-center text-shade-3 text-sm gap-2 tracking-tight'>
-				<time dateTime={article.publishedAt}>
-					{format(parseISO(article.publishedAt), 'MMM dd, yyyy')}
-				</time>
-				&#8226;
-				<span>{article.readingTime.text}</span>
-			</div>
-
-			<article className='prose max-w-none text-base tracking-tight'>
-				<MDXContent />
-			</article>
-		</div>
-	);
-};
-
-export default ArticleLayout;
+export default ArticlesPage;
