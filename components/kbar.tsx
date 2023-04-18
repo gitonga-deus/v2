@@ -42,15 +42,15 @@ const KBar = (props: KBarProps) => {
 	const { children } = props
 
 	const actions: Action[] = [
-		{
-			id: 'source-code',
-			name: 'Source code',
-			keywords: 'source code github',
-			section: 'General',
-			perform: () =>
-				window.open('https://github.com/gitonga-deus/v2', '_blank'),
-			icon: <Code />,
-		},
+		// {
+		// 	id: 'source-code',
+		// 	name: 'Source code',
+		// 	keywords: 'source code github',
+		// 	section: 'General',
+		// 	perform: () =>
+		// 		window.open('https://github.com/gitonga-deus/v2', '_blank'),
+		// 	icon: <Code />,
+		// },
 		{
 			id: 'github',
 			name: 'GitHub',
