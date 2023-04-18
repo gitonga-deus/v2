@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
-	// manifest: '/static/favicon/site.webmanifest',
+	manifest: '../public/site.webmanifest',
 	keywords: site.keywords,
 	themeColor: '#0d1117',
 	openGraph: {
