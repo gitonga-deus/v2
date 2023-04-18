@@ -9,6 +9,17 @@
 	--shade-1: #eaeaea;
 	--shade-2: #999;
 	--shade-3: #6b7280;
+	--shade-4: #fafafa;
+	--shade-5: #eaeaea;
+}
+
+.dark:root {
+	--gitonga-bg: #0d1117;
+	--gitonga-fg: #fff;
+
+	--shade-1: #1f2937;
+	--shade-2: #4b5563;
+	--shade-3: #9ca3af;
 }
 
 ::-webkit-scrollbar {
@@ -20,43 +31,31 @@
 	@apply bg-gitonga-fg;
 }
 
-.prose pre {
-	padding: 10px 20px;
-	border-radius: 5px;
-	overflow: auto;
-	font-size: 0.9rem;
-	margin: 20px 0;
-	max-width: 80vw;
-	font-family: "Cascadia Code", monospace;
+pre,
+code {
+	@apply !font-code;
 }
 
-.prose code {
-	background-color: #F3F3F3;
-	color: #0170F2;
-	padding: 2px 6px;
-	border-radius: 5px;
-	font-size: 0.9rem;
-	border: 1px solid #E9E8E9;
-	font-family: "Cascadia Code", monospace;
-	font-weight: 400;
+[data-rehype-pretty-code-fragment] {
+	@apply relative;
 }
 
-.prose pre code {
-	background-color: transparent;
-	padding: 0;
-	border-radius: 0px;
-	font-size: auto;
-	border: none;
+div[data-rehype-pretty-code-title][data-theme='light'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='light'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='light']~button {
+	@apply block dark:hidden;
 }
 
-.prose p {
-	font-size: 15px;
+div[data-rehype-pretty-code-title][data-theme='dark'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='dark'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='dark']~button {
+	@apply hidden dark:block;
 }
 
-.prose li {
-	font-size: 15px;
+span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
+	@apply inline dark:hidden;
 }
 
-.prose a {
-	text-decoration: none;
+span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
+	@apply hidden dark:inline;
 }

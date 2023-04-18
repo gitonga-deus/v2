@@ -1,9 +1,14 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
-import rehypePrettyCode from "rehype-pretty-code";
-import readingTime from "reading-time"
-import remarkGfm from "remark-gfm";
-import rehypePrism from "rehype-prism-plus";
-import remarkExternalLinks from "remark-external-links";
+import {
+	defineDocumentType,
+	makeSource,
+} from 'contentlayer/source-files'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrettyCode from 'rehype-pretty-code'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
+import readingTime from 'reading-time'
+
+import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
 
 const Article = defineDocumentType(() => ({
 	name: "Article",
@@ -38,30 +43,22 @@ const Article = defineDocumentType(() => ({
 	},
 }));
 
-const rehypeOptions = {
-	theme: "material-theme-palenight",
-
-	keepBackground: true,
-	onVisitLine(node: any) {
-		if (node.children.length === 0) {
-			node.children = [{ type: "text", value: " " }];
-		}
-	},
-
-	onVisitHighlightedLine(node: any) {
-		node.properties.className.push("highlighted");
-	},
-
-	onVisitHighlightedWord(node: any) {
-		node.properties.className = ["word"]
-	}
-}
-
 export default makeSource({
-	contentDirPath: "articles",
+	contentDirPath: 'articles',
 	documentTypes: [Article],
 	mdx: {
-		rehypePlugins: [[rehypePrettyCode, rehypeOptions, rehypePrism]],
-		remarkPlugins: [remarkGfm, remarkExternalLinks],
+		remarkPlugins: [remarkGfm],
+		rehypePlugins: [
+			rehypeSlug,
+			[rehypePrettyCode, rehypePrettyCodeOptions],
+			[
+				rehypeAutolinkHeadings,
+				{
+					properties: {
+						className: ['absolute left-0 top-0 bottom-0 w-full group'],
+					},
+				},
+			],
+		],
 	},
-});
+})
