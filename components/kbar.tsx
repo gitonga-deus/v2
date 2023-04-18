@@ -42,20 +42,20 @@ const KBar = (props: KBarProps) => {
 	const { children } = props
 
 	const actions: Action[] = [
-		// {
-		// 	id: 'source-code',
-		// 	name: 'Source code',
-		// 	keywords: 'source code github',
-		// 	section: 'General',
-		// 	perform: () =>
-		// 		window.open('https://github.com/gitonga-deus/v2', '_blank'),
-		// 	icon: <Code />,
-		// },
+		{
+			id: 'source-code',
+			name: 'Source code',
+			keywords: 'source code github',
+			section: 'General',
+			perform: () =>
+				window.open('https://github.com/gitonga-deus/v2', '_blank'),
+			icon: <Code />,
+		},
 		{
 			id: 'github',
 			name: 'GitHub',
 			keywords: 'github',
-			section: 'Social',
+			section: 'Social Links',
 			perform: () => window.open('https://github.com/gitonga-deus', '_blank'),
 			icon: <GitHub />,
 		},
@@ -63,7 +63,7 @@ const KBar = (props: KBarProps) => {
 			id: 'linkedin',
 			name: 'LinkedIn',
 			keywords: 'linkedin',
-			section: 'Social',
+			section: 'Social Links',
 			perform: () => window.open('https://linkedin.com/in/gitonga-deus/', '_blank'),
 			icon: <LinkedIn />,
 		},
