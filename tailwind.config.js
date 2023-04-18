@@ -23,7 +23,7 @@ module.exports = {
 			fontFamily: {
 				default: ['var(--font-inter)'],
 				code: [
-					'var(--font-fira-code)',
+					'var(--font-roboto-mono)',
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
