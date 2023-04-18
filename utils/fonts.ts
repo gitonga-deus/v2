@@ -1,4 +1,4 @@
-import { Inter, Cormorant_Garamond } from 'next/font/google'
+import { Inter, Cormorant_Garamond, Fira_Code } from 'next/font/google'
 
 export const inter = Inter({
 	display: "swap",
@@ -13,3 +13,8 @@ export const cormorant = Cormorant_Garamond({
 	variable: "--font-cormorant",
 	weight: ["400", "500", "600", "700"],
 });
+
+export const firaCode = Fira_Code({
+	variable: '--font-fira-code',
+	subsets: ['latin'],
+})
