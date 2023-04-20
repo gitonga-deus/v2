@@ -8,7 +8,7 @@ const Intro = () => {
 			>
 				<h1
 					className={clsx(
-						'text-2xl md:text-3xl font-bold text-shade-3 tracking-normal',
+						'text-2xl md:text-3xl font-semibold text-shade-3 tracking-normal',
 
 					)}
 				>
