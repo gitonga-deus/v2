@@ -15,7 +15,7 @@ const Intro = () => {
 					Hello! ¡Holá! Bonjour!👋🏻, <span className='text-gitonga-fg'>I&apos;m Gitonga. </span>
 				</h1>
 
-				<p className="text-shade-3 font-regular text-base leading-8 tracking-tight">
+				<p className="text-shade-3 font-regular text-base leading-6 tracking-tight">
 					Welcome to my blog. I&apos;m a frontend and javascript developer based in Nairobi and here, I share my thoughts on software development, design, and other things I find interesting.
 				</p>
 
