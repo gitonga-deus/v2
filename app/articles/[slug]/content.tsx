@@ -16,7 +16,7 @@ const Content = (props: ContentProps) => {
 	return (
 		<div className='mt-4 flex flex-col justify-between lg:flex-row'>
 			<article className='w-full'>
-				<div className='prose prose-zinc text-[15px] text-shade-3 tracking-normal leading-relaxed max-w-none w-full dark:prose-invert'>
+				<div className='prose prose-zinc text-base text-shade-3 tracking-normal leading-relaxed max-w-none w-full dark:prose-invert'>
 					<MDXComponent
 						components={{
 							...MDXComponents,

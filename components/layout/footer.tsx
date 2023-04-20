@@ -8,9 +8,6 @@ const Footer = () => {
 				<div className='w-[1px] h-[20px] mx-[5px] bg-shade-3' />
 				Deus Gitonga.
 			</div>
-
-
-
 		</footer>
 	)
 }

@@ -7,10 +7,23 @@ import clsx from 'clsx'
 import KBar from '@/components/kbar'
 import CustomToaster from './custom-toaster'
 
-import { roboto, inter } from '@/utils/fonts'
 import { Navbar, Footer } from '@/components/layout'
 
 import { site } from '@/config/site'
+
+import { Inter, Roboto_Mono } from 'next/font/google'
+
+const inter = Inter({
+	display: "swap",
+	subsets: ["latin"],
+	variable: "--font-inter",
+	weight: ["400", "500", "600", "700"],
+});
+
+const roboto = Roboto_Mono({
+	variable: '--font-roboto-mono',
+	subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
 	title: {
@@ -39,15 +52,6 @@ export const metadata: Metadata = {
 		siteName: site.title,
 		description: site.description,
 		locale: 'en-US',
-		// images: [
-		// 	{
-		// 		url: `${site.url}/static/images/og/og.png`,
-		// 		width: 1200,
-		// 		height: 630,
-		// 		alt: site.description,
-		// 		type: 'image/png',
-		// 	},
-		// ],
 	},
 	icons: {
 		icon: '../public/favicon.ico',
@@ -70,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			className={clsx(inter.className, roboto.variable)}
 		>
 			<KBar>
-				<body className='antialiased select-text selection:bg-gray-200 overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-4'>
+				<body className='antialiased select-text bg-gitonga-bg selection:bg-gray-200 overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-4'>
 					<Navbar />
 					{children}
 					<CustomToaster />
