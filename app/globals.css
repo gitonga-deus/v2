@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-	--gitonga-bg: #fff;
+	--gitonga-bg: hsla(223, 15%, 98%, 1);
 	--gitonga-fg: #0d1117;
+
+	--pre-bg: hsla(222, calc(89*1%), 50%, 5%)
 
 	--shade-1: #eaeaea;
 	--shade-2: #999;
