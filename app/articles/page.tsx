@@ -28,7 +28,7 @@ function ArticleCard(article: Article) {
 			</div>
 
 			<h2 className="py-1 text-base font-semibold leading-6 tracking-tight">{title}</h2>
-			<p className="text-[15px] tracking-tight text-shade-3">{summary}...</p>
+			<p className="text-base tracking-tight text-shade-3">{summary}...</p>
 		</Link>
 	)
 }
@@ -40,9 +40,9 @@ export default function Page() {
 
 	return (
 		<section className='py-8'>
-			<h1 className="font-bold text-zinc-800 tracking-tight text-2xl mb-1">Articles</h1>
+			<h1 className="font-bold text-gitonga-fg tracking-tight text-2xl mb-1">Articles</h1>
 
-			<p className='text-[15px] leading-7 tracking-tight text-shade-3'>
+			<p className='text-base leading-7 tracking-tight text-shade-2'>
 				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 

@@ -4,26 +4,26 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
 import clsx from 'clsx'
+
 import KBar from '@/components/kbar'
 import CustomToaster from './custom-toaster'
-
 import { Navbar, Footer } from '@/components/layout'
+
+import { Inter, Roboto_Mono, Fira_Code } from 'next/font/google'
 
 import { site } from '@/config/site'
 
-import { Inter, Roboto_Mono } from 'next/font/google'
-
 const inter = Inter({
-	display: "swap",
-	subsets: ["latin"],
-	variable: "--font-inter",
-	weight: ["400", "500", "600", "700"],
+	display: 'swap',
+	subsets: ['latin'],
+	variable: '--font-inter',
+	weight: ['400', '500', '600', '700'],
 });
 
-const roboto = Roboto_Mono({
-	variable: '--font-roboto-mono',
+const firaCode = Fira_Code({
+	variable: '--font-fira-code',
 	subsets: ['latin'],
-})
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
-	manifest: '../public/site.webmanifest',
+	manifest: '../public/favicon/site.webmanifest',
 	keywords: site.keywords,
 	themeColor: '#0d1117',
 	openGraph: {
@@ -54,11 +54,11 @@ export const metadata: Metadata = {
 		locale: 'en-US',
 	},
 	icons: {
-		icon: '../public/favicon.ico',
-		shortcut: '../public/favicon.ico',
+		icon: '../public/favicon/favicon.ico',
+		shortcut: '../public/favicon/favicon.ico',
 		apple: [
 			{
-				url: '../public/apple-touch-icon.png',
+				url: '../public/favicon/apple-touch-icon.png',
 				sizes: '180x180',
 				type: 'image/png',
 			},
@@ -71,17 +71,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={clsx(inter.className, roboto.variable)}
+			className={clsx(inter.className, firaCode.variable, 'scroll-smooth')}
 		>
-			<KBar>
-				<body className='antialiased select-text bg-gitonga-bg selection:bg-gray-200 overflow-x-hidden max-w-3xl relative mx-auto pt-20 px-4'>
+			<body className='overflow-x-hidden bg-gitonga-bg font-default antialiased select-text selection:bg-gray-300'>
+				<KBar>
 					<Navbar />
-					{children}
+					<main className='relative mx-auto mb-16 max-w-3xl px-8 py-24'>
+						{children}
+					</main>
 					<CustomToaster />
 					<Footer />
-					<Analytics />
-				</body>
-			</KBar>
+				</KBar>
+				<Analytics />
+			</body>
+
 		</html>
 	)
 }

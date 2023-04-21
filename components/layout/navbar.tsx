@@ -61,8 +61,8 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 z-40 backdrop-blur">
-				<div className="flex h-[90px] border-b px-4 mx-auto max-w-3xl items-center justify-between">
+			<header className='fixed left-0 right-0 top-0 z-40 saturate-[1.8] backdrop-blur-[40px]'>
+				<div className='mx-auto flex h-[100px] max-w-3xl border-b items-center justify-between px-6'>
 					<Link
 						href='/'
 						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
@@ -77,12 +77,12 @@ const Navbar = () => {
 								<li key={i}>
 									<Link
 										href={navLink.href}
-										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight capitalize',
+										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
-												['text-[#555] hover:bg-shade-1 hover:text-black']: navLink.href !== pathname
+												['text-gitonga-fg hover:bg-shade-1']: navLink.href !== pathname
 											},
 											{
-												['bg-shade-1 text-black']: navLink.href === pathname
+												['bg-shade-1 text-gitonga-fg']: navLink.href === pathname
 											}
 										)}
 									>
