@@ -23,7 +23,6 @@ module.exports = {
 			fontFamily: {
 				default: ['var(--font-inter)'],
 				code: [
-					// 'var(--font-roboto-mono)',
 					'var(--font-fira-code)',
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
@@ -56,10 +55,10 @@ module.exports = {
 							fontWeight: 'normal',
 						},
 						'[data-rehype-pretty-code-title]': {
-							backgroundColor: 'var(--shade-4)',
+							backgroundColor: 'var(--pre-bg)',
 							border: '1px solid var(--shade-5)',
-							borderTopLeftRadius: '4px',
-							borderTopRightRadius: '4px',
+							borderTopLeftRadius: '8px',
+							borderTopRightRadius: '8px',
 							padding: '10px 20px',
 							fontSize: '14px',
 						},
@@ -74,7 +73,7 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							backgroundColor: 'var(--gitonga-bg)',
+							backgroundColor: 'var(--pre-bg)',
 							padding: '10px 0',
 							lineHeight: 2,
 							borderRadius: '4px',
@@ -111,8 +110,8 @@ module.exports = {
 								},
 
 								'> .line.highlighted': {
-									borderLeftColor: 'rgba(239, 68, 68, 0.4)',
-									backgroundColor: 'rgba(239, 68, 68, 0.1)',
+									borderLeftColor: 'rgba(68, 68, 239, 0.4)',
+									backgroundColor: 'rgba(68, 68, 239, 0.1)',
 								},
 							},
 						},

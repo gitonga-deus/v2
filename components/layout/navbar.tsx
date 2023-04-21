@@ -20,7 +20,7 @@ const navItems = [
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
 	return (
 		<div className='md:hidden'>
-			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur`}>
+			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-[10px]`}>
 				<nav className='relative space-y-2 z-40'>
 					{navItems.map((navLink, i) => (
 						<div key={i} className='px-7'>
@@ -65,7 +65,7 @@ const Navbar = () => {
 				<div className='mx-auto flex h-[100px] max-w-3xl border-b items-center justify-between px-6'>
 					<Link
 						href='/'
-						className='hover:bg-shade-1 hover:text-black py-2 px-3 rounded-md'
+						className='hover:bg-gray-200/60 py-2 px-3 rounded-md'
 					>
 						<Home />
 					</Link>
@@ -79,10 +79,10 @@ const Navbar = () => {
 										href={navLink.href}
 										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
-												['text-gitonga-fg hover:bg-shade-1']: navLink.href !== pathname
+												['text-gitonga-fg hover:bg-gray-200/60']: navLink.href !== pathname
 											},
 											{
-												['bg-shade-1 text-gitonga-fg']: navLink.href === pathname
+												['bg-gray-200/60 text-gitonga-fg']: navLink.href === pathname
 											}
 										)}
 									>
@@ -90,7 +90,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 							))}
-							<div className='w-[1px] h-[20px] mx-[5px] bg-shade-3' />
+							<div className='w-[1px] h-[20px] mx-[5px] bg-shade-2' />
 						</ul>
 
 
