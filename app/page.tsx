@@ -11,7 +11,7 @@ const Home = () => {
 		<section>
 			<Intro />
 
-			<h1 className='text-base tracking-tight font-semibold leading-8'>Recent Articles</h1>
+			<h1 className='text-lg text-shade-2 tracking-tight font-semibold leading-8'>articles</h1>
 
 			{allArticles.slice(0, 4).sort((a, b) => (
 				compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
@@ -34,8 +34,8 @@ const Home = () => {
 								<span>{readingTime.text}</span>
 							</div>
 
-							<h2 className='py-1 text-base font-semibold leading-6 tracking-tight'>{title}</h2>
-							<p className='text-[15px] tracking-tight text-shade-3'>{summary}...</p>
+							<h2 className='py-1 text-base text-gitonga-fg font-semibold leading-6 tracking-tight'>{title}</h2>
+							<p className='text-base tracking-tight text-shade-3'>{summary}...</p>
 						</Link>
 					</>
 				})
@@ -44,7 +44,7 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 hover:bg-shade-1 text-black p-2 -mx-2 rounded-md flex items-center gap-4 text-[15px] font-medium'
+					className='my-2 hover:bg-shade-1 text-gitonga-fg p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
 				>
 					more posts...
 				</Link>

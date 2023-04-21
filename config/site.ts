@@ -4,7 +4,6 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 type Site = {
 	url: string
-	// logo: string
 	title: string
 	name: string
 	keywords: string[]
@@ -27,13 +26,13 @@ export const site: Site = {
 			rel: 'icon',
 			type: 'image/png',
 			sizes: '16x16',
-			url: '../public/favicon-16x16.png',
+			url: '../public/favicon/favicon-16x16.png',
 		},
 		{
 			rel: 'icon',
 			type: 'image/png',
 			sizes: '32x32',
-			url: '../public/favicon-32x32.png',
+			url: '../public/favicon/favicon-32x32.png',
 		},
 	],
 }

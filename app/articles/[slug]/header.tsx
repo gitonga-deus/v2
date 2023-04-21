@@ -18,7 +18,7 @@ const Header = (props: HeaderProps) => {
 				{title}
 			</h1>
 
-			<div className='flex py-2 items-center text-shade-3 text-sm gap-2 tracking-tight'>
+			<div className='flex py-2 items-center text-shade-2 text-sm gap-2 tracking-tight'>
 				<time dateTime={date}>
 					{format(parseISO(date), 'MMM dd, yyyy')}
 				</time>
