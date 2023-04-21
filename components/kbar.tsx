@@ -24,7 +24,7 @@ const Results = () => {
 					<div
 						className={clsx(
 							'mx-3 flex cursor-pointer items-center justify-between rounded px-3 py-3 transition-colors',
-							active ? 'bg-shade-1' : 'bg-transparent'
+							active ? 'bg-gray-200/60' : 'bg-transparent'
 						)}
 					>
 						<div className='flex items-center'>
@@ -74,7 +74,7 @@ const KBar = (props: KBarProps) => {
 			<KBarProvider actions={actions}>
 				<KBarPortal>
 					<KBarPositioner className='z-50 bg-[#0d1117]/10 backdrop-blur'>
-					<KBarAnimator className='w-full max-w-lg rounded-lg border bg-white'>
+					<KBarAnimator className='w-full max-w-lg rounded-lg border bg-gitonga-bg'>
 							<KBarSearch
 								className='w-full bg-transparent px-4 py-3 outline-none'
 								defaultPlaceholder='Type command or search'
