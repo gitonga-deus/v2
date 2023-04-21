@@ -73,7 +73,7 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							backgroundColor: 'var(--pre-bg)',
+							backgroundColor: 'var(--gitonga-bg)',
 							padding: '10px 0',
 							lineHeight: 2,
 							borderRadius: '4px',
