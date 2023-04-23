@@ -61,8 +61,8 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className='fixed left-0 right-0 top-0 z-40 saturate-[1.8] backdrop-blur-[40px]'>
-				<div className='mx-auto flex h-[100px] max-w-3xl border-b items-center justify-between px-6'>
+			<header className='fixed left-0 right-0 top-0 z-40 saturate-[1.0] backdrop-blur-[40px]'>
+				<div className='mx-auto flex h-[100px] border-b max-w-3xl items-center justify-between px-8'>
 					<Link
 						href='/'
 						className='hover:bg-gray-200/60 py-2 px-3 rounded-md'
@@ -95,7 +95,7 @@ const Navbar = () => {
 
 
 						<button
-							className='flex py-2 px-3 items-center justify-center rounded duration-300 hover:bg-shade-1 hover:text-black'
+							className='flex py-2 px-3 items-center justify-center rounded duration-300 hover:bg-gray-200/60 font-bold hover:text-black'
 							onClick={() => query.toggle()}
 							type='button'
 							aria-label='Command Bar'
