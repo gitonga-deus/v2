@@ -19,7 +19,7 @@ function ArticleCard(article: Article) {
 			className="block select-none p-2 my-2 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60"
 			href={`/articles/${slug}`}
 		>
-			<div className="flex py-1 items-center text-shade-3 gap-2 text-sm tracking-tight">
+			<div className="flex py-1 items-center text-shade-2 gap-2 text-sm tracking-tight">
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
@@ -28,7 +28,7 @@ function ArticleCard(article: Article) {
 			</div>
 
 			<h2 className="py-1 text-base font-semibold leading-6 tracking-tight">{title}</h2>
-			<p className="text-base tracking-tight text-shade-3">{summary}...</p>
+			<p className="text-base tracking-tight text-shade-3">{summary}</p>
 		</Link>
 	)
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
-// import { format, parseISO } from 'date-fns';
 import { Article, WithContext } from 'schema-dts'
 
 import { allArticles } from 'contentlayer/generated';
@@ -33,26 +32,14 @@ export const generateMetadata = (props: ArticlesPageProp): Metadata => {
 	return {
 		title: article.title,
 		description: article.summary,
-		// alternates: {
-		// 	canonical: `${site.url}/blog/${params.slug}`,
-		// },
 		openGraph: {
-			url: `${site.url}/blog/${params.slug}`,
+			url: `${site.url}/articles/${params.slug}`,
 			type: 'article',
 			title: article.title,
 			siteName: site.name,
 			description: article.summary,
 			locale: 'en-US',
 			authors: site.url,
-			// images: [
-			// 	{
-			// 		url: `${site.url}/static/images/og/posts/${post.slug}.png`,
-			// 		width: 1200,
-			// 		height: 630,
-			// 		alt: post.title,
-			// 		type: 'image/png',
-			// 	},
-			// ],
 		},
 	}
 }
@@ -75,7 +62,6 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 		headline: title,
 		description: summary,
 		datePublished: publishedAt,
-		// image: `${site.url}/static/images/og/posts/${slug}.png`,
 		author: {
 			'@type': 'Person',
 			name: site.name,
