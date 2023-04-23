@@ -4,8 +4,6 @@ module.exports = {
 		"./app/**/*.{js,ts,jsx,tsx}",
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
-
-		// Or if using `src` directory:
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
@@ -21,9 +19,9 @@ module.exports = {
 				"shade-5": "var(--shade-5)",
 			},
 			fontFamily: {
-				default: ['var(--font-inter)'],
+				// default: ['var(--font-inter)'],
 				code: [
-					'var(--font-fira-code)',
+					'var(--font-operator)'
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
@@ -76,7 +74,7 @@ module.exports = {
 							backgroundColor: 'var(--gitonga-bg)',
 							padding: '10px 0',
 							lineHeight: 2,
-							borderRadius: '4px',
+							borderRadius: '8px',
 							border: '1px solid var(--shade-5)',
 
 							'[data-line-numbers]': {
@@ -110,8 +108,8 @@ module.exports = {
 								},
 
 								'> .line.highlighted': {
-									borderLeftColor: 'rgba(68, 68, 239, 0.4)',
-									backgroundColor: 'rgba(68, 68, 239, 0.1)',
+									borderLeftColor: 'rgba(68, 68, 230, 0.4)',
+									backgroundColor: 'rgba(68, 68, 230, 0.1)',
 								},
 							},
 						},
