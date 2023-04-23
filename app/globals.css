@@ -63,5 +63,5 @@ span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
 }
 
 a.animated {
-	@apply relative before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:rounded before:bg-gitonga-fg before:transition-transform before:duration-300 before:ease-in-out before:content-[""] hover:before:origin-left hover:before:scale-x-100;
+	@apply relative after:absolute after:bg-gitonga-fg after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }
