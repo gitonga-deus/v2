@@ -9,20 +9,14 @@ import KBar from '@/components/kbar'
 import CustomToaster from './custom-toaster'
 import { Navbar, Footer } from '@/components/layout'
 
-import { Inter, Roboto_Mono, Fira_Code } from 'next/font/google'
+import localFont from 'next/font/local'
 
 import { site } from '@/config/site'
 
-const inter = Inter({
-	display: 'swap',
-	subsets: ['latin'],
-	variable: '--font-inter',
-	weight: ['400', '500', '600', '700'],
-});
-
-const firaCode = Fira_Code({
-	variable: '--font-fira-code',
-	subsets: ['latin'],
+const operatorMono = localFont({
+	src: '../public/fonts/OperatorMono-Book.woff2',
+	weight: '400',
+	variable: '--font-operator',
 });
 
 export const metadata: Metadata = {
@@ -71,12 +65,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={clsx(inter.className, firaCode.variable, 'scroll-smooth')}
+			className={clsx(operatorMono.variable, 'scroll-smooth')}
 		>
 			<body className='overflow-x-hidden bg-gitonga-bg font-default antialiased select-text selection:bg-gray-300'>
 				<KBar>
 					<Navbar />
-					<main className='relative mx-auto mb-16 max-w-3xl px-8 py-24'>
+					<main className='relative mx-auto mb-4 max-w-3xl px-8 py-24'>
 						{children}
 					</main>
 					<CustomToaster />
@@ -84,7 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				</KBar>
 				<Analytics />
 			</body>
-
 		</html>
 	)
 }
