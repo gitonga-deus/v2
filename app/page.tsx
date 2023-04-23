@@ -13,7 +13,7 @@ const Home = () => {
 
 			<h1 className='text-lg text-shade-2 tracking-tight font-semibold leading-8'>articles</h1>
 
-			{allArticles.slice(0, 4).sort((a, b) => (
+			{allArticles.slice(0, 6).sort((a, b) => (
 				compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
 				.map((article) => {
 					const { slug, title, summary, publishedAt, readingTime } = article;
@@ -24,18 +24,22 @@ const Home = () => {
 							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60'
 							href={`articles/${slug}`}
 						>
-							<div className='flex pt-1 items-center text-shade-3 text-sm tracking-tight'>
+							<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
 								<time dateTime={publishedAt}>
 									{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 								</time>
-								<div className="mx-1">
+								<span className="mx-1">
 									&#8226;
-								</div>
+								</span>
 								<span>{readingTime.text}</span>
 							</div>
 
-							<h2 className='py-1 text-base text-gitonga-fg font-semibold leading-6 tracking-tight'>{title}</h2>
-							<p className='text-base tracking-tight text-shade-3'>{summary}...</p>
+							<h2
+								className='py-1 text-base text-gitonga-fg font-semibold leading-6 tracking-tight'
+							>
+								{title}
+							</h2>
+							<p className='text-base tracking-tight text-shade-3'>{summary}</p>
 						</Link>
 					</>
 				})
@@ -44,11 +48,14 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 hover:bg-shade-1 text-gitonga-fg p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
+					className='my-2 hover:bg-gray-200/60 text-shade-2 hover:text-gitonga-fg p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-semibold tracking-tight'
 				>
-					more posts...
+					more articles...
 				</Link>
 			</div>
+
+			{/* <hr className='w-[8rem] mt-8 mb-4' /> */}
+
 		</section>
 	)
 }
