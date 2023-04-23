@@ -12,7 +12,7 @@ import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
 
 const Article = defineDocumentType(() => ({
 	name: "Article",
-	filePathPattern: `**/*.mdx`,
+	filePathPattern: "**/*.mdx",
 	contentType: "mdx",
 	fields: {
 		title: {
