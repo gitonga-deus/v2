@@ -1,5 +1,5 @@
 const heroText = [
-	'Hey 👋🏻 there, welcome to my little corner of the internet! I\'m all about making websites that look good and work great.', 'Join me as we explore the latest tech trends and programming tips, with a side of humor and a dash of coffee.',
+	'Welcome to my little corner of the internet! I\'m all about making websites that look good and work great.', 'Join me as we explore the latest tech trends and programming tips, with a side of humor and a dash of coffee.',
 ]
 
 const Hero = () => {
@@ -7,8 +7,8 @@ const Hero = () => {
 		<>
 			<div className='pt-8'>
 				<div className='space-y-2 md:max-w-full'>
-					<h2 className='text-3xl font-semibold text-gitonga-fg tracking-tight'>
-						DnG
+					<h2 className='text-2xl md:text-3xl font-semibold text-gitonga-fg tracking-tight'>
+						Hey <span className='wave'>👋🏻</span>, I&apos;m Deus
 					</h2>
 
 					{heroText.map((text, i) => (
