@@ -49,6 +49,9 @@ dependencies:
   react-hot-toast:
     specifier: ^2.4.0
     version: 2.4.0(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
+  react-wrap-balancer:
+    specifier: ^0.4.0
+    version: 0.4.0(react@18.2.0)
   reading-time:
     specifier: ^1.5.0
     version: 1.5.0
@@ -4241,6 +4244,14 @@ packages:
       react: ^16.6.3 || ^17.0.0
     dependencies:
       '@reach/observe-rect': 1.2.0
+      react: 18.2.0
+    dev: false
+
+  /react-wrap-balancer@0.4.0(react@18.2.0):
+    resolution: {integrity: sha512-MUsROihHd7bFHCo9kCOifKDYBEZPgKTyGvfa8RcwRQKtT2cL7Um9Cc8A7GvuT8t3np7LAGsEkzdEyJdKrr5lVQ==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
       react: 18.2.0
     dev: false
 
