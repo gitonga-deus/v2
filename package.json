@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"postbuild": "next-sitemap"
 	},
 	"dependencies": {
 		"@types/node": "18.15.11",
@@ -21,6 +22,7 @@
 		"kbar": "0.1.0-beta.40",
 		"next": "13.2.4",
 		"next-contentlayer": "^0.3.1",
+		"next-sitemap": "^4.0.7",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-hot-toast": "^2.4.0",
