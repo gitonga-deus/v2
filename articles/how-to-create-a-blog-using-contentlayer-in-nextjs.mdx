@@ -139,7 +139,33 @@ title: "Hello World"
 excerpt: "This is my first blog post"
 publishedAt: "2023-04-10"
 ---
-## Lorem Ipsum
+# Heading 1
+## Heading 2
+### Heading 3
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore optio ab officiis vero aspernatur ea delectus
+harum suscipit adipisci cumque, officia voluptatem cupiditate impedit blanditiis reprehenderit. Ipsa voluptas eius
+porro praesentium ut eos dignissimos, veritatis amet officiis similique fuga rerum voluptates excepturi explicabo,
+magni molestiae laborum accusamus esse commodi? Voluptatum.
+
+**Bold Text**
+
+*Italic Text*
+
+~~Strikethrough Text~~
+
+### Blockquote
+> Stay Awesome
+
+### Unordered List
+- Item 1
+- Item 2
+- Item 3
+
+### Ordered List
+1. Item 1
+2. Item 2
+3. Item 3
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. 
 Ipsum consequat enim id excepteur consequat nostrud 
 ```
@@ -158,7 +184,7 @@ The content of the file is stored in `json` format, which contains all the `fiel
 ### Fetch and display your posts
 Now that we're done with our `contentlayer` configuration, we can just import our content as data inside our app.
 
-```tsx title="app/page.tsx" showLineNumbers {4}
+```tsx title="app/posts/page.tsx" showLineNumbers {4}
 import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
 
@@ -171,8 +197,9 @@ function PostCard(post: Posts) {
 		<Link
 			key={slug}
 			href={`/posts/${slug}`}
+			className="block select-none p-2 my-2 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60"
 		>
-			<div>
+			<div className="flex py-1 items-center text-shade-2 gap-2 text-sm tracking-tight">
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
@@ -180,8 +207,8 @@ function PostCard(post: Posts) {
 				<span>{readingTime.text}</span>
 			</div>
 
-			<h1>{title}</h1>
-			<p>{summary}</p>
+			<h1 className="py-1 text-base font-semibold leading-6 tracking-tight">{title}</h1>
+			<p className="text-base tracking-tight text-shade-3">{excerpt}</p>
 		</Link>
 	)
 }
@@ -193,7 +220,7 @@ export default function Page() {
 
 	return (
 		<section>
-			<h1>Posts</h1>
+			<h1 className="font-bold text-black tracking-tight text-2xl mb-1">Posts</h1>
 			{posts.map((post, i) => (
 				<PostCard key={i} {...post} />
 			))}
@@ -210,7 +237,7 @@ If we try clicking on a post, we'll get a **404 error** since we haven't created
 
 Let's start by creating a `Header` component for the blog post `title`, `date`, and `readingTime`.
 
-```tsx title="app/[slug]/header.tsx" showLineNumbers
+```tsx title="app/posts/[slug]/header.tsx" showLineNumbers
 import React from 'react'
 import { parseISO, format } from 'date-fns'
 
@@ -224,12 +251,12 @@ const Header = (props: HeaderProps) => {
 	const { date, title, readingTime } = props
 
 	return (
-		<div>
-			<h1>
+		<div className="pt-6">
+			<h1 className='text-slate-900 text-xl md:text-2xl tracking-tight font-bold'>
 				{title}
 			</h1>
 
-			<div>
+			<div className='flex py-2 items-center text-shade-2 text-sm gap-1 tracking-tight'>
 				<time dateTime={date}>
 					{format(parseISO(date), 'MMM dd, yyyy')}
 				</time>
@@ -245,7 +272,7 @@ export default Header
 
 Next, we'll create a `Content` component that will display the content of the post.
 
-```tsx title="app/[slug]/content.tsx" showLineNumbers {4}
+```tsx title="app/posts/[slug]/content.tsx" showLineNumbers {4}
 import { Posts } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
@@ -263,8 +290,8 @@ const Content = (props: ContentProps) => {
 
 	return (
 		<>
-			<article>
-				<div>
+			<article className='mt-4 flex flex-col justify-between lg:flex-row w-full'>
+				<div className='prose text-base text-shade-3 tracking-tight leading-7 max-w-none dark:prose-invert'>
 					<MDXComponent
 						components={{
 							...MDXComponents,
@@ -283,7 +310,7 @@ Notice we're importing `MDXComponents` which is where we will define custom comp
 
 We can now import the `Header` and `Content` components into our `page.tsx` file and display the content of the post.
 
-```tsx title="app/[slug]/page.tsx" showLineNumbers
+```tsx title="app/posts/[slug]/page.tsx" showLineNumbers
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
 
@@ -343,6 +370,6 @@ export default PostsPage;
 ```
 
 ### Conclusion
-That's pretty much it. You can check out the [repo](https://github.com/gitonga-deus/cuddly-engine.git) for the full code. I have also added styles for the blog posts and the `MDXComponents` file. 
+That's pretty much it. You can check out the [repo](https://github.com/gitonga-deus/cuddly-engine.git) for the full code. The repo also includes a `tailwind.config.js` file that you can use to customize the tailwind styles.
 
 You can also check out the [demo](https://cuddly-engine-blog.vercel.app/) to see the final result.
