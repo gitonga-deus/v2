@@ -19,9 +19,9 @@ module.exports = {
 				"shade-5": "var(--shade-5)",
 			},
 			fontFamily: {
-				// default: ['var(--font-inter)'],
+				default: ['var(--font-inter)'],
 				code: [
-					'var(--font-operator)'
+					'var(--font-operator-mono)'
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
