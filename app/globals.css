@@ -10,18 +10,22 @@
 
 	--shade-1: #eaeaea;
 	--shade-2: #999;
-	--shade-3: #6b7280;
-	--shade-4: #fafafa;
+	--shade-3: #626B84;
+	--shade-4: #575F75;
 	--shade-5: #eaeaea;
 }
 
 .dark:root {
 	--gitonga-bg: #0d1117;
-	--gitonga-fg: #fff;
+	--gitonga-fg: hsla(223, 15%, 98%, 1);
+
+	--pre-bg: ;
 
 	--shade-1: #1f2937;
 	--shade-2: #4b5563;
-	--shade-3: #9ca3af;
+	--shade-3: #98A0B3;
+	--shade-4: ;
+	--shade-5: ;
 }
 
 ::-webkit-scrollbar {
@@ -106,6 +110,7 @@ span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
 	@apply hidden dark:inline;
 }
 
+
 a.animated {
-	@apply relative after:absolute after:bg-gitonga-fg after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
+	@apply relative after:absolute after:bg-neutral-400 dark:bg-neutral-600 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }
