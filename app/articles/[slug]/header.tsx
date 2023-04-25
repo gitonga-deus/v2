@@ -19,10 +19,10 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<div className="pt-6">
-			<div className='text-shade-3 my-8 -mx-2 flex items-center font-medium text-sm'>
+			<div className='text-gitonga-fg my-8 -mx-2 flex items-center font-medium text-sm'>
 				<ChevronLeft />
 				<Link href='/articles'>
-					Back
+					back
 				</Link>
 			</div>
 
