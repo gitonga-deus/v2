@@ -48,7 +48,7 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 hover:bg-gray-200/60 text-shade-2 hover:text-gitonga-fg p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-semibold tracking-tight'
+					className='my-2 hover:bg-gray-200/60 text-shade-2 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
 				>
 					more articles...
 				</Link>
