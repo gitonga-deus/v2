@@ -33,4 +33,4 @@ const Link = (props: any) => {
 	)
 }
 
-export default Link
+export default Link;
