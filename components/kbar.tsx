@@ -17,14 +17,14 @@ const Results = () => {
 			items={results}
 			onRender={({ item, active }) =>
 				typeof item === 'string' ? (
-					<div className='select-none px-4 pb-2 pt-4 text-[10px] uppercase tracking-[1px]'>
+					<div className='select-none px-4 pb-2 pt-4 text-[10px] text-shade-1 uppercase tracking-[1px]'>
 						{item}
 					</div>
 				) : (
 					<div
 						className={clsx(
-							'mx-3 flex cursor-pointer items-center justify-between rounded px-3 py-3 transition-colors',
-							active ? 'bg-gray-200/60' : 'bg-transparent'
+							'mx-3 flex cursor-pointer items-center justify-between text-shade-1 rounded px-3 py-3 transition-colors',
+							active ? 'bg-[#69696980]' : 'bg-transparent'
 						)}
 					>
 						<div className='flex items-center'>
@@ -74,10 +74,10 @@ const KBar = (props: KBarProps) => {
 			<KBarProvider actions={actions}>
 				<KBarPortal>
 					<KBarPositioner className='z-50 bg-[#0d1117]/10 backdrop-blur'>
-					<KBarAnimator className='w-full max-w-lg rounded-lg border bg-gitonga-bg'>
+						<KBarAnimator className='w-full max-w-lg rounded-lg border border-[#69696980] bg-gitonga-fg'>
 							<KBarSearch
-								className='w-full bg-transparent px-4 py-3 outline-none'
-								defaultPlaceholder='Type command or search'
+								className='w-full bg-transparent text-shade-1 px-4 py-3 outline-none'
+								defaultPlaceholder='Search...'
 							/>
 							<Results />
 							<div className='h-4'></div>
