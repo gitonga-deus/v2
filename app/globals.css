@@ -8,11 +8,12 @@
 	--color-1: #69696940;
 	--color-2: #69696980;
 
+	--article-hover: rgb(44, 49, 63, 0.3);
+
 	--shade-1: #eaeaea;
 	--shade-2: #999;
-	--shade-3: #626B84;
-	--shade-4: #575F75;
-	--shade-5: #eaeaea;
+	--shade-3: #c9d1d9;
+	
 }
 
 ::-webkit-scrollbar {
