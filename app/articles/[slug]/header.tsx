@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { parseISO, format } from 'date-fns'
-import Balancer from 'react-wrap-balancer'
 
 import Link from '@/components/mdx/link'
 import { ChevronLeft } from '@/components/icons'
@@ -27,9 +26,7 @@ const Header = (props: HeaderProps) => {
 			</div>
 
 			<h1 className='text-slate-900 text-xl md:text-3xl font-semibold'>
-				<Balancer ratio={0.3}>
-					{title}
-				</Balancer>
+				{title}
 			</h1>
 
 			<div className='flex py-2 items-center text-shade-2 text-sm gap-1 tracking-tight'>
