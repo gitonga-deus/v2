@@ -14,7 +14,7 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<div className="pt-6">
-			<h1 className='text-slate-900 text-xl tracking-tight font-bold'>
+			<h1 className='text-shade-1 text-xl tracking-tight font-bold'>
 				{title}
 			</h1>
 
@@ -22,7 +22,7 @@ const Header = (props: HeaderProps) => {
 				<time dateTime={date}>
 					{format(parseISO(date), 'MMM dd, yyyy')}
 				</time>
-				&#8226;
+				/
 				<span>{readingTime}</span>
 			</div>
 		</div>

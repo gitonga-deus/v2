@@ -2,7 +2,8 @@
 
 import clsx from 'clsx'
 import { WithChildren } from '@/types/common'
-import { Code, GitHub, LinkedIn } from './icons'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { BsCodeSlash } from 'react-icons/bs'
 import {
 	Action, KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarSearch, KBarResults, useMatches
 } from 'kbar'
@@ -28,8 +29,8 @@ const Results = () => {
 						)}
 					>
 						<div className='flex items-center'>
-							{item.icon && <div className='mr-4'>{item.icon}</div>}
-							<span className='text-md'>{item.name}</span>
+							{item.icon && <div className='mr-3'>{item.icon}</div>}
+							<span className='text-base'>{item.name}</span>
 						</div>
 					</div>
 				)
@@ -49,7 +50,7 @@ const KBar = (props: KBarProps) => {
 			section: 'General',
 			perform: () =>
 				window.open('https://github.com/gitonga-deus/v2', '_blank'),
-			icon: <Code />,
+			icon: <BsCodeSlash size={20} />,
 		},
 		{
 			id: 'github',
@@ -57,7 +58,7 @@ const KBar = (props: KBarProps) => {
 			keywords: 'github',
 			section: 'Social Links',
 			perform: () => window.open('https://github.com/gitonga-deus', '_blank'),
-			icon: <GitHub />,
+			icon: <FiGithub size={20} />,
 		},
 		{
 			id: 'linkedin',
@@ -65,7 +66,7 @@ const KBar = (props: KBarProps) => {
 			keywords: 'linkedin',
 			section: 'Social Links',
 			perform: () => window.open('https://linkedin.com/in/gitonga-deus/', '_blank'),
-			icon: <LinkedIn />,
+			icon: <FiLinkedin size={20} />,
 		},
 	]
 

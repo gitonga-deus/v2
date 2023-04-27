@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Intro from '@/components/intro'
+import HomePage  from '@/components/home/index'
 
 import { allArticles } from 'contentlayer/generated';
 
@@ -9,9 +9,9 @@ import { compareDesc, format, parseISO } from 'date-fns';
 const Home = () => {
 	return (
 		<section>
-			<Intro />
+			<HomePage />
 
-			<h1 className='text-lg text-shade-2 tracking-tight font-semibold leading-8'>articles</h1>
+			<h1 className='text-lg text-shade-1 tracking-tight font-semibold leading-8'>articles</h1>
 
 			{allArticles.slice(0, 4).sort((a, b) => (
 				compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
@@ -21,7 +21,7 @@ const Home = () => {
 					return <>
 						<Link
 							key={slug}
-							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60'
+							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-links-h-bg'
 							href={`articles/${slug}`}
 						>
 							<div className='flex pt-1 items-center text-shade-3 text-sm tracking-tight'>
@@ -34,8 +34,8 @@ const Home = () => {
 								<span>{readingTime.text}</span>
 							</div>
 
-							<h2 className='py-1 text-base text-gitonga-fg font-semibold leading-6 tracking-tight'>{title}</h2>
-							<p className='text-base tracking-tight text-shade-3'>{summary}...</p>
+							<h2 className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'>{title}</h2>
+							<p className='text-base tracking-tight text-shade-2'>{summary}...</p>
 						</Link>
 					</>
 				})

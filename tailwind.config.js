@@ -14,6 +14,9 @@ module.exports = {
 				"gitonga-bg": "var(--gitonga-bg)",
 				"gitonga-fg": "var(--gitonga-fg)",
 
+				"links-bg": "var(--links-h-bg)",
+				"links-h-bg": "var(--links-h-bg)",
+
 				"shade-1": "var(--shade-1)",
 				"shade-2": "var(--shade-2)",
 				"shade-3": "var(--shade-3)",
@@ -23,7 +26,7 @@ module.exports = {
 			fontFamily: {
 				default: ['var(--font-inter)'],
 				code: [
-					'var(--font-fira-code)',
+					'var(--font-operator)',
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
@@ -35,7 +38,7 @@ module.exports = {
 						},
 						'h2, h3, h4, h5, h6': {
 							position: 'relative',
-							scrollMarginTop: '128px',
+							scrollMarginTop: '96px',
 
 							'& a::before': {
 								content: 'none !important',
@@ -55,11 +58,11 @@ module.exports = {
 							fontWeight: 'normal',
 						},
 						'[data-rehype-pretty-code-title]': {
-							backgroundColor: 'var(--pre-bg)',
-							border: '1px solid var(--shade-5)',
-							borderTopLeftRadius: '8px',
-							borderTopRightRadius: '8px',
-							padding: '10px 20px',
+							backgroundColor: 'var(--links-bg)',
+							border: '1px solid var(--links-bg)',
+							borderTopLeftRadius: '4px',
+							borderTopRightRadius: '4px',
+							padding: '5px 20px',
 							fontSize: '14px',
 						},
 						'[data-rehype-pretty-code-title] ~ pre': {
@@ -73,11 +76,11 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							backgroundColor: 'var(--gitonga-bg)',
+							backgroundColor: 'var(--gitonga-fg)',
 							padding: '10px 0',
 							lineHeight: 2,
 							borderRadius: '4px',
-							border: '1px solid var(--shade-5)',
+							border: '1px solid var(--links-bg)',
 
 							'[data-line-numbers]': {
 								'.line::before': {
@@ -87,10 +90,10 @@ module.exports = {
 									width: '16px',
 									marginRight: '16px',
 									textAlign: 'right',
-									color: 'var(--gitonga-fg)',
+									color: 'var(--gitonga-bg)',
 								},
 								'.line.highlighted::before': {
-									color: 'var(--gitonga-fg)',
+									color: 'var(--gitonga-bg)',
 								},
 							},
 
@@ -106,12 +109,12 @@ module.exports = {
 
 								'> .line': {
 									padding: '0 20px 0 12px',
-									borderLeft: `2px solid transparent`,
+									borderLeft: '2px solid transparent',
 								},
 
 								'> .line.highlighted': {
-									borderLeftColor: 'rgba(68, 68, 239, 0.4)',
-									backgroundColor: 'rgba(68, 68, 239, 0.1)',
+									borderLeftColor: 'rgba(105, 105, 105, 0.6)',
+									backgroundColor: 'rgba(105, 105, 105, 0.2)',
 								},
 							},
 						},

@@ -8,20 +8,14 @@
 
 	--pre-bg: hsla(222, calc(89*1%), 50%, 5%);
 
-	--shade-1: #eaeaea;
+	--links-bg: #69696940;
+	--links-h-bg: #69696980;
+
+	--shade-1: #C9D1D9;
 	--shade-2: #999;
 	--shade-3: #6b7280;
 	--shade-4: #fafafa;
 	--shade-5: #eaeaea;
-}
-
-.dark:root {
-	--gitonga-bg: #0d1117;
-	--gitonga-fg: #fff;
-
-	--shade-1: #1f2937;
-	--shade-2: #4b5563;
-	--shade-3: #9ca3af;
 }
 
 ::-webkit-scrollbar {
@@ -36,6 +30,10 @@
 pre,
 code {
 	@apply !font-code;
+}
+
+.prose strong {
+	color: var(--shade-4);
 }
 
 [data-rehype-pretty-code-fragment] {

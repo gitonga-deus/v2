@@ -16,10 +16,10 @@ function ArticleCard(article: Article) {
 	return (
 		<Link
 			key={slug}
-			className="block select-none p-2 my-2 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60"
+			className="block select-none p-2 my-2 -mx-2 rounded-md duration-500 transition-colors hover:bg-links-h-bg"
 			href={`/articles/${slug}`}
 		>
-			<div className="flex py-1 items-center text-shade-3 gap-2 text-sm tracking-tight">
+			<div className="flex py-1 items-center text-shade-1 gap-2 text-sm tracking-tight">
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
@@ -27,8 +27,8 @@ function ArticleCard(article: Article) {
 				<span>{readingTime.text}</span>
 			</div>
 
-			<h2 className="py-1 text-base font-semibold leading-6 tracking-tight">{title}</h2>
-			<p className="text-base tracking-tight text-shade-3">{summary}...</p>
+			<h2 className="py-1 text-shade-1 text-base font-semibold leading-6 tracking-tight">{title}</h2>
+			<p className="text-base tracking-tight text-shade-2">{summary}</p>
 		</Link>
 	)
 }
@@ -39,8 +39,8 @@ export default function Page() {
 	);
 
 	return (
-		<section className='py-8'>
-			<h1 className="font-bold text-gitonga-fg tracking-tight text-2xl mb-1">Articles</h1>
+		<section className='py-4'>
+			<h1 className="font-bold text-gitonga-bg tracking-tight text-2xl mb-1">Articles</h1>
 
 			<p className='text-base leading-7 tracking-tight text-shade-2'>
 				Collection of random thoughts, explorations, and how-to guides.
