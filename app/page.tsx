@@ -21,7 +21,7 @@ const Home = () => {
 					return <>
 						<Link
 							key={slug}
-							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors'
+							className='block select-none p-2 my-1 -mx-2 rounded-md hover:bg-article-hover duration-500 hover:scale-100 transition-all'
 							href={`articles/${slug}`}
 						>
 							<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
@@ -48,7 +48,7 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 text-shade-1 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
+					className='my-2 text-shade-1 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight hover:bg-article-hover'
 				>
 					more articles...
 				</Link>

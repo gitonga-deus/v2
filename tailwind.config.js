@@ -14,6 +14,8 @@ module.exports = {
 				"color-1": "var(--color-1)",
 				"color-2": "var(--color-2)",
 
+				"article-hover": "var(--article-hover)",
+
 				"shade-1": "var(--shade-1)",
 				"shade-2": "var(--shade-2)",
 				"shade-3": "var(--shade-3)",

@@ -16,7 +16,7 @@ function ArticleCard(article: Article) {
 	return (
 		<Link
 			key={slug}
-			className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors'
+			className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-all hover:bg-article-hover hover:scale-100'
 			href={`articles/${slug}`}
 		>
 			<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
@@ -48,7 +48,7 @@ export default function Page() {
 		<section className='py-8'>
 			<h1 className="font-bold text-shade-1 tracking-tight text-2xl mb-1">Articles</h1>
 
-			<p className='text-base leading-7 tracking-tight text-shade-2'>
+			<p className='text-base leading-7 tracking-tight text-shade-3'>
 				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 
