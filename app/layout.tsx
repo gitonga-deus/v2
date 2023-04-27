@@ -6,7 +6,6 @@ import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
 
 import KBar from '@/components/kbar'
-import CustomToaster from './custom-toaster'
 import { Navbar, Footer } from '@/components/layout'
 
 import localFont from 'next/font/local'
@@ -25,17 +24,6 @@ export const metadata: Metadata = {
 		template: `%s ${site.titleTemplate}`,
 	},
 	description: site.description,
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
 	manifest: '../public/favicon/site.webmanifest',
 	keywords: site.keywords,
 	themeColor: '#0d1117',
@@ -73,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<main className='relative mx-auto mb-4 max-w-3xl px-8 py-20'>
 						{children}
 					</main>
-					<CustomToaster />
 					<Footer />
 				</KBar>
 				<Analytics />
