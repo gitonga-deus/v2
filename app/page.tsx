@@ -21,7 +21,7 @@ const Home = () => {
 					return <>
 						<Link
 							key={slug}
-							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors hover:bg-gray-200/60'
+							className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-colors'
 							href={`articles/${slug}`}
 						>
 							<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
@@ -35,11 +35,11 @@ const Home = () => {
 							</div>
 
 							<h2
-								className='py-1 text-base text-gitonga-fg font-semibold leading-6 tracking-tight'
+								className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'
 							>
 								{title}
 							</h2>
-							<p className='text-base tracking-tight text-shade-3'>{summary}</p>
+							<p className='text-base tracking-tight text-shade-2'>{summary}</p>
 						</Link>
 					</>
 				})
@@ -48,7 +48,7 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 hover:bg-gray-200/60 text-shade-2 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
+					className='my-2 text-shade-1 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight'
 				>
 					more articles...
 				</Link>

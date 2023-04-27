@@ -7,18 +7,18 @@ const Hero = () => {
 		<>
 			<div className='pt-8'>
 				<div className='space-y-2 md:max-w-full'>
-					<h2 className='text-2xl md:text-3xl font-semibold text-gitonga-fg tracking-tight'>
-						Hey <span className='wave'>👋🏻</span>, I&apos;m Deus
-					</h2>
+					<h1 className='text-2xl md:text-3xl font-semibold text-shade-1 tracking-tight'>
+						Deus Gitonga — Developer <code>&</code> Writer
+					</h1>
 
 					{heroText.map((text, i) => (
-						<p className='text-base leading-7 text-left text-shade-3 tracking-tight' key={i}>
+						<p className='text-base leading-7 text-left text-shade-2 tracking-tight' key={i}>
 							{text}
 						</p>
 					))}
 				</div>
 			</div>
-			<hr className='w-[8rem] mt-8 mb-4' />
+			<div className='w-32 border-b border-color-1 my-8 ' />
 		</>
 	)
 }

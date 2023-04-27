@@ -18,14 +18,14 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<div className="pt-6">
-			<div className='text-gitonga-fg my-8 -mx-2 flex items-center font-medium text-sm'>
+			<div className='my-8 -mx-2 flex items-center font-medium text-sm'>
 				<ChevronLeft />
-				<Link href='/articles'>
-					back
+				<Link href='/articles' className='text-shade-2'>
+					Back to Articles
 				</Link>
 			</div>
 
-			<h1 className='text-slate-900 text-xl md:text-3xl font-semibold'>
+			<h1 className='text-shade-1 text-xl md:text-3xl font-semibold'>
 				{title}
 			</h1>
 

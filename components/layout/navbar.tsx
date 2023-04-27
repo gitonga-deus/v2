@@ -61,11 +61,11 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className='fixed left-0 right-0 top-0 z-40 saturate-[1.0] backdrop-blur-[40px]'>
-				<div className='mx-auto flex h-[100px] border-b max-w-3xl items-center justify-between px-8'>
+			<header className='fixed left-0 right-0 top-0 z-40 saturate-[1.0] backdrop-blur-[10px]'>
+				<div className='mx-auto flex h-[80px] border-b border-color-1 max-w-3xl items-center justify-between px-8'>
 					<Link
 						href='/'
-						className='hover:bg-gray-200/60 py-2 px-3 rounded-md'
+						className='text-shade-1 py-2 px-3 rounded-md'
 					>
 						<Home />
 					</Link>
@@ -79,10 +79,10 @@ const Navbar = () => {
 										href={navLink.href}
 										className={clsx('rounded py-2 px-3 text-sm font-[500] transition-colors duration-300 tracking-tight',
 											{
-												['text-gitonga-fg hover:bg-gray-200/60']: navLink.href !== pathname
+												['text-shade-1']: navLink.href !== pathname
 											},
 											{
-												['bg-gray-200/60 text-gitonga-fg']: navLink.href === pathname
+												['bg-color-2 text-shade-1']: navLink.href === pathname
 											}
 										)}
 									>
@@ -90,12 +90,12 @@ const Navbar = () => {
 									</Link>
 								</li>
 							))}
-							<div className='w-[1px] h-[20px] mx-[5px] bg-shade-2' />
+							<div className='w-[1px] h-[20px] mx-[5px] bg-color-2' />
 						</ul>
 
 
 						<button
-							className='flex py-2 px-3 items-center justify-center rounded duration-300 hover:bg-gray-200/60 font-bold hover:text-black'
+							className='flex py-1 px-2 items-center justify-center rounded duration-300 text-shade-1'
 							onClick={() => query.toggle()}
 							type='button'
 							aria-label='Command Bar'
