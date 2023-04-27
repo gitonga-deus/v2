@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-	--gitonga-bg: hsla(223, 15%, 98%, 1);
-	--gitonga-fg: #0d1117;
+	--theme: #0d1117;
 
-	--pre-bg: hsla(222, calc(89*1%), 50%, 5%);
+	--color-1: #69696940;
+	--color-2: #69696980;
 
 	--shade-1: #eaeaea;
 	--shade-2: #999;
@@ -15,75 +15,22 @@
 	--shade-5: #eaeaea;
 }
 
-.dark:root {
-	--gitonga-bg: #0d1117;
-	--gitonga-fg: hsla(223, 15%, 98%, 1);
-
-	--pre-bg: ;
-
-	--shade-1: #1f2937;
-	--shade-2: #4b5563;
-	--shade-3: #98A0B3;
-	--shade-4: ;
-	--shade-5: ;
-}
-
 ::-webkit-scrollbar {
 	width: 6px;
 	height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-	@apply bg-gitonga-fg;
+	@apply bg-color-2;
 }
 
-.wave {
-	animation-name: wave-animation;
-	animation-duration: 2.5s;
-	animation-iteration-count: infinite;
-	transform-origin: 70% 70%;
-	display: inline-block;
-}
-
-@keyframes wave-animation {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	10% {
-		transform: rotate(14deg);
-	}
-
-	/* The following five values can be played with to make the waving more or less extreme */
-	20% {
-		transform: rotate(-8deg);
-	}
-
-	30% {
-		transform: rotate(14deg);
-	}
-
-	40% {
-		transform: rotate(-4deg);
-	}
-
-	50% {
-		transform: rotate(10deg);
-	}
-
-	60% {
-		transform: rotate(0deg);
-	}
-
-	/* Reset for the last half to pause */
-	100% {
-		transform: rotate(0deg);
-	}
+.prose strong {
+	color: var(--shade-1);
 }
 
 pre,
 code {
-	@apply !font-code;
+	@apply font-code;
 }
 
 [data-rehype-pretty-code-fragment] {
@@ -112,5 +59,6 @@ span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
 
 
 a.animated {
+	color: var(--shade-1);
 	@apply relative after:absolute after:bg-neutral-400 dark:bg-neutral-600 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }

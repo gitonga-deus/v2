@@ -7,7 +7,7 @@ const CustomToaster = () => {
 		<Toaster
 			position='top-right'
 			toastOptions={{
-				className: '!bg-shade-1 !text-gitonga-fg !border !border-shade-5',
+				className: '!bg-shade-1 !text-theme !border !border-shade-5',
 			}}
 		/>
 	)

@@ -2,7 +2,7 @@ import { Options } from 'rehype-pretty-code'
 
 export const rehypePrettyCodeOptions: Partial<Options> = {
 	theme: {
-		light: 'github-light',
+		light: 'min-dark',
 		dark: 'github-dark',
 	},
 	onVisitLine(node: any) {

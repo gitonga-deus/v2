@@ -17,19 +17,19 @@ const Results = () => {
 			items={results}
 			onRender={({ item, active }) =>
 				typeof item === 'string' ? (
-					<div className='select-none px-4 pb-2 pt-4 text-[10px] uppercase tracking-[1px]'>
+					<div className='select-none px-4 pb-2 pt-4 text-[10px] text-shade-1 uppercase tracking-[1px]'>
 						{item}
 					</div>
 				) : (
 					<div
 						className={clsx(
 							'mx-3 flex cursor-pointer items-center justify-between rounded px-3 py-3 transition-colors',
-							active ? 'bg-gray-200/60' : 'bg-transparent'
+							active ? 'bg-color-2' : 'bg-transparent'
 						)}
 					>
-						<div className='flex items-center'>
+						<div className='flex items-center text-shade-1'>
 							{item.icon && <div className='mr-4'>{item.icon}</div>}
-							<span className='text-md'>{item.name}</span>
+							<span className='text-base'>{item.name}</span>
 						</div>
 					</div>
 				)
@@ -73,10 +73,10 @@ const KBar = (props: KBarProps) => {
 		<>
 			<KBarProvider actions={actions}>
 				<KBarPortal>
-					<KBarPositioner className='z-50 bg-[#0d1117]/10 backdrop-blur'>
-					<KBarAnimator className='w-full max-w-lg rounded-lg border bg-gitonga-bg'>
+					<KBarPositioner className='z-50 bg-theme/10 backdrop-blur'>
+						<KBarAnimator className='w-full max-w-lg rounded-lg border border-color-1 bg-theme'>
 							<KBarSearch
-								className='w-full bg-transparent px-4 py-3 outline-none'
+								className='w-full bg-transparent text-shade-2 px-4 py-3 outline-none'
 								defaultPlaceholder='Type command or search'
 							/>
 							<Results />
