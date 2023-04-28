@@ -2,7 +2,10 @@
 
 import clsx from 'clsx'
 import { WithChildren } from '@/types/common'
-import { Code, GitHub, LinkedIn } from './icons'
+
+import { BsLinkedin } from 'react-icons/bs'
+import { SlSocialGithub } from 'react-icons/sl'
+import { VscSourceControl } from 'react-icons/vsc'
 import {
 	Action, KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarSearch, KBarResults, useMatches
 } from 'kbar'
@@ -49,7 +52,7 @@ const KBar = (props: KBarProps) => {
 			section: 'General',
 			perform: () =>
 				window.open('https://github.com/gitonga-deus/v2', '_blank'),
-			icon: <Code />,
+			icon: <VscSourceControl size={22} />,
 		},
 		{
 			id: 'github',
@@ -57,7 +60,7 @@ const KBar = (props: KBarProps) => {
 			keywords: 'github',
 			section: 'Social Links',
 			perform: () => window.open('https://github.com/gitonga-deus', '_blank'),
-			icon: <GitHub />,
+			icon: <SlSocialGithub size={22} />,
 		},
 		{
 			id: 'linkedin',
@@ -65,7 +68,7 @@ const KBar = (props: KBarProps) => {
 			keywords: 'linkedin',
 			section: 'Social Links',
 			perform: () => window.open('https://linkedin.com/in/gitonga-deus/', '_blank'),
-			icon: <LinkedIn />,
+			icon: <BsLinkedin size={22} />,
 		},
 	]
 

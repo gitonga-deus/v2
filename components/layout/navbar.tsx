@@ -8,7 +8,10 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useKBar } from 'kbar'
 
-import { Command, MenuClose, Menu, Home } from '@/components/icons'
+import { GoHome } from 'react-icons/go'
+import { RiCommandFill } from 'react-icons/ri'
+import { IoCloseOutline } from 'react-icons/io5'
+import { RxTextAlignRight } from 'react-icons/rx'
 
 const navItems = [
 	{
@@ -20,14 +23,14 @@ const navItems = [
 const MobileMenu = ({ navShow, onToggleNav }: any) => {
 	return (
 		<div className='md:hidden'>
-			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-[10px]`}>
+			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-xl`}>
 				<nav className='relative space-y-2 z-40'>
 					{navItems.map((navLink, i) => (
-						<div key={i} className='px-7'>
+						<div key={i} className='px-8'>
 							<Link
 								href={navLink.href}
 								title={navLink.text}
-								className='flex my-3 border-gray-600 border-b-[1px] items-center text-sm font-[500] leading-8 tracking-normal text-black'
+								className='flex my-3 border-color-1 border-b text-base font-medium leading-8 tracking-normal text-shade-3'
 								onClick={onToggleNav}
 							>
 								{navLink.text}
@@ -67,7 +70,7 @@ const Navbar = () => {
 						href='/'
 						className='text-shade-1 py-2 px-3 rounded-md'
 					>
-						<Home />
+						<GoHome size={22} />
 					</Link>
 
 
@@ -100,21 +103,21 @@ const Navbar = () => {
 							type='button'
 							aria-label='Command Bar'
 						>
-							<Command />
+							<RiCommandFill size={22} />
 						</button>
 
 
 						<div className="md:hidden">
 							<button
 								type='button'
-								className='mx-1 h-8 w-8 rounded text-zinc-800 dark:text-white'
+								className='mx-1 h-8 w-8 rounded text-shade-1'
 								aria-label='Toggle Menu'
 								onClick={onToggleNav}
 							>
 								{navShow ? (
-									<MenuClose />
+									<IoCloseOutline size={24} />
 								) : (
-									<Menu />
+									<RxTextAlignRight size={24} />
 								)}
 							</button>
 						</div>
