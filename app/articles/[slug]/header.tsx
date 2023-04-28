@@ -3,10 +3,6 @@
 import React from 'react'
 import { parseISO, format } from 'date-fns'
 
-import Link from 'next/link'
-import { ChevronLeft } from '@/components/icons'
-
-
 type HeaderProps = {
 	date: string
 	title: string
