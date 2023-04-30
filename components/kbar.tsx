@@ -47,7 +47,7 @@ const KBar = (props: KBarProps) => {
 	const actions: Action[] = [
 		{
 			id: 'source-code',
-			name: 'Source code',
+			name: 'Source Code',
 			keywords: 'source code github',
 			section: 'General',
 			perform: () =>

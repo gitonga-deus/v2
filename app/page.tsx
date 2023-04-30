@@ -11,7 +11,7 @@ const Home = () => {
 		<section>
 			<Intro />
 
-			<h1 className='text-lg text-shade-2 tracking-tight font-semibold leading-8'>articles</h1>
+			<h1 className='text-lg text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
 
 			{allArticles.slice(0, 6).sort((a, b) => (
 				compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
@@ -24,21 +24,19 @@ const Home = () => {
 							className='block select-none p-2 my-1 -mx-2 rounded-md hover:bg-article-hover duration-500 hover:scale-100 transition-all'
 							href={`articles/${slug}`}
 						>
-							<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
+							<div className='flex pt-1 items-center gap-1 text-shade-2 text-sm tracking-tight'>
 								<time dateTime={publishedAt}>
 									{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 								</time>
-								<span className="mx-1">
-									&#8226;
-								</span>
+								&#8226;
 								<span>{readingTime.text}</span>
 							</div>
 
-							<h2
+							<h1
 								className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'
 							>
 								{title}
-							</h2>
+							</h1>
 							<p className='text-base tracking-tight text-shade-2'>{summary}</p>
 						</Link>
 					</>
@@ -48,14 +46,13 @@ const Home = () => {
 			<div className='flex'>
 				<Link
 					href='/articles'
-					className='my-2 text-shade-1 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight hover:bg-article-hover'
+					className='my-2 text-shade-1 p-2 -mx-2 rounded-md flex items-center gap-4 text-base font-medium tracking-tight duration-500 hover:scale-100 transition-all hover:bg-article-hover'
 				>
 					more articles...
 				</Link>
 			</div>
 
-			{/* <hr className='w-[8rem] mt-8 mb-4' /> */}
-
+			
 		</section>
 	)
 }

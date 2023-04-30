@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 :root {
-	--theme: #0d1117;
+	--theme: #151718;
 
 	--color-1: #69696940;
 	--color-2: #69696980;
 
-	--article-hover: rgb(44, 49, 63, 0.3);
+	--article-hover: #292c2f99;
 
 	--shade-1: #eaeaea;
 	--shade-2: #999;
 	--shade-3: #c9d1d9;
-	
 }
 
 ::-webkit-scrollbar {
@@ -60,6 +59,6 @@ span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
 
 
 a.animated {
-	color: var(--shade-1);
+	color: var(--shade-3);
 	@apply relative after:absolute after:bg-neutral-400 dark:bg-neutral-600 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }

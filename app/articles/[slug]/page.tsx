@@ -53,7 +53,7 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 		notFound()
 	}
 
-	const { title, summary, publishedAt } = article;
+	const { title, summary, publishedAt, author } = article;
 
 	const jsonLd: WithContext<Article> = {
 		'@context': 'https://schema.org',
@@ -82,7 +82,7 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 			/>
 
 			{/* Main Content */}
-			<Header title={title} readingTime={article.readingTime.text} date={publishedAt} />
+			<Header title={title} readingTime={article.readingTime.text} date={publishedAt} author={author} />
 			<Content slug={slug} article={article} />
 		</>
 	)
