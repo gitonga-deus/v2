@@ -30,6 +30,11 @@ const Article = defineDocumentType(() => ({
 			description: "The date of the article",
 			required: true,
 		},
+		author: {
+			type: "string",
+			description: "The author of the article",
+			required: true,
+		}
 	},
 	computedFields: {
 		slug: {
