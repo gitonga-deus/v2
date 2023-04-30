@@ -29,11 +29,11 @@ function ArticleCard(article: Article) {
 				<span>{readingTime.text}</span>
 			</div>
 
-			<h2
+			<h1
 				className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'
 			>
 				{title}
-			</h2>
+			</h1>
 			<p className='text-base tracking-tight text-shade-2'>{summary}</p>
 		</Link>
 	)
@@ -45,16 +45,16 @@ export default function Page() {
 	);
 
 	return (
-		<section className='py-8'>
-			<h1 className="font-bold text-shade-1 tracking-tight text-2xl mb-1">Articles</h1>
+		<div className='py-8'>
+			<h1 className="font-bold text-shade-1 tracking-tight text-3xl mb-1">Articles</h1>
 
-			<p className='text-base leading-7 tracking-tight text-shade-3'>
+			<p className='text-base leading-7 tracking-tight text-shade-2'>
 				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 
 			{posts.map((post, i) => (
 				<ArticleCard key={i} {...post} />
 			))}
-		</section>
+		</div>
 	)
 }
