@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+
 import { notFound } from 'next/navigation';
 import { Article, WithContext } from 'schema-dts'
 
@@ -6,7 +7,8 @@ import { allArticles } from 'contentlayer/generated';
 
 import Header from './header'
 import Content from './content';
-import { site } from '@/config/site'
+
+const url = 'https://gitonga.me'
 
 type ArticlesPageProp = {
 	params: {
@@ -33,13 +35,16 @@ export const generateMetadata = (props: ArticlesPageProp): Metadata => {
 		title: article.title,
 		description: article.summary,
 		openGraph: {
-			url: `${site.url}/articles/${params.slug}`,
-			type: 'article',
 			title: article.title,
-			siteName: site.name,
 			description: article.summary,
-			locale: 'en-US',
-			authors: site.url,
+			type: 'article',
+			publishedTime: article.publishedAt,
+			url: `https://gitonga.me/articles/${params.slug}`,
+			images: [
+				// {
+				// 	url: ogImage
+				// }
+			]
 		},
 	}
 }
@@ -64,13 +69,13 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 		datePublished: publishedAt,
 		author: {
 			'@type': 'Person',
-			name: site.name,
-			url: site.url,
+			name: 'Deus Gitonga',
+			url: url,
 		},
 		publisher: {
 			'@type': 'Person',
-			name: site.name,
-			url: site.url,
+			name: 'Deus Gitonga',
+			url: url,
 		},
 	}
 
@@ -82,8 +87,17 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 			/>
 
 			{/* Main Content */}
-			<Header title={title} readingTime={article.readingTime.text} date={publishedAt} author={author} />
-			<Content slug={slug} article={article} />
+			<Header
+				title={title}
+				author={author}
+				date={publishedAt}
+				readingTime={article.readingTime.text}
+			/>
+
+			<Content
+				slug={slug}
+				article={article}
+			/>
 		</>
 	)
 }
