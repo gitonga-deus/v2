@@ -71,26 +71,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			className={clsx(karla.variable, operatorMono.variable, 'scroll-smooth')}
 		>
 			<body className='bg-theme font-default antialiased select-text selection:bg-color-2'>
-				<svg
-					className="pointer-events-none fixed top-0 left-0 isolate z-50 opacity-[0.2] mix-blend-normal"
-					width="100%"
-					height="100%"
-				>
-					<filter id="v2">
+				<svg id="texture">
+					<filter id="noise">
 						<feTurbulence
-							type="fractalNoise"
-							baseFrequency="0.75"
 							numOctaves="4"
+							baseFrequency=".8"
+							type="fractalNoise"
 							stitchTiles="stitch"
 						/>
-						<feColorMatrix type="saturate" values="0" />
+						<feColorMatrix
+							values="0"
+							type="saturate"
+						/>
 					</filter>
-					<rect
-						width="100%"
-						height="100%"
-						filter="url(#v2)"
-					></rect>
+					<rect width="100%" height="100%" filter="url(#noise)"></rect>
 				</svg>
+				
 				<KBar>
 					<Navbar />
 					<main className='relative mx-auto mb-4 max-w-3xl px-8 py-20'>
