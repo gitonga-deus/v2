@@ -51,8 +51,6 @@ const Home = () => {
 					more articles...
 				</Link>
 			</div>
-
-			
 		</section>
 	)
 }

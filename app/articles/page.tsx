@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 import { allArticles, Article } from 'contentlayer/generated';
 
-import { compareDesc, format, parseISO } from 'date-fns';
+import { compareDesc, format, parseISO } from 'date-fns'
 
 export const metadata: Metadata = {
 	title: 'Articles',
@@ -19,13 +19,11 @@ function ArticleCard(article: Article) {
 			className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-all hover:bg-article-hover hover:scale-100'
 			href={`articles/${slug}`}
 		>
-			<div className='flex pt-1 items-center text-shade-2 text-sm tracking-tight'>
+			<div className='flex pt-1 items-center gap-1 text-shade-2 text-sm tracking-tight'>
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
-				<span className="mx-1">
-					&#8226;
-				</span>
+				&#8226;
 				<span>{readingTime.text}</span>
 			</div>
 
