@@ -25,7 +25,7 @@ module.exports = {
 			fontFamily: {
 				default: ['var(--font-karla)'],
 				code: [
-					'var(--font-operator-mono)',
+					'var(--font-jebrain)',
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
