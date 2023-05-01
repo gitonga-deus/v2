@@ -32,7 +32,7 @@ const Header = (props: HeaderProps) => {
 					</time>
 				</div>
 
-				<div className='flex gap-1'>
+				<div className='flex gap-1 text-shade-3'>
 					<span>{readingTime}</span>
 				</div>
 			</div>
