@@ -8,7 +8,7 @@ const Hero = () => {
 			<div className='pt-8'>
 				<div className='space-y-2 md:max-w-full'>
 					<h1 className='text-2xl md:text-3xl font-semibold text-shade-1 tracking-tight'>
-						Deus Gitonga — Developer and Writer
+						Deus Gitonga — Developer <code>&</code> Writer
 					</h1>
 
 					{heroText.map((text, i) => (

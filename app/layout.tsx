@@ -10,19 +10,19 @@ import BackToTop from '@/components/backToTop'
 import { Navbar, Footer } from '@/components/layout'
 
 import localFont from 'next/font/local'
-import { Karla, JetBrains_Mono } from 'next/font/google'
-
-const jetbrain = JetBrains_Mono({
-	variable: '--font-jetbrain',
-	weight: ['400', '500', '600', '700'],
-	subsets: ['latin']
-});
+import { Karla } from 'next/font/google'
 
 const karla = Karla({
 	display: 'swap',
 	subsets: ['latin'],
 	variable: '--font-karla',
 	weight: ['400', '500', '600', '700']
+});
+
+const operatorMono = localFont({
+	src: '../public/fonts/OperatorMono-Book.woff2',
+	weight: '400',
+	variable: '--font-operator-mono',
 });
 
 export const metadata: Metadata = {
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={clsx(karla.variable, jetbrain.variable, 'scroll-smooth')}
+			className={clsx(karla.variable, operatorMono.variable, 'scroll-smooth')}
 		>
 			<body className='bg-theme font-default antialiased select-text selection:bg-color-2'>
 				<svg id="texture">
