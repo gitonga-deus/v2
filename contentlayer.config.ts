@@ -2,13 +2,11 @@ import {
 	defineDocumentType,
 	makeSource,
 } from 'contentlayer/source-files'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypePrettyCode from 'rehype-pretty-code'
-import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
 import readingTime from 'reading-time'
-
-import { s } from 'hastscript'
+import rehypePrettyCode from 'rehype-pretty-code'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
 import { getLastUpdatedDate } from './lib/lastUpdated'
