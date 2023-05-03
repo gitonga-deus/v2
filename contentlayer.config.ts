@@ -8,6 +8,8 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import readingTime from 'reading-time'
 
+import { s } from 'hastscript'
+
 import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
 import { getLastUpdatedDate } from './lib/lastUpdated'
 
@@ -61,7 +63,7 @@ export default makeSource({
 				rehypeAutolinkHeadings,
 				{
 					properties: {
-						className: ['absolute left-0 top-0 bottom-0 w-full group'],
+						className: ['anchor'],
 					},
 				},
 			],
