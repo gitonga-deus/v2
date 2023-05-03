@@ -31,11 +31,6 @@ const Article = defineDocumentType(() => ({
 			description: "The date of the article",
 			required: true,
 		},
-		isPublished: {
-			type: 'boolean',
-			description: 'Whether the blog post has been published',
-			required: true,
-		}
 	},
 	computedFields: {
 		slug: {
