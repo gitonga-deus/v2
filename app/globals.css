@@ -41,6 +41,11 @@
 	color: var(--shade-1);
 }
 
+.prose blockquote{
+	color: var(--shade-3);
+	font-style: normal;
+}
+
 pre,
 code {
 	@apply font-code;
