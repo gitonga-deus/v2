@@ -44,7 +44,7 @@ export default function Page() {
 
 	return (
 		<div className='py-8'>
-			<h1 className="font-bold text-shade-1 tracking-tight text-3xl mb-1">Articles</h1>
+			<h1 className="font-bold text-shade-1 tracking-tight text-3xl mb-2">Articles</h1>
 
 			<p className='text-base leading-7 tracking-tight text-shade-2'>
 				Collection of random thoughts, explorations, and how-to guides.
