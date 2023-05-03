@@ -9,14 +9,7 @@ import KBar from '@/components/kbar'
 import BackToTop from '@/components/backToTop'
 import { Navbar, Footer } from '@/components/layout'
 
-import { Karla, Roboto_Mono, Inter } from 'next/font/google'
-
-const inter = Inter ({
-	display: 'swap',
-	subsets: ['latin'],
-	variable: '--font-inter',
-	weight: ['400', '500', '600', '700']
-})
+import { Karla, Roboto_Mono } from 'next/font/google'
 
 const karla = Karla({
 	display: 'swap',
