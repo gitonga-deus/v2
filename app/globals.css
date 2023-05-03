@@ -4,15 +4,15 @@
 
 #texture {
 	position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: calc(100vh + 200px);
-    opacity: .25;
-    pointer-events: none;
-    transform: translateY(0);
-    filter: contrast(40%) brightness(70%);
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: calc(100vh + 200px);
+	opacity: .25;
+	pointer-events: none;
+	transform: translateY(0);
+	filter: contrast(40%) brightness(70%);
 }
 
 :root {
@@ -29,7 +29,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
+	width: 5px;
 	height: 3px;
 }
 
@@ -41,9 +41,32 @@
 	color: var(--shade-1);
 }
 
-.prose blockquote{
-	color: var(--shade-3);
+.prose blockquote {
+	color: var(--shade-2);
 	font-style: normal;
+}
+
+.prose .anchor {
+	@apply absolute invisible no-underline;
+
+	margin-left: -1em;
+	padding-right: 0.5em;
+	width: 80%;
+	max-width: 700px;
+	cursor: pointer;
+}
+
+.anchor:hover {
+	@apply visible;
+}
+
+.prose .anchor:after {
+	@apply text-neutral-300;
+	content: '#';
+}
+
+.prose *:hover>.anchor {
+	@apply visible;
 }
 
 pre,
@@ -54,27 +77,6 @@ code {
 [data-rehype-pretty-code-fragment] {
 	@apply relative;
 }
-
-div[data-rehype-pretty-code-title][data-theme='light'],
-div[data-rehype-pretty-code-fragment] pre[data-theme='light'],
-div[data-rehype-pretty-code-fragment] pre[data-theme='light']~button {
-	@apply block dark:hidden;
-}
-
-div[data-rehype-pretty-code-title][data-theme='dark'],
-div[data-rehype-pretty-code-fragment] pre[data-theme='dark'],
-div[data-rehype-pretty-code-fragment] pre[data-theme='dark']~button {
-	@apply hidden dark:block;
-}
-
-span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
-	@apply inline dark:hidden;
-}
-
-span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
-	@apply hidden dark:inline;
-}
-
 
 a.animated {
 	color: var(--shade-3);
