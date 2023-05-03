@@ -8,12 +8,11 @@ import { parseISO, format } from 'date-fns'
 type HeaderProps = {
 	date: string
 	title: string
-	author: string
 	readingTime: string
 }
 
 const Header = (props: HeaderProps) => {
-	const { date, title, readingTime, author } = props
+	const { date, title, readingTime } = props
 
 	return (
 		<div className="pt-10 pb-2">
@@ -23,16 +22,12 @@ const Header = (props: HeaderProps) => {
 				</Balancer>
 			</h1>
 
-			<div className='flex py-2 justify-between items-center text-shade-3 text-sm gap-1 tracking-tight'>
+			<div className='flex py-2 items-center text-shade-3 text-sm gap-2 tracking-tight'>
 				<div className='flex gap-1'>
-					<span>{author}</span>
-					/
 					<time dateTime={date}>
 						{format(parseISO(date), 'MMM dd, yyyy')}
 					</time>
-				</div>
-
-				<div className='flex gap-1 text-shade-3'>
+					&#8226;
 					<span>{readingTime}</span>
 				</div>
 			</div>
