@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Intro from '@/components/intro'
+import Hero from '@/components/hero'
 
 import { allArticles } from 'contentlayer/generated';
 
@@ -9,7 +9,7 @@ import { compareDesc, format, parseISO } from 'date-fns';
 const Home = () => {
 	return (
 		<section>
-			<Intro />
+			<Hero />
 
 			<h1 className='text-lg text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
 
