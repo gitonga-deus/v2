@@ -83,7 +83,7 @@ const twoSum = (nums, target) => {
 }
 ```
 
-In this algorithm, we use a Map object to store the indices of the elements we've already seen. We iterate through the array once, and for each element, we check if the complement is already in the Map. If it is, we return the indices of the current element and its complement. Otherwise, we add the current element and its index to the Map.
+In this algorithm, we use a `Map` object to store the indices of the elements we've already seen. We iterate through the array once, and for each element, we check if the complement is already in the `Map`. If it is, we return the indices of the current element and its complement. Otherwise, we add the current element and its index to the `Map`.
 
 This algorithm has a time complexity of O(n), which is much better than O(n<sup>2</sup>) for large arrays. It has a space complexity of O(n) as well, due to the hash table we use to store the indices.
 
