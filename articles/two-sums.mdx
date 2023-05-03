@@ -2,14 +2,31 @@
 title: "The Two Sum Problem: Finding pairs of Numbers that Add Up to a Target"
 summary: "Learn how to solve the Two Sum problem in JavaScript using a hash table for O(n) time complexity."
 publishedAt: "2023-05-01"
-author: "Deus Gitonga"
 ---
 
 The **Two Sum** problem is a classic algorithmic problem that asks you to find pairs of numbers in an array that add up to a target value. The problem statement is as follows:
 
 >Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
 
-### The Brute Force Approach
+### Example 1: 
+
+```js
+Input: nums = [2, 7, 11, 15], target = 9
+Output: [0, 1]
+
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+```
+
+### Example 2:
+
+```js
+Input: nums = [3, 2, 4], target = 6
+Output: [1, 2]
+
+Explanation: Because nums[1] + nums[2] == 6, we return [1, 2].
+```
+
+## The Brute Force Approach
 
 One way to solve the **Two Sum** problem is to use a brute force approach, which involves checking every pair of numbers in the array to see if they add up to the target value. Here's the algorithm:
 
@@ -23,6 +40,7 @@ Here's the JavaScript code to implement this algorithm:
 
 ```js title="javascript" showLineNumbers
 const twoSum = (nums, target) => {
+	
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
@@ -36,7 +54,7 @@ const twoSum = (nums, target) => {
 
 This algorithm has a time complexity of O(n<sup>2</sup>), since we're checking every pair of numbers in the array. It has a space complexity of O(1), since we're not using any additional data structures.
 
-### The Hash Table Approach
+## The Hash Table Approach
 
 A more efficient way to solve the **Two Sum** problem is to use a hash table to store the indices of the elements in the array. Here's the algorithm:
 
