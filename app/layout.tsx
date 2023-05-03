@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={clsx(inter.variable, roboto.variable, 'scroll-smooth')}
+			className={clsx(karla.variable, roboto.variable, 'scroll-smooth')}
 		>
 			<body className='bg-theme font-default antialiased select-text selection:bg-color-2'>
 				<svg id="texture">

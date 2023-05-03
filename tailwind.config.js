@@ -22,7 +22,7 @@ module.exports = {
 				"shade-5": "var(--shade-5)",
 			},
 			fontFamily: {
-				default: ['var(--font-inter)'],
+				default: ['var(--font-karla)'],
 				code: [
 					'var(--font-roboto)',
 				],
