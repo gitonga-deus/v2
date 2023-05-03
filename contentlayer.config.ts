@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm'
 import readingTime from 'reading-time'
 
 import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
+import { getLastUpdatedDate } from './lib/lastUpdated'
 
 const Article = defineDocumentType(() => ({
 	name: "Article",
@@ -30,9 +31,9 @@ const Article = defineDocumentType(() => ({
 			description: "The date of the article",
 			required: true,
 		},
-		author: {
-			type: "string",
-			description: "The author of the article",
+		isPublished: {
+			type: 'boolean',
+			description: 'Whether the blog post has been published',
 			required: true,
 		}
 	},
@@ -44,6 +45,11 @@ const Article = defineDocumentType(() => ({
 		readingTime: {
 			type: 'json',
 			resolve: (doc) => readingTime(doc.body.raw),
+		},
+		lastUpdatedDate: {
+			type: 'date',
+			description: 'The date the post was last updated',
+			resolve: getLastUpdatedDate,
 		},
 	},
 }));
