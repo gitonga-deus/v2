@@ -22,7 +22,7 @@ module.exports = {
 				"shade-5": "var(--shade-5)",
 			},
 			fontFamily: {
-				default: ['var(--font-karla)'],
+				default: ['var(--font-inter)'],
 				code: [
 					'var(--font-roboto)',
 				],
@@ -33,12 +33,6 @@ module.exports = {
 					css: {
 						a: {
 							textDecoration: 'none',
-						},
-						'blockquote p:first-of-type::before': {
-							content: 'none'
-						},
-						'blockquote p:first-of-type::after': {
-							content: 'none'
 						},
 						'h2, h3, h4, h5, h6': {
 							position: 'relative',
