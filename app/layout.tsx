@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang='en'
-			className={clsx(karla.variable,roboto.variable, 'scroll-smooth')}
+			className={clsx(karla.variable, roboto.variable, 'scroll-smooth')}
 		>
 			<body className='bg-theme font-default antialiased select-text selection:bg-color-2'>
 				<svg id="texture">
@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					</filter>
 					<rect width="100%" height="100%" filter="url(#noise)"></rect>
 				</svg>
-				
+
 				<KBar>
 					<Navbar />
 					<main className='relative mx-auto mb-4 max-w-3xl px-8 py-20'>

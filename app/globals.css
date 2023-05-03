@@ -46,7 +46,7 @@
 	font-style: normal;
 }
 
-.prose .anchor {
+/* .prose .anchor {
 	@apply absolute invisible no-underline;
 
 	margin-left: -1em;
@@ -67,7 +67,7 @@
 
 .prose *:hover>.anchor {
 	@apply visible;
-}
+} */
 
 pre,
 code {
