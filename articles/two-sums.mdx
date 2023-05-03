@@ -1,0 +1,76 @@
+---
+title: "The Two Sum Problem: Finding pairs of Numbers that Add Up to a Target"
+summary: "Learn how to solve the Two Sum problem in JavaScript using a hash table for O(n) time complexity."
+publishedAt: "2023-05-01"
+author: "Deus Gitonga"
+---
+
+The **Two Sum** problem is a classic algorithmic problem that asks you to find pairs of numbers in an array that add up to a target value. The problem statement is as follows:
+
+>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+
+### The Brute Force Approach
+
+One way to solve the **Two Sum** problem is to use a brute force approach, which involves checking every pair of numbers in the array to see if they add up to the target value. Here's the algorithm:
+
+1. Traverse the array from left to right.
+2. For each element, traverse the rest of the array from the next element to the end.
+3. For each pair of elements, check if they add up to the target value.
+4. If a pair is found, return the indices of the two elements.
+5. If no pair is found, return an empty array.
+
+Here's the JavaScript code to implement this algorithm:
+
+```js title="javascript" showLineNumbers
+const twoSum = (nums, target) => {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+    return [];
+}
+```
+
+This algorithm has a time complexity of O(n<sup>2</sup>), since we're checking every pair of numbers in the array. It has a space complexity of O(1), since we're not using any additional data structures.
+
+### The Hash Table Approach
+
+A more efficient way to solve the **Two Sum** problem is to use a hash table to store the indices of the elements in the array. Here's the algorithm:
+
+1. Create an empty hash table.
+2. Traverse the array from left to right.
+3. For each element, check if the complement `(target - element)` is already in the hash table. If it is, return the indices of the current element and the complement.
+4. If the complement is not in the hash table, add the current element and its index to the hash table.
+5. If no solution is found, return an empty array.
+
+Here's the JavaScript code to implement this algorithm:
+
+```js title="javascript" showLineNumbers {4}
+const twoSum = (nums, target) => {
+
+	// create an empty hash table
+    const complements = new Map(); 
+
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (complements.has(complement)) {
+            return [complements.get(complement), i];
+        }
+        complements.set(nums[i], i);
+    }
+    return [];
+}
+```
+
+In this algorithm, we use a Map object to store the indices of the elements we've already seen. We iterate through the array once, and for each element, we check if the complement is already in the Map. If it is, we return the indices of the current element and its complement. Otherwise, we add the current element and its index to the Map.
+
+This algorithm has a time complexity of O(n), which is much better than O(n<sup>2</sup>) for large arrays. It has a space complexity of O(n) as well, due to the hash table we use to store the indices.
+
+### Conclusion
+
+In conclusion, the **Two Sum** problem is a common coding challenge that requires finding pairs of numbers in an array that add up to a target value. In this article, we explored two solutions to the problem: a brute force approach with O(n<sup>2</sup>) time complexity and a more efficient approach using a hash table with O(n) time complexity. By using the hash table approach, we can solve the problem much faster, especially for large arrays.
+
+You can find the problem on [LeetCode](https://leetcode.com/problems/two-sum/)
