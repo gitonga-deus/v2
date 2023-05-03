@@ -9,7 +9,6 @@ import KBar from '@/components/kbar'
 import BackToTop from '@/components/backToTop'
 import { Navbar, Footer } from '@/components/layout'
 
-import localFont from 'next/font/local'
 import { Karla, Roboto_Mono } from 'next/font/google'
 
 const karla = Karla({
@@ -23,12 +22,6 @@ const roboto = Roboto_Mono({
 	variable: '--font-roboto',
 	subsets: ['latin']
 })
-
-const operatorMono = localFont({
-	src: '../public/fonts/OperatorMono-Book.woff2',
-	weight: '400',
-	variable: '--font-operator-mono',
-});
 
 export const metadata: Metadata = {
 	title: {
