@@ -38,7 +38,7 @@ function ArticleCard(article: Article) {
 }
 
 export default function Page() {
-	const posts = allArticles.sort((a, b) =>
+	const articles = allArticles.sort((a, b) =>
 		compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
 	);
 
@@ -50,8 +50,8 @@ export default function Page() {
 				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 
-			{posts.map((post, i) => (
-				<ArticleCard key={i} {...post} />
+			{articles.map((article, i) => (
+				<ArticleCard key={i} {...article} />
 			))}
 		</div>
 	)
