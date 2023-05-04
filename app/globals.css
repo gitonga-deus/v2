@@ -51,7 +51,7 @@
 
 	margin-left: -1em;
 	padding-right: 0.5em;
-	width: 80%;
+	width: 100%;
 	max-width: 700px;
 	cursor: pointer;
 }
@@ -62,7 +62,7 @@
 
 .prose .anchor:after {
 	@apply text-neutral-300;
-	content: '#';
+	content: '**';
 }
 
 .prose *:hover>.anchor {
