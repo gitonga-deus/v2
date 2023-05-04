@@ -9,7 +9,6 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
-import { getLastUpdatedDate } from './lib/lastUpdated'
 
 const Article = defineDocumentType(() => ({
 	name: "Article",
@@ -31,6 +30,11 @@ const Article = defineDocumentType(() => ({
 			description: "The date of the article",
 			required: true,
 		},
+		lastUpdatedAt: {
+			type: "date",
+			description: "The date the article was last updated",
+			required: true
+		}
 	},
 	computedFields: {
 		slug: {
@@ -40,11 +44,6 @@ const Article = defineDocumentType(() => ({
 		readingTime: {
 			type: 'json',
 			resolve: (doc) => readingTime(doc.body.raw),
-		},
-		lastUpdatedDate: {
-			type: 'date',
-			description: 'The date the post was last updated',
-			resolve: getLastUpdatedDate,
 		},
 	},
 }));
