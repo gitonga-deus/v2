@@ -45,13 +45,13 @@ export const metadata: Metadata = {
 		type: 'website'
 	},
 
-	manifest: '../public/favicon/site.webmanifest',
+	manifest: '../favicon/site.webmanifest',
 	icons: {
-		icon: '../public/favicon/favicon.ico',
-		shortcut: '../public/favicon/favicon.ico',
+		icon: '../favicon/favicon.ico',
+		shortcut: '../favicon/favicon.ico',
 		apple: [
 			{
-				url: '../public/favicon/apple-touch-icon.png',
+				url: '../favicon/apple-touch-icon.png',
 				sizes: '180x180',
 				type: 'image/png',
 			},
