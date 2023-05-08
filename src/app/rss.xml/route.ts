@@ -23,7 +23,7 @@ export const GET = async () => {
 			url: `https://gitonga.me/articles/${slug}`,
 			date: publishedAt,
 			description: summary,
-			author: '小康',
+			author: 'Deus Gitonga',
 		})
 	})
 
