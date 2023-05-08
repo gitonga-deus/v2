@@ -92,7 +92,7 @@ export default function RootLayout({
 				<CommandBar>
 					<Navbar />
 
-					<main className='relative antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
+					<main className='relative font-default antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
 						{children}
 					</main>
 					<Footer />
