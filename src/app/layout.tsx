@@ -71,7 +71,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme')}
+			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme font-default')}
 		>
 			<body>
 				<svg id="texture">
@@ -92,7 +92,7 @@ export default function RootLayout({
 				<CommandBar>
 					<Navbar />
 
-					<main className='relative font-default antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
+					<main className='relative antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
 						{children}
 					</main>
 					<Footer />
