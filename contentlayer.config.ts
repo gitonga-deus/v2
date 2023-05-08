@@ -8,7 +8,7 @@ import readingTime from 'reading-time'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
-import { rehypePrettyCodeOptions } from './lib/rehypePrettyCode'
+import { rehypePrettyCodeOptions } from './src/lib/rehypePrettyCode'
 
 const Article = defineDocumentType(() => ({
 	name: "Article",
@@ -49,7 +49,7 @@ const Article = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-	contentDirPath: 'articles',
+	contentDirPath: 'src/content',
 	documentTypes: [Article],
 	mdx: {
 		remarkPlugins: [remarkGfm],

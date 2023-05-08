@@ -1,25 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		"./app/**/*.{js,ts,jsx,tsx}",
-		"./pages/**/*.{js,ts,jsx,tsx}",
-		"./components/**/*.{js,ts,jsx,tsx}",
+		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
 		extend: {
 			colors: {
 				"theme": "var(--theme)",
 
+				"shade-1": "var(--shade-1)",
+				"shade-2": "var(--shade-2)",
+
 				"color-1": "var(--color-1)",
 				"color-2": "var(--color-2)",
 
-				"article-hover": "var(--article-hover)",
-
-				"shade-1": "var(--shade-1)",
-				"shade-2": "var(--shade-2)",
-				"shade-3": "var(--shade-3)",
-				"shade-4": "var(--shade-4)",
-				"shade-5": "var(--shade-5)",
+				"art-hv": "var(--art-hv)"
 			},
 			fontFamily: {
 				default: ['var(--font-karla)'],
@@ -125,29 +122,8 @@ module.exports = {
 						},
 					}
 				},
-				invert: {
-					css: {
-						code: {
-							color: theme('colors.red.400'),
-						},
-						pre: {
-							'> code': {
-								'.word': {
-									backgroundColor: 'rgba(239, 68, 68, 0.2)',
-								},
-								'> .line.highlighted': {
-									borderLeftColor: 'rgba(239, 68, 68, 0.4)',
-									backgroundColor: 'rgba(239, 68, 68, 0.2)',
-								},
-							}
-						}
-					}
-				}
 			}),
 		},
-	},
-	variants: {
-		typography: ['invert']
 	},
 	plugins: [require('@tailwindcss/typography')],
 }
