@@ -1,6 +1,8 @@
 import './globals.css'
 import clsx from 'clsx'
 
+import type { Metadata } from 'next'
+
 import { Analytics } from '@vercel/analytics/react'
 import { Karla, Roboto_Mono } from 'next/font/google'
 
@@ -18,9 +20,47 @@ const roboto = Roboto_Mono({
 	subsets: ['latin']
 })
 
-export const metadata = {
-	title: 'Hello - Deus Gitonga',
+export const metadata: Metadata = {
+	title: {
+		default: 'Hello - Deus Gitonga',
+		template: '%s - Deus Gitonga'
+	},
 	description: 'Developer and Writer',
+	openGraph: {
+		title: 'Hello - Deus Gitonga',
+		description: 'Developer and Writer',
+		url: 'https://gitonga.me',
+		siteName: 'Deus Gitonga',
+		images: [],
+		locale: 'en_US',
+		type: 'website'
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
+	manifest: '../favicon/site.webmanifest',
+	icons: {
+		icon: '../favicon/favicon.ico',
+		shortcut: '../favicon/favicon.ico',
+		apple: [
+			{
+				url: '../favicon/apple-touch-icon.png',
+				sizes: '180x180',
+				type: 'image/png',
+			},
+		],
+	},
+	verification: {
+		google: 'OdjLEq3FBtZ6ffW_Wuo83qQk9QsQtFVAe71q_yrkCGs',
+	}
 }
 
 export default function RootLayout({
@@ -31,7 +71,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, roboto.className, 'scroll-smooth bg-theme')}
+			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme')}
 		>
 			<body>
 				<svg id="texture">
@@ -52,7 +92,7 @@ export default function RootLayout({
 				<CommandBar>
 					<Navbar />
 
-					<main className='relative  font-default antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
+					<main className='relative antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
 						{children}
 					</main>
 					<Footer />
