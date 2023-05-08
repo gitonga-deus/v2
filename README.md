@@ -17,12 +17,12 @@ cd v2/
 
 3. Install dependencies
 ```
-pnpm install
+npm install
 ```
 
 4. Run the development server
 ```
-pnpm run dev
+npm run dev
 ```
 
 ## Cloning/Forking
