@@ -9,7 +9,7 @@ import { useKBar } from 'kbar'
 import { usePathname } from 'next/navigation'
 
 import { HEADER_LINKS } from '@/config/links'
-import { IconCommand, IconMenu, IconCross } from '@tabler/icons-react'
+import { IconCommand, IconMenu } from '@tabler/icons-react'
 
 function MobileMenu({ navShow, onToggleNav }: any) {
 	return (
@@ -56,10 +56,10 @@ export default function Header() {
 	return (
 		<>
 			<header className='fixed left-0 right-0 top-0 z-40 bg-theme/50 saturate-100 backdrop-blur-[10px]'>
-				<div className='mx-auto flex flex-row-reverse border-b border-color-2 h-[80px] max-w-3xl items-center justify-between px-4'>
+				<div className='mx-auto flex flex-row-reverse border-b border-color-2 h-[80px] max-w-3xl items-center justify-between px-8'>
 					<div className='flex items-center'>
 						<button
-							className='flex p-1 items-center justify-center rounded duration-500 text-shade-1 hover:ring-2 ring-neutral-500'
+							className='flex p-1 items-center justify-center rounded duration-500 text-shade-1 hover:ring-2 ring-color-2'
 							onClick={() => query.toggle()}
 							type='button'
 							aria-label='Command Bar'
@@ -108,6 +108,7 @@ export default function Header() {
 											}
 										)}
 										href={link.href}
+										scroll={false}
 									>
 										{link.text}
 									</Link>
