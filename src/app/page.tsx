@@ -26,7 +26,7 @@ export default function Home() {
 					))}
 				</div>
 			</div>
-			<div className='w-40 border-b border-color-2 my-8 -mx-4 ' />
+			<div className='w-40 border-b border-color-2 my-8' />
 
 			<h1 className='text-lg text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
 
