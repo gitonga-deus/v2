@@ -15,7 +15,7 @@ const Header = (props: HeaderProps) => {
 	const { date, title, readingTime } = props
 
 	return (
-		<div className="pt-10 pb-2">
+		<div className="pt-24">
 			<h1 className='text-shade-1 text-xl md:text-4xl font-bold'>
 				<Balancer ratio={0.3}>
 					{title}
