@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FiChevronUp } from 'react-icons/fi'
+import { IconChevronUp } from '@tabler/icons-react'
 
 export default function BackToTop() {
 	const [showButton, setShowButton] = useState(false)
@@ -24,7 +24,7 @@ export default function BackToTop() {
 			style={{ transform: showButton ? 'rotate(0deg)' : 'rotate(180deg)' }}
 			aria-label='Back to top'
 		>
-			<FiChevronUp size={24} />
+			<IconChevronUp size={24} />
 		</button>
 	)
 }
