@@ -74,25 +74,24 @@ export default function RootLayout({
 			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme font-default')}
 		>
 			<body>
-				<svg id="texture">
-					<filter id="noise">
-						<feTurbulence
-							numOctaves="4"
-							baseFrequency=".8"
-							type="fractalNoise"
-							stitchTiles="stitch"
-						/>
-						<feColorMatrix
-							values="0"
-							type="saturate"
-						/>
-					</filter>
-					<rect width="100%" height="100%" filter="url(#noise)"></rect>
-				</svg>
 				<CommandBar>
+					<svg id="texture">
+						<filter id="noise">
+							<feTurbulence
+								numOctaves="4"
+								baseFrequency=".8"
+								type="fractalNoise"
+								stitchTiles="stitch"
+							/>
+							<feColorMatrix
+								values="0"
+								type="saturate"
+							/>
+						</filter>
+						<rect width="100%" height="100%" filter="url(#noise)"></rect>
+					</svg>
 					<Navbar />
-
-					<main className='relative antialiased mx-auto mb-16 max-w-3xl px-4 py-16'>
+					<main className='relative antialiased mx-auto mb-12 max-w-3xl px-8 py-16'>
 						{children}
 					</main>
 					<Footer />
