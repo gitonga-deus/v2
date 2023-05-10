@@ -4,7 +4,9 @@ import clsx from 'clsx'
 import type { Metadata } from 'next'
 
 import { Analytics } from '@vercel/analytics/react'
-import { Karla, Roboto_Mono } from 'next/font/google'
+
+import localFont from 'next/font/local'
+import { Karla } from 'next/font/google'
 
 import BackToTop from '@/components/backToTop'
 import CommandBar from '@/components/commandBar'
@@ -15,10 +17,10 @@ const karla = Karla({
 	subsets: ['latin']
 });
 
-const roboto = Roboto_Mono({
-	variable: '--font-roboto',
-	subsets: ['latin']
-})
+const operator = localFont({
+	src: '../../public/fonts/operator-mono.woff2',
+	variable: '--font-operator',
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -71,7 +73,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme font-default select-text selection:bg-shade-1 selection:text-black')}
+			className={clsx(karla.variable, operator.variable, 'scroll-smooth bg-theme font-default select-text selection:bg-shade-1 selection:text-black')}
 		>
 			<body>
 				<CommandBar>
