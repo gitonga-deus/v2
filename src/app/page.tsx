@@ -7,20 +7,20 @@ export default function Home() {
 	const user = {
 		name: 'Deus Gitonga — Developer and Writer',
 		headline: [
-			'Welcome to my little corner of the internet! I\'m all about making websites that look good and work great.',
-			'Join me as we explore the latest tech trends and programming tips, with a side of humor and a dash of coffee.'
+			'Hello and welcome to my website!',
+			'Here, I share my experience as a frontend developer and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read'
 		],
 	}
 	return (
 		<>
 			<div className='pt-12'>
 				<div className='space-y-2 pb-2 md:max-w-full text-white'>
-					<h1 className='text-2xl md:text-3xl font-bold text-shade-1 tracking-tight'>
+					<h1 className='text-2xl md:text-4xl font-bold text-shade-1 tracking-tight'>
 						{user.name}
 					</h1>
 
 					{user.headline.map((item, i) => (
-						<p className='text-base leading-7 text-left text-shade-2 tracking-tight' key={i}>
+						<p className='text-base leading-7 text-left text-shade-2' key={i}>
 							{item}
 						</p>
 					))}
@@ -28,7 +28,7 @@ export default function Home() {
 			</div>
 			<div className='w-40 border-b border-color-2 my-8' />
 
-			<h1 className='text-lg text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
+			<h1 className='text-xl text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
 
 			<div>
 				{allArticles.slice(0, 6).sort((a, b) => (
@@ -39,10 +39,10 @@ export default function Home() {
 						return (
 							<Link
 								key={slug}
-								className='block select-none p-2 my-1 -mx-2 rounded-md hover:bg-art-hv duration-500 hover:highlighted transition-all'
+								className='block select-none p-2 my-1 -mx-2 rounded-md hover:bg-color-1 duration-500 hover:highlighted transition-all'
 								href={`articles/${slug}`}
 							>
-								<div className='flex pt-1 items-center gap-1 text-shade-2 text-sm tracking-tight'>
+								<div className='flex pt-1 items-center gap-2 text-shade-2 text-sm tracking-tight'>
 									<time dateTime={publishedAt}>
 										{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 									</time>
@@ -51,7 +51,7 @@ export default function Home() {
 								</div>
 
 								<h1
-									className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'
+									className='py-1 text-[17px] text-shade-1 font-semibold'
 								>
 									{title}
 								</h1>
@@ -61,12 +61,12 @@ export default function Home() {
 					})
 				}
 
-				<div className='mt-4'>
+				<div className='mt-6'>
 					<Link
 						href='/articles'
-						className='text-shade-1 p-2 -mx-2 rounded-md text-base font-medium tracking-tight duration-500 transition-all hover:bg-art-hv'
+						className='text-shade-1 px-4 py-2 rounded text-base font-medium tracking-tight duration-500 transition-all bg-color-1 hover:bg-color-2'
 					>
-						more articles...
+						Read More
 					</Link>
 				</div>
 			</div>

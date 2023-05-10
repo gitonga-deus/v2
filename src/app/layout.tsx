@@ -71,7 +71,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme font-default')}
+			className={clsx(karla.variable, roboto.variable, 'scroll-smooth bg-theme font-default select-text selection:bg-shade-1 selection:text-black')}
 		>
 			<body>
 				<CommandBar>

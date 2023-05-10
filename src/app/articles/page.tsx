@@ -16,10 +16,10 @@ function ArticleCard(article: Article) {
 	return (
 		<Link
 			key={slug}
-			className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-all hover:bg-art-hv'
+			className='block select-none p-2 my-1 -mx-2 rounded-md duration-500 transition-all hover:bg-color-1'
 			href={`articles/${slug}`}
 		>
-			<div className='flex pt-1 items-center gap-1 text-shade-2 text-sm tracking-tight'>
+			<div className='flex pt-1 items-center gap-2 text-shade-2 text-sm tracking-tight'>
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
@@ -28,7 +28,7 @@ function ArticleCard(article: Article) {
 			</div>
 
 			<h1
-				className='py-1 text-base text-shade-1 font-semibold leading-6 tracking-tight'
+				className='py-1 text-[17px] text-shade-1 font-semibold'
 			>
 				{title}
 			</h1>
