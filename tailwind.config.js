@@ -19,7 +19,7 @@ module.exports = {
 				"art-hv": "var(--art-hv)"
 			},
 			fontFamily: {
-				default: ['var(--font-inter)'],
+				default: ['var(--font-karla)'],
 				code: [
 					'var(--font-operator)',
 				],
