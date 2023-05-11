@@ -5,9 +5,9 @@ import { Toaster } from 'react-hot-toast'
 const CustomToaster = () => {
 	return (
 		<Toaster
-			position='bottom-right'
+			position='top-right'
 			toastOptions={{
-				className: '!bg-shade-1 !text-theme !border !border-shade-2',
+				className: '!bg-color-2 !text-shade-1 !border !border-color-1',
 			}}
 		/>
 	)
