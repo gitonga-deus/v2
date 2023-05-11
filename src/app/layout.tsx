@@ -12,6 +12,8 @@ import BackToTop from '@/components/backToTop'
 import CommandBar from '@/components/commandBar'
 import { Navbar, Footer } from '@/components/layout'
 
+import CustomToaster from './customToaster'
+
 const karla = Karla({
 	variable: '--font-karla',
 	subsets: ['latin']
@@ -75,7 +77,7 @@ export default function RootLayout({
 			lang="en"
 			className={clsx(karla.variable, operator.variable, 'scroll-smooth')}
 		>
-			<body className='bg-theme font-default select-text selection:bg-shade-1 selection:text-black'>
+			<body className='select-text bg-theme font-default selection:bg-shade-1 selection:text-black'>
 				<svg id="texture">
 					<filter id="noise">
 						<feTurbulence
@@ -93,9 +95,10 @@ export default function RootLayout({
 				</svg>
 				<CommandBar>
 					<Navbar />
-					<main className='relative antialiased  mx-auto mb-12 max-w-3xl px-8 py-16'>
+					<main className='relative max-w-3xl px-8 py-16 mx-auto mb-12 antialiased'>
 						{children}
 					</main>
+					<CustomToaster />
 					<Footer />
 					<BackToTop />
 				</CommandBar>
