@@ -15,13 +15,13 @@ function MobileMenu({ navShow, onToggleNav }: any) {
 	return (
 		<div className='md:hidden'>
 			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-xl`}>
-				<nav className='relative space-y-2 z-40'>
+				<nav className='relative z-40 space-y-2'>
 					{HEADER_LINKS.map((navLink, i) => (
 						<div key={i} className='px-8'>
 							<Link
 								href={navLink.href}
 								title={navLink.text}
-								className='flex my-3 border-color-1 border-b text-base font-medium leading-8 tracking-normal text-shade-1'
+								className='flex my-3 text-base font-medium leading-8 tracking-normal border-b border-color-1 text-shade-1'
 								onClick={onToggleNav}
 							>
 								{navLink.text}
@@ -59,7 +59,7 @@ export default function Header() {
 				<div className='mx-auto flex flex-row-reverse border-b border-color-2 h-[80px] max-w-3xl items-center justify-between px-8'>
 					<div className='flex items-center'>
 						<button
-							className='flex p-1 items-center justify-center rounded duration-500 text-shade-1 hover:ring-2 ring-color-2'
+							className='flex items-center justify-center p-1 duration-500 rounded text-shade-1 hover:ring-2 ring-color-2'
 							onClick={() => query.toggle()}
 							type='button'
 							aria-label='Command Bar'
@@ -71,7 +71,7 @@ export default function Header() {
 						<div className="md:hidden">
 							<button
 								type='button'
-								className='mx-1 h-8 w-8 rounded text-shade-1'
+								className='w-8 h-8 mx-1 rounded text-shade-1'
 								aria-label='Toggle Menu'
 								onClick={onToggleNav}
 							>

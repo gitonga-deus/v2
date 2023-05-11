@@ -74,9 +74,9 @@ export default function CommandBar (props: CommandBarProps) {
 			<KBarProvider actions={actions}>
 				<KBarPortal>
 					<KBarPositioner className='z-50 bg-theme/10 backdrop-blur'>
-						<KBarAnimator className='w-full max-w-lg rounded-lg border border-color-1 bg-theme'>
+						<KBarAnimator className='w-full max-w-lg border rounded-lg border-color-1 bg-theme'>
 							<KBarSearch
-								className='w-full bg-transparent text-shade-2 px-4 py-3 outline-none'
+								className='w-full px-4 py-3 bg-transparent outline-none text-shade-2'
 								defaultPlaceholder='Type command or search'
 							/>
 							<Results />

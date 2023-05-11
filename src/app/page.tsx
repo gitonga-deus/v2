@@ -14,8 +14,8 @@ export default function Home() {
 	return (
 		<>
 			<div className='pt-12'>
-				<div className='space-y-2 pb-2 md:max-w-full text-white'>
-					<h1 className='text-2xl md:text-4xl font-bold text-shade-1 tracking-tight'>
+				<div className='pb-2 space-y-2 text-white md:max-w-full'>
+					<h1 className='text-2xl font-bold tracking-tight md:text-4xl text-shade-1'>
 						{user.name}
 					</h1>
 
@@ -26,9 +26,9 @@ export default function Home() {
 					))}
 				</div>
 			</div>
-			<div className='w-40 border-b border-color-2 my-8' />
+			<div className='w-40 my-8 border-b border-color-2' />
 
-			<h1 className='text-xl text-shade-1 tracking-tight font-semibold leading-8'>Featured Articles</h1>
+			<h1 className='text-xl font-semibold leading-8 tracking-tight text-shade-1'>Featured Articles</h1>
 
 			<div>
 				{allArticles.slice(0, 6).sort((a, b) => (
@@ -39,10 +39,10 @@ export default function Home() {
 						return (
 							<Link
 								key={slug}
-								className='block select-none p-2 my-1 -mx-2 rounded-md hover:bg-color-1 duration-500 hover:highlighted transition-all'
+								className='block p-2 my-1 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
 								href={`articles/${slug}`}
 							>
-								<div className='flex pt-1 items-center gap-2 text-shade-2 text-sm tracking-tight'>
+								<div className='flex items-center gap-2 pt-1 text-sm tracking-tight text-shade-2'>
 									<time dateTime={publishedAt}>
 										{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 									</time>
@@ -64,7 +64,7 @@ export default function Home() {
 				<div className='mt-6'>
 					<Link
 						href='/articles'
-						className='text-shade-1 px-4 py-2 rounded text-base font-medium tracking-tight duration-500 transition-all bg-color-1 hover:bg-color-2'
+						className='px-4 py-2 text-base font-medium tracking-tight transition-all duration-500 rounded text-shade-1 bg-color-1 hover:bg-color-2'
 					>
 						Read More
 					</Link>

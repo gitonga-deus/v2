@@ -14,7 +14,7 @@ export default function BackToTop() {
 
 	return (
 		<button
-			className='flex justify-center items-center p-4 bottom-6 right-8 text-lg cursor-pointer fixed border-none backdrop-blur-sm rounded-full bg-color-1 text-shade-1 hover:bg-color-2 duration-500'
+			className='fixed flex items-center justify-center p-4 text-lg duration-500 border-none rounded-full cursor-pointer bottom-6 right-8 backdrop-blur-sm bg-color-1 text-shade-1 hover:bg-color-2'
 			onClick={() =>
 				window.scrollTo({
 					top: showButton ? 0 : document.body.scrollHeight,
