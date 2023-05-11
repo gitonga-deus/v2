@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
 import localFont from 'next/font/local'
-import { Karla } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import BackToTop from '@/components/backToTop'
 import CommandBar from '@/components/commandBar'
@@ -14,8 +14,8 @@ import { Navbar, Footer } from '@/components/layout'
 
 import CustomToaster from './customToaster'
 
-const karla = Karla({
-	variable: '--font-karla',
+const inter = Inter({
+	variable: '--font-inter',
 	subsets: ['latin']
 });
 
@@ -75,7 +75,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, operator.variable, 'scroll-smooth')}
+			className={clsx(inter.variable, operator.variable, 'scroll-smooth')}
 		>
 			<body className='select-text bg-theme font-default selection:bg-shade-1 selection:text-black'>
 				<svg id="texture">
