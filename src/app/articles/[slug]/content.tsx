@@ -3,6 +3,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { parseISO, format } from 'date-fns'
 import { IconPencil } from '@tabler/icons-react'
+import Balancer from 'react-wrap-balancer'
 
 import MDXComponents from '@/components/mdx/mdxcomponents'
 
@@ -17,21 +18,26 @@ const Content = (props: ContentProps) => {
 	const MDXComponent = useMDXComponent(article.body.code);
 
 	return (
-		<div className='flex flex-col justify-between mt-4 lg:flex-row'>
-			<article className='w-full text-base leading-8 tracking-tight prose text-left text-shade-2 max-w-none'>
+		<>
+			<div className='flex flex-col justify-between mt-4 lg:flex-row'>
+				<article className='w-full text-[15px] leading-8 tracking-tight prose text-left text-shade-2 max-w-none'>
 
-				<div className='flex items-center gap-1 px-3 py-2 text-sm rounded-md bg-color-1 w-52 text-shade-1'>
-					<IconPencil size={20} />
-					Updated {format(parseISO(article.lastUpdatedAt), 'MMM dd, yyyy')}
-				</div>
+					<div className='flex items-center gap-1 px-3 py-2 text-sm rounded-md bg-color-1 w-52 text-shade-1'>
+						<IconPencil size={20} />
+						Updated {format(parseISO(article.lastUpdatedAt), 'MMM dd, yyyy')}
+					</div>
 
-				<MDXComponent
-					components={{
-						...MDXComponents,
-					}}
-				/>
-			</article>
-		</div>
+
+					<Balancer>
+						<MDXComponent
+							components={{
+								...MDXComponents,
+							}}
+						/>
+					</Balancer>
+				</article>
+			</div>
+		</>
 	)
 }
 

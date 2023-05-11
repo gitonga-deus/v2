@@ -15,23 +15,25 @@ const Header = (props: HeaderProps) => {
 	const { date, title, readingTime } = props
 
 	return (
-		<div className="pt-24">
-			<h1 className='text-xl font-bold text-shade-1 md:text-4xl'>
-				<Balancer ratio={0.3}>
-					{title}
-				</Balancer>
-			</h1>
+		<>
+			<div className="pt-24">
+				<h1 className='text-xl font-bold text-shade-1 md:text-4xl'>
+					<Balancer ratio={0.3}>
+						{title}
+					</Balancer>
+				</h1>
 
-			<div className='flex items-center py-2 text-sm text-shade-1'>
-				<div className='flex gap-1'>
-					<time dateTime={date}>
-						{format(parseISO(date), 'MMM dd, yyyy')}
-					</time>
-					&#8226;
-					<span>{readingTime}</span>
+				<div className='flex items-center py-2 text-sm text-shade-1'>
+					<div className='flex gap-1'>
+						<time dateTime={date}>
+							{format(parseISO(date), 'MMM dd, yyyy')}
+						</time>
+						&#8226;
+						<span>{readingTime}</span>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 

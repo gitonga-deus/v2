@@ -20,7 +20,7 @@ export default function Home() {
 					</h1>
 
 					{user.headline.map((item, i) => (
-						<p className='text-base leading-7 text-left text-shade-2' key={i}>
+						<p className='text-[15px] tracking-tight leading-7 text-left text-shade-2' key={i}>
 							{item}
 						</p>
 					))}
@@ -55,7 +55,7 @@ export default function Home() {
 								>
 									{title}
 								</h1>
-								<p className='text-base tracking-tight text-shade-2'>{summary}</p>
+								<p className='text-[15px] tracking-tight text-shade-2'>{summary}</p>
 							</Link>
 						)
 					})
