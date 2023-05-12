@@ -95,7 +95,7 @@ export default function RootLayout({
 				</svg>
 				<CommandBar>
 					<Navbar />
-					<main className='relative max-w-3xl px-8 py-16 mx-auto mb-12 antialiased'>
+					<main className='relative max-w-3xl px-8 pb-16 mx-auto mb-12 antialiased'>
 						{children}
 					</main>
 					<CustomToaster />

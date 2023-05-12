@@ -13,7 +13,7 @@ export default function Home() {
 	}
 	return (
 		<>
-			<div className='pt-12'>
+			<div className='pt-8'>
 				<div className='pb-2 space-y-2 text-white md:max-w-full'>
 					<h1 className='text-2xl font-bold tracking-tight md:text-4xl text-shade-1'>
 						{user.name}

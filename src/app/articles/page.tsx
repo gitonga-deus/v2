@@ -43,7 +43,7 @@ export default function Page() {
 	);
 
 	return (
-		<div className='pt-12'>
+		<div className='pt-8'>
 			<h1 className="mb-2 text-3xl font-bold tracking-tight text-shade-1">Articles</h1>
 
 			<p className='text-base leading-7 tracking-tight text-shade-2'>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Link from 'next/link'
 
@@ -36,12 +36,14 @@ function MobileMenu({ navShow, onToggleNav }: any) {
 
 export default function Header() {
 	let { query } = useKBar()
+	const transitionStyle = "duration-300"
 
 	let pathname = usePathname()
 	if (pathname.includes('/articles/')) {
 		pathname = '/articles';
 	}
 	const [navShow, setNavShow] = useState(false);
+	const [showBlur, setShowBlur] = useState(false)
 
 	const onToggleNav = () => {
 		setNavShow((status) => {
@@ -53,10 +55,28 @@ export default function Header() {
 		});
 	}
 
+	useEffect(() => {
+		function handleScroll() {
+			const position = window.scrollY
+			setShowBlur(position > 40)
+		}
+
+		window.addEventListener("scroll", handleScroll, { passive: true })
+		return () => {
+			window.removeEventListener("scroll", handleScroll)
+		}
+	}, [])
+
 	return (
 		<>
-			<header className='fixed left-0 right-0 top-0 z-40 bg-theme/50 saturate-100 backdrop-blur-[10px]'>
-				<div className='mx-auto flex flex-row-reverse border-b border-color-2 h-[80px] max-w-3xl items-center justify-between px-8'>
+			<header className={clsx(
+				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
+				showBlur
+					? "bg-opacity-20 backdrop-blur dark:bg-opacity-20"
+					: "bg-opacity-0 backdrop-blur-none dark:bg-opacity-0",
+				transitionStyle
+			)}>
+				<div className='flex flex-row-reverse h-[90px] items-center justify-between px-8'>
 					<div className='flex items-center'>
 						<button
 							className='flex items-center justify-center p-1 duration-500 rounded text-shade-1 hover:ring-2 ring-color-2'
@@ -117,7 +137,11 @@ export default function Header() {
 						</ul>
 					</div>
 				</div>
+				<div
+					className={clsx("divider-x transition-opacity", transitionStyle, showBlur ? "opacity-100" : "opacity-0")}
+				/>
 			</header>
+
 			<MobileMenu navShow={navShow} onToggleNav={onToggleNav} />
 		</>
 	)

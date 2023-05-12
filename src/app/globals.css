@@ -42,6 +42,10 @@ body {
 	@apply bg-color-2;
 }
 
+.divider-x {
+	@apply h-px w-full bg-color-1;
+}
+
 .prose strong {
 	color: var(--shade-1);
 }
