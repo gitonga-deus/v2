@@ -23,14 +23,14 @@ const Header = (props: HeaderProps) => {
 					</Balancer>
 				</h1>
 
-				<div className='flex items-center py-2 text-sm text-shade-1'>
-					<div className='flex gap-1'>
-						<time dateTime={date}>
-							{format(parseISO(date), 'MMM dd, yyyy')}
-						</time>
-						&#8226;
-						<span>{readingTime}</span>
-					</div>
+
+				<div className='flex items-center gap-2 py-2 text-sm text-shade-1'>
+					<time dateTime={date}>
+						{format(parseISO(date), 'MMM dd, yyyy')}
+					</time>
+					&#8226;
+					<span>{readingTime}</span>
+
 				</div>
 			</div>
 		</>

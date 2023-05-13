@@ -5,11 +5,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 import clsx from 'clsx'
-import { useKBar } from 'kbar'
 import { usePathname } from 'next/navigation'
 
-import { HEADER_LINKS } from '@/config/links'
-import { IconCommand, IconMenu } from '@tabler/icons-react'
+import { HEADER_LINKS, SOCIAL_LINKS } from '@/config/links'
+import { Close, Menu } from '../icons'
 
 function MobileMenu({ navShow, onToggleNav }: any) {
 	return (
@@ -35,8 +34,6 @@ function MobileMenu({ navShow, onToggleNav }: any) {
 }
 
 export default function Header() {
-	let { query } = useKBar()
-	const transitionStyle = "duration-300"
 
 	let pathname = usePathname()
 	if (pathname.includes('/articles/')) {
@@ -70,22 +67,26 @@ export default function Header() {
 	return (
 		<>
 			<header className={clsx(
-				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
+				'sticky top-0 z-30 max-w-4xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
 				showBlur
 					? "bg-opacity-20 backdrop-blur dark:bg-opacity-20"
 					: "bg-opacity-0 backdrop-blur-none dark:bg-opacity-0",
-				transitionStyle
+				'duration-100'
 			)}>
-				<div className='flex flex-row-reverse h-[90px] items-center justify-between px-8'>
+				<div className='flex flex-row-reverse h-[80px] items-center justify-between px-8'>
 					<div className='flex items-center'>
-						<button
-							className='flex items-center justify-center p-1 duration-500 rounded text-shade-1 hover:ring-2 ring-color-2'
-							onClick={() => query.toggle()}
-							type='button'
-							aria-label='Command Bar'
-						>
-							<IconCommand size={24} />
-						</button>
+						<div className='flex items-center gap-2 mr-2'>
+							{SOCIAL_LINKS.map((item, i) => (
+								<Link
+									key={i}
+									href={item.href}
+									target='_blank' rel='noreferrer noopener'
+									className='text-shade-2 hover:text-shade-1 duration-300'
+								>
+									{item.icon}
+								</Link>
+							))}
+						</div>
 
 
 						<div className="md:hidden">
@@ -96,17 +97,9 @@ export default function Header() {
 								onClick={onToggleNav}
 							>
 								{navShow ? (
-									<svg
-										className='w-5 h-5'
-										viewBox="0 0 15 15"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd">
-										</path>
-									</svg>
+									<Close />
 								) : (
-									<IconMenu size={24} />
+									<Menu />
 								)}
 							</button>
 						</div>
@@ -138,7 +131,7 @@ export default function Header() {
 					</div>
 				</div>
 				<div
-					className={clsx("divider-x transition-opacity", transitionStyle, showBlur ? "opacity-100" : "opacity-0")}
+					className={clsx("divider-x transition-opacity", 'duration-100', showBlur ? "opacity-100" : "opacity-0")}
 				/>
 			</header>
 

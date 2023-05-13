@@ -2,15 +2,13 @@
 
 import { Toaster } from 'react-hot-toast'
 
-const CustomToaster = () => {
+export default function CustomerToaster() {
 	return (
 		<Toaster
 			position='top-right'
 			toastOptions={{
-				className: '!bg-theme !text-shade-1 !border !border-color-1',
+				className: '!bg-color-2 !text-shade-1 !border !border-color-1',
 			}}
 		/>
 	)
 }
-
-export default CustomToaster

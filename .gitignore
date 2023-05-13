@@ -38,4 +38,5 @@ next-env.d.ts
 # Contentlayer
 .contentlayer
 
-.env
+# vscode
+/.vscode

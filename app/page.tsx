@@ -39,7 +39,7 @@ export default function Home() {
 						return (
 							<Link
 								key={slug}
-								className='block p-2 my-1 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
+								className='block p-2 my-2 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
 								href={`articles/${slug}`}
 							>
 								<div className='flex items-center gap-2 pt-1 text-sm tracking-tight text-shade-2'>
@@ -64,7 +64,7 @@ export default function Home() {
 				<div className='mt-6'>
 					<Link
 						href='/articles'
-						className='px-4 py-2 text-base font-medium tracking-tight transition-all duration-500 rounded text-shade-1 bg-color-1 hover:bg-color-2'
+						className='p-2 text-base font-medium tracking-tight transition-all duration-500 rounded text-shade-1 border border-color-1 hover:bg-color-2'
 					>
 						Read More
 					</Link>

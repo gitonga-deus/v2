@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { toast } from 'react-hot-toast'
-import { IconCheck, IconCopy } from '@tabler/icons-react'
+import { Check, Copy } from '../icons'
 
 type PreProps = JSX.IntrinsicElements['pre']
 
@@ -53,7 +53,7 @@ const Pre = (props: PreProps) => {
 				aria-label='Copy to clipboard'
 				title='Copy to clipboard'
 			>
-				{isCopied ? <IconCheck size={20} /> : <IconCopy size={20} />}
+				{isCopied ? <Check /> : <Copy />}
 			</button>
 		</>
 	)

@@ -2,7 +2,7 @@ import { Article } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { parseISO, format } from 'date-fns'
-import { IconPencil } from '@tabler/icons-react'
+import { Pen } from '@/components/icons'
 
 import MDXComponents from '@/components/mdx/mdxcomponents'
 
@@ -22,7 +22,7 @@ const Content = (props: ContentProps) => {
 				<article className='w-full text-base leading-8 tracking-tight prose text-left text-shade-2 max-w-none'>
 
 					<div className='flex items-center gap-1 px-3 py-2 text-sm rounded-md bg-color-1 w-52 text-shade-1'>
-						<IconPencil size={20} />
+						<Pen />
 						Updated {format(parseISO(article.lastUpdatedAt), 'MMM dd, yyyy')}
 					</div>
 

@@ -10,7 +10,6 @@
 	},
 	"dependencies": {
 		"@giscus/react": "^2.2.8",
-		"@tabler/icons-react": "^2.17.0",
 		"@types/node": "20.1.0",
 		"@types/react": "18.2.6",
 		"@types/react-dom": "18.2.4",
@@ -20,8 +19,6 @@
 		"clsx": "^1.2.1",
 		"contentlayer": "^0.3.2",
 		"date-fns": "^2.30.0",
-		"framer-motion": "^10.12.8",
-		"kbar": "^0.1.0-beta.40",
 		"next": "13.4.1",
 		"next-contentlayer": "^0.3.2",
 		"postcss": "8.4.23",

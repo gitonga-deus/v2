@@ -9,10 +9,9 @@ import localFont from 'next/font/local'
 import { Karla } from 'next/font/google'
 
 import BackToTop from '@/components/backToTop'
-import CommandBar from '@/components/commandBar'
 import { Navbar, Footer } from '@/components/layout'
 
-import CustomToaster from './customToaster'
+import CustomToaster from './custom-toaster'
 
 const karla = Karla({
 	variable: '--font-karla',
@@ -20,7 +19,7 @@ const karla = Karla({
 });
 
 const operator = localFont({
-	src: '../../public/fonts/operator-mono.woff2',
+	src: '../public/fonts/operator-mono.woff2',
 	variable: '--font-operator',
 });
 
@@ -93,15 +92,15 @@ export default function RootLayout({
 					</filter>
 					<rect width="100%" height="100%" filter="url(#noise)"></rect>
 				</svg>
-				<CommandBar>
-					<Navbar />
-					<main className='relative max-w-3xl px-8 pb-16 mx-auto mb-12 antialiased'>
-						{children}
-					</main>
-					<CustomToaster />
-					<Footer />
-					<BackToTop />
-				</CommandBar>
+
+				<Navbar />
+				<main className='relative max-w-4xl px-8 pb-16 mx-auto mb-12 antialiased'>
+					{children}
+				</main>
+				<CustomToaster />
+				<Footer />
+				<BackToTop />
+
 				<Analytics />
 			</body>
 		</html>
