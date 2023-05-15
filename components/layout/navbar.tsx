@@ -67,7 +67,7 @@ export default function Header() {
 	return (
 		<>
 			<header className={clsx(
-				'sticky top-0 z-30 max-w-4xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
+				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
 				showBlur
 					? "bg-opacity-20 backdrop-blur dark:bg-opacity-20"
 					: "bg-opacity-0 backdrop-blur-none dark:bg-opacity-0",
