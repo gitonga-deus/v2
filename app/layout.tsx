@@ -1,17 +1,17 @@
 import './globals.css'
+
 import clsx from 'clsx'
 
 import type { Metadata } from 'next'
-
 import { Analytics } from '@vercel/analytics/react'
 
 import localFont from 'next/font/local'
 import { Karla } from 'next/font/google'
 
-import BackToTop from '@/components/backToTop'
 import { Navbar, Footer } from '@/components/layout'
 
-import CustomToaster from './custom-toaster'
+import BackToTop from '@/components/backToTop'
+import CustomToaster from '@/components/custom-toaster'
 
 const karla = Karla({
 	variable: '--font-karla',
@@ -94,7 +94,7 @@ export default function RootLayout({
 				</svg>
 
 				<Navbar />
-				<main className='relative max-w-4xl px-8 pb-16 mx-auto mb-12 antialiased'>
+				<main className='relative max-w-3xl px-8 pb-16 mx-auto mb-12 antialiased'>
 					{children}
 				</main>
 				<CustomToaster />

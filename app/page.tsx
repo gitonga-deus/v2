@@ -8,7 +8,7 @@ export default function Home() {
 		name: 'Deus Gitonga — Developer and Writer',
 		headline: [
 			'Hello and welcome to my website!',
-			'Here, I share my experience as a frontend developer and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read'
+			'Here, I share my experience as a frontend developer and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read!'
 		],
 	}
 	return (
@@ -39,7 +39,7 @@ export default function Home() {
 						return (
 							<Link
 								key={slug}
-								className='block p-2 my-2 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
+								className='block p-2 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
 								href={`articles/${slug}`}
 							>
 								<div className='flex items-center gap-2 pt-1 text-sm tracking-tight text-shade-2'>
