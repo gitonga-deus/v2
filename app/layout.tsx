@@ -6,17 +6,11 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
 import localFont from 'next/font/local'
-import { Karla } from 'next/font/google'
 
 import { Navbar, Footer } from '@/components/layout'
 
 import BackToTop from '@/components/backToTop'
 import CustomToaster from '@/components/custom-toaster'
-
-const karla = Karla({
-	variable: '--font-karla',
-	subsets: ['latin']
-});
 
 const operator = localFont({
 	src: '../public/fonts/operator-mono.woff2',
@@ -74,9 +68,9 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(karla.variable, operator.variable, 'scroll-smooth')}
+			className={clsx(operator.variable, 'scroll-smooth')}
 		>
-			<body className='select-text bg-theme font-default selection:bg-shade-1 selection:text-black'>
+			<body className='select-text bg-theme selection:bg-shade-1 selection:text-black'>
 				<svg id="texture">
 					<filter id="noise">
 						<feTurbulence

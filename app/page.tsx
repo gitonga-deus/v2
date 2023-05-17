@@ -1,75 +1,55 @@
 import Link from 'next/link'
 
+import { ArrowRight } from '@/components/icons';
+import ArticleCard from '@/components/article/ArticleCard';
+
 import { allArticles } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
 
 export default function Home() {
 	const user = {
-		name: 'Deus Gitonga — Developer and Writer',
+		name: 'Deus Gitonga — Developer',
 		headline: [
 			'Hello and welcome to my website!',
-			'Here, I share my experience as a frontend developer and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read!'
+			'Here, I share my experience as a frontend developer 👨🏼‍💻 and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read!'
 		],
 	}
 	return (
 		<>
-			<div className='pt-8'>
-				<div className='pb-2 space-y-2 text-white md:max-w-full'>
-					<h1 className='text-2xl font-bold tracking-tight md:text-4xl text-shade-1'>
-						{user.name}
-					</h1>
+			<div className='pt-4'>
+				<h1 className='text-xl mb-4 font-bold md:text-4xl text-shade-1'>
+					{user.name}
+				</h1>
 
-					{user.headline.map((item, i) => (
-						<p className='text-base leading-7 text-left text-shade-2' key={i}>
-							{item}
-						</p>
-					))}
-				</div>
+				{user.headline.map((item, i) => (
+					<p className='text-base tracking-normal my-2 leading-7 text-left text-shade-2' key={i}>
+						{item}
+					</p>
+				))}
 			</div>
-			<div className='w-40 my-8 border-b border-color-2' />
 
-			<h1 className='text-xl font-semibold leading-8 tracking-tight text-shade-1'>Featured Articles</h1>
+			<div className='-mx-2 w-48 my-6 border-b border-color-1' />
+
+			<h1 className='text-2xl  font-bold leading-8 text-shade-1 font-sans'>Featured Articles</h1>
 
 			<div>
 				{allArticles.slice(0, 6).sort((a, b) => (
 					compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
-					.map((article) => {
-						const { slug, title, summary, publishedAt, readingTime } = article;
-
-						return (
-							<Link
-								key={slug}
-								className='block p-2 -mx-2 transition-all duration-500 rounded-md select-none hover:bg-color-1 hover:highlighted'
-								href={`articles/${slug}`}
-							>
-								<div className='flex items-center gap-2 pt-1 text-sm tracking-tight text-shade-2'>
-									<time dateTime={publishedAt}>
-										{format(parseISO(publishedAt), 'MMM dd, yyyy')}
-									</time>
-									&#8226;
-									<span>{readingTime.text}</span>
-								</div>
-
-								<h1
-									className='py-1 text-[17px] text-shade-1 font-semibold'
-								>
-									{title}
-								</h1>
-								<p className='text-base tracking-tight text-shade-2'>{summary}</p>
-							</Link>
-						)
-					})
+					.map((article) => (
+						<ArticleCard key={article._id} {...article} />
+					))
 				}
 
-				<div className='mt-6'>
+				<button className='my-4'>
 					<Link
 						href='/articles'
-						className='p-2 text-base font-medium tracking-tight transition-all duration-500 rounded text-shade-1 border border-color-1 hover:bg-color-2'
+						className='animated lowercase flex items-center gap-2 text-base font-medium py-1 text-shade-1'
 					>
-						Read More
+						All Articles
+						<ArrowRight />
 					</Link>
-				</div>
-			</div>
+				</button>
+			</div >
 		</>
 	)
 }
