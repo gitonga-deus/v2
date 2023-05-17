@@ -18,13 +18,15 @@ const Content = (props: ContentProps) => {
 
 	return (
 		<>
-			<div className='flex flex-col justify-between mt-4 lg:flex-row'>
-				<article className='w-full text-base leading-8 tracking-tight prose text-left text-shade-2 max-w-none'>
+			<div className='flex flex-col justify-between my-4 lg:flex-row'>
+				<article className='w-full text-base leading-8 prose text-left text-shade-2 max-w-none'>
 
-					<div className='flex items-center gap-1 px-3 py-2 text-sm rounded-md bg-color-1 w-52 text-shade-1'>
+					<button
+						className='flex items-center gap-2 px-3 py-2 text-sm tracking-wide font-serif rounded bg-color-2 w-50 text-shade-1 cursor-not-allowed'
+					>
 						<Pen />
 						Updated {format(parseISO(article.lastUpdatedAt), 'MMM dd, yyyy')}
-					</div>
+					</button>
 
 					<MDXComponent
 						components={{
