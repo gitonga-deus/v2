@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-	--theme: #151718;
+	--theme: #0d1117;
 
 	--shade-1: #eaeaea;
 	--shade-2: #999999;
@@ -43,7 +43,7 @@ body {
 }
 
 .divider-x {
-	@apply h-px w-full bg-color-1;
+	@apply h-px bg-color-1;
 }
 
 .prose strong {
