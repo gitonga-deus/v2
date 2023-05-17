@@ -1,9 +1,13 @@
 'use client'
 
-export default function Footer () {
+import clsx from 'clsx'
+export default function Footer() {
 	return (
 		<footer>
-			<div className="max-w-3xl px-8 py-6 mx-auto border-t border-color-2">
+			<div className="max-w-3xl px-8 space-y-6 mb-8 mx-auto">
+				<div
+					className={clsx("divider-x -mx-2")}
+				/>
 				<div className="flex items-center text-base font-medium tracking-normal text-shade-1">
 					&copy; {new Date().getFullYear()}{' '} Deus Gitonga.
 				</div>

@@ -13,7 +13,7 @@ import { Close, Menu } from '../icons'
 function MobileMenu({ navShow, onToggleNav }: any) {
 	return (
 		<div className='md:hidden'>
-			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-xl`}>
+			<div className={`fixed w-full h-full p-2 top-20 right-0 z-40 ease-in-out duration-500 ${navShow ? 'translate-x-0' : 'translate-x-full'} backdrop-blur`}>
 				<nav className='relative z-40 space-y-2'>
 					{HEADER_LINKS.map((navLink, i) => (
 						<div key={i} className='px-8'>
@@ -69,8 +69,8 @@ export default function Header() {
 			<header className={clsx(
 				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
 				showBlur
-					? "bg-opacity-20 backdrop-blur dark:bg-opacity-20"
-					: "bg-opacity-0 backdrop-blur-none dark:bg-opacity-0",
+					? "bg-opacity-20 backdrop-blur"
+					: "bg-opacity-0 backdrop-blur-none",
 				'duration-100'
 			)}>
 				<div className='flex flex-row-reverse h-[80px] items-center justify-between px-8'>
@@ -131,7 +131,7 @@ export default function Header() {
 					</div>
 				</div>
 				<div
-					className={clsx("divider-x transition-opacity", 'duration-100', showBlur ? "opacity-100" : "opacity-0")}
+					className={clsx("divider-x transition-opacity mx-6", 'duration-100', showBlur ? "opacity-100" : "opacity-0")}
 				/>
 			</header>
 
