@@ -109,13 +109,57 @@ export function ChevronUp() {
 export function Pen() {
 	return (
 		<>
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6"
-				viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
-				fill="none" strokeLinecap="round" strokeLinejoin="round"
+			<svg
+				className="w-4 h-4"
+				viewBox="0 0 15 15" fill="none"
+				xmlns="http://www.w3.org/2000/svg"
 			>
-				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-				<path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
-				<path d="M13.5 6.5l4 4" />
+				<path
+					d="M11.8536 1.14645C11.6583 0.951184 11.3417 0.951184 11.1465 1.14645L3.71455 8.57836C3.62459 8.66832 3.55263 8.77461 3.50251 8.89155L2.04044 12.303C1.9599 12.491 2.00189 12.709 2.14646 12.8536C2.29103 12.9981 2.50905 13.0401 2.69697 12.9596L6.10847 11.4975C6.2254 11.4474 6.3317 11.3754 6.42166 11.2855L13.8536 3.85355C14.0488 3.65829 14.0488 3.34171 13.8536 3.14645L11.8536 1.14645ZM4.42166 9.28547L11.5 2.20711L12.7929 3.5L5.71455 10.5784L4.21924 11.2192L3.78081 10.7808L4.42166 9.28547Z"
+					fill="currentColor"
+					fillRule="evenodd"
+					clipRule="evenodd"
+				>
+				</path>
+			</svg>
+		</>
+	)
+}
+
+export function ArrowRight() {
+	return (
+		<>
+			<svg
+				className="w-5 h-5"
+				viewBox="0 0 15 15"
+				fill="none" xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+					fill="currentColor"
+					fillRule="evenodd"
+					clipRule="evenodd"
+				>
+				</path>
+			</svg>
+		</>
+	)
+}
+
+export function Search() {
+	return (
+		<>
+			<svg
+				className='w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2'
+				viewBox="0 0 15 15" fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+					fill="currentColor"
+					fillRule="evenodd"
+					clipRule="evenodd"
+				></path>
 			</svg>
 		</>
 	)
