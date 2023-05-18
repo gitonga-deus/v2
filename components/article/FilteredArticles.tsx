@@ -28,9 +28,9 @@ const FilteredArticles = (props: FilteredPostsProps) => {
 					type='text'
 					value={searchValue}
 					onChange={(e) => setSearchValue(e.target.value)}
-					placeholder='Search articles'
+					placeholder='search articles'
 					aria-label='Search articles'
-					className='w-full rounded-full border border-color-1 bg-theme py-2 pl-12 transition-colors duration-200 ease-linear focus:border-color-2 focus:outline-none'
+					className='w-full rounded-full border border-color-1 bg-theme py-2 pl-12 transition-colors duration-200 ease-linear text-[15px] focus:border-color-2 focus:outline-none'
 					id='search'
 				/>
 				<label htmlFor='search'>
