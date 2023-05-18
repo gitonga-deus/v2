@@ -67,13 +67,13 @@ export default function Header() {
 	return (
 		<>
 			<header className={clsx(
-				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/50 saturate-100 backdrop-blur',
+				'sticky top-0 z-30 max-w-3xl mx-auto bg-theme/10 saturate-100 backdrop-blur',
 				showBlur
 					? "bg-opacity-20 backdrop-blur"
 					: "bg-opacity-0 backdrop-blur-none",
 				'duration-100'
 			)}>
-				<div className='flex flex-row-reverse h-[80px] items-center justify-between px-8'>
+				<div className='flex flex-row-reverse h-[90px] items-center justify-between px-8'>
 					<div className='flex items-center'>
 						<div className='flex items-center gap-2 mr-2'>
 							{SOCIAL_LINKS.map((item, i) => (
@@ -111,7 +111,7 @@ export default function Header() {
 								<li key={link.text}>
 									<Link
 										className={clsx(
-											'rounded px-3 py-2 text-sm font-medium transition-colors duration-500',
+											'rounded px-3 lowercase py-2 text-[15px] transition-colors duration-500',
 											{
 												['text-shade-2 hover:bg-color-1 hover:text-shade-1']:
 													link.href !== pathname,
