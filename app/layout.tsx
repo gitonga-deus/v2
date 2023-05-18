@@ -6,11 +6,16 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
 import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 
 import { Navbar, Footer } from '@/components/layout'
 
 import BackToTop from '@/components/backToTop'
 import CustomToaster from '@/components/custom-toaster'
+
+const inter = Inter({
+	subsets: ['latin']
+})
 
 const operator = localFont({
 	src: '../public/fonts/operator-mono.woff2',
@@ -68,7 +73,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={clsx(operator.variable, 'scroll-smooth')}
+			className={clsx(inter.className, operator.variable, 'scroll-smooth')}
 		>
 			<body className='select-text bg-theme selection:bg-shade-1 selection:text-black'>
 				<svg id="texture">
@@ -91,8 +96,8 @@ export default function RootLayout({
 				<main className='relative max-w-3xl px-8 pb-16 mx-auto mb-12 antialiased'>
 					{children}
 				</main>
-				<CustomToaster />
 				<Footer />
+				<CustomToaster />
 				<BackToTop />
 
 				<Analytics />
