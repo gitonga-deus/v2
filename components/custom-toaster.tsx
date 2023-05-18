@@ -7,7 +7,7 @@ export default function CustomerToaster() {
 		<Toaster
 			position='top-right'
 			toastOptions={{
-				className: '!bg-color-2 !text-shade-1 !border !border-color-1',
+				className: '!bg-color-2 !text-shade-1 !rounded',
 			}}
 		/>
 	)
