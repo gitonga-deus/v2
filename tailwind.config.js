@@ -78,7 +78,8 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							backgroundColor: 'var(--gitonga-bg)',
+							fontSize: '15px',
+							backgroundColor: 'var(--theme)',
 							padding: '8px 0',
 							lineHeight: '1.8',
 							borderRadius: '4px',
@@ -121,9 +122,9 @@ module.exports = {
 							},
 						},
 						':not(pre) > code': {
-							backgroundColor: 'var(--gitonga-bg)',
+							backgroundColor: 'var(--theme)',
 							padding: '4px',
-							fontSize: '14px !important',
+							fontSize: '16px !important',
 							borderRadius: '4px',
 						},
 					}
