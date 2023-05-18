@@ -20,7 +20,7 @@ export default function Page() {
 		<div className='pt-8'>
 			<h1 className="mb-2 text-3xl font-bold tracking-tight text-shade-1">Articles</h1>
 
-			<p className='text-base leading-7 tracking-tight text-shade-2'>
+			<p className='text-[15px] leading-7 text-shade-2'>
 				Collection of random thoughts, explorations, and how-to guides.
 			</p>
 

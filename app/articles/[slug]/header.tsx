@@ -17,14 +17,14 @@ const Header = (props: HeaderProps) => {
 	return (
 		<>
 			<div className="pt-8">
-				<h1 className='text-xl font-bold text-shade-1 md:text-4xl'>
+				<h1 className='text-xl font-bold text-shade-1 md:text-3xl tracking-wide'>
 					<Balancer ratio={0.3}>
 						{title}
 					</Balancer>
 				</h1>
 
 
-				<div className='flex items-center gap-2 py-2 text-[15px] font-serif text-shade-2'>
+				<div className='flex items-center gap-2 py-2 text-sm tracking-tight text-shade-2'>
 					<time dateTime={date}>
 						{format(parseISO(date), 'MMM dd, yyyy')}
 					</time>
