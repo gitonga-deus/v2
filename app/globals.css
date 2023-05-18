@@ -71,7 +71,7 @@ body {
 
 .prose .anchor:after {
 	@apply text-neutral-300;
-	content: '**';
+	content: '#';
 }
 
 .prose *:hover>.anchor {

@@ -40,6 +40,12 @@ module.exports = {
 								content: 'none !important',
 							},
 						},
+						'blockquote p:first-of-type::before': {
+							content: 'none'
+						},
+						'blockquote p:first-of-type::after': {
+							content: 'none'
+						},
 						img: {
 							margin: '24px auto',
 						},
