@@ -2,7 +2,7 @@
 title: "LeetCode II: Roman to Integer"
 summary: "Convert Roman Numerals to Integers in JavaScript"
 publishedAt: "2023-05-10"
-lastUpdatedAt: "2023-05-11"
+lastUpdatedAt: "2023-05-22"
 ---
 
 Roman numerals are a numeric system that originated in ancient Rome and was used throughout the Roman Empire. They are still used today in certain contexts, such as on clocks and in some legal documents. However, Roman numerals can be difficult to work with because they are not a positional system like decimal `(base 10)` or binary `(base 2)`. Instead, they are a subtractive system that uses a combination of symbols to represent numbers.
@@ -27,7 +27,7 @@ Here's the algorithm in pseudocode:
 In JavaScript, we can implement this algorithm as follows:
 
 ```js title="javascript" showLineNumbers
-function romanToInt(s) {
+const romanToInt = (s) => {
 	const romanValues = new Map([
     	["I", 1],
     	["V", 5],
