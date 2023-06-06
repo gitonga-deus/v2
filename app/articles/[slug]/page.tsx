@@ -6,8 +6,7 @@ import { Article, WithContext } from 'schema-dts'
 import { allArticles } from 'contentlayer/generated';
 
 import Header from './header'
-import Content from './content';
-import Comment from './comment'
+import Content from './content'
 
 const url = 'https://gitonga.me'
 
@@ -98,7 +97,6 @@ const ArticlesPage = (props: ArticlesPageProp) => {
 				slug={slug}
 				article={article}
 			/>
-			<Comment />
 		</>
 	)
 }
