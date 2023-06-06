@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
 import { allArticles } from 'contentlayer/generated';
-import ArticleCard from '@/components/article/ArticleCard';
 
 import { compareDesc } from 'date-fns'
 import FilteredArticles from '@/components/article/FilteredArticles';
