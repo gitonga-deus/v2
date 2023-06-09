@@ -1,4 +1,5 @@
-## [gitonga.me](https://gitonga.me)
+## Personal Website
+#### [gitonga.me](https://gitonga.me)
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
