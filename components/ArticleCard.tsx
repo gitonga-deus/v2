@@ -11,7 +11,7 @@ export default function ArticleCard(article: ArticleCore) {
 	return (
 		<Link
 			key={slug}
-			className='block p-2 -mx-2 my-1 transition-all duration-500 rounded-md select-none hover:bg-gray-100'
+			className='block p-2 -mx-2 my-1 transition-all duration-500 rounded-md select-none hover:bg-gray-200'
 			href={`articles/${slug}`}
 		>
 			<div className='flex items-center gap-2 pt-1 tracking-tight text-sm text-gray-600'>
