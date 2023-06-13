@@ -1,7 +1,7 @@
 import { Article } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
-import MDXComponents from '@/components/mdx'
+import MDXComponents from '@/components/mdx/MDXComponents'
 
 type ContentProps = {
 	slug: string
