@@ -15,13 +15,10 @@ module.exports = {
 
 				"color-1": "var(--color-1)",
 				"color-2": "var(--color-2)",
-
-				"art-hv": "var(--art-hv)"
 			},
 			fontFamily: {
-				// default: ['var(--font-karla)'],
 				code: [
-					'var(--font-operator)',
+					'var(--font-roboto)',
 				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
@@ -34,7 +31,7 @@ module.exports = {
 						'h2, h3, h4, h5, h6': {
 							position: 'relative',
 							scrollMarginTop: '112px',
-							color: 'var(--shade-1)',
+							color: 'var(--theme)',
 
 							'& a::before': {
 								content: 'none !important',
@@ -50,18 +47,18 @@ module.exports = {
 							margin: '24px auto',
 						},
 						code: {
-							color: theme('colors.red.500'),
+							color: theme('var(--theme)'),
 							'&::before': {
 								content: `"" !important`,
 							},
 							'&::after': {
 								content: `"" !important`,
 							},
-							fontWeight: 'normal',
 						},
+
 						'[data-rehype-pretty-code-title]': {
-							backgroundColor: 'var(--color-1)',
-							border: '1px solid var(--color-1)',
+							backgroundColor: 'var(--shade-1)',
+							border: '1px solid var(--shade-1)',
 							borderTopLeftRadius: '4px',
 							borderTopRightRadius: '4px',
 							padding: '5px 20px',
@@ -78,12 +75,12 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							fontSize: '15px',
-							backgroundColor: 'var(--theme)',
+							fontSize: '14px',
+							backgroundColor: 'var(--color-1)',
 							padding: '8px 0',
-							lineHeight: '1.8',
+							lineHeight: '1.7',
 							borderRadius: '4px',
-							border: '1px solid var(--color-1)',
+							border: '1px solid var(--shade-1)',
 
 							'[data-line-numbers]': {
 								'.line::before': {
@@ -122,9 +119,8 @@ module.exports = {
 							},
 						},
 						':not(pre) > code': {
-							backgroundColor: 'var(--theme)',
 							padding: '4px',
-							fontSize: '16px !important',
+							fontSize: '14px',
 							borderRadius: '4px',
 						},
 					}

@@ -1,7 +1,7 @@
 import { Options } from 'rehype-pretty-code'
 
 export const rehypePrettyCodeOptions: Partial<Options> = {
-	theme: 'min-dark',
+	theme: 'Github-light',
 	onVisitLine(node: any) {
 		
 		if (node.children.length === 0) {

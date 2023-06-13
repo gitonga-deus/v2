@@ -1,41 +1,32 @@
-import './globals.css'
+import './globals.css';
+import clsx from 'clsx';
 
-import clsx from 'clsx'
+import type { Metadata } from 'next';
+import { Roboto_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
-import type { Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/react'
+import { Navbar, Footer } from '@/components/layout';
 
-import localFont from 'next/font/local'
-import { Inter } from 'next/font/google'
-
-import { Navbar, Footer } from '@/components/layout'
-
-import BackToTop from '@/components/backToTop'
-import CustomToaster from '@/components/custom-toaster'
-
-const inter = Inter({
+const roboto = Roboto_Mono({
+	variable: '--font-roboto',
+	display: 'swap',
 	subsets: ['latin']
 })
 
-const operator = localFont({
-	src: '../public/fonts/operator-mono.woff2',
-	variable: '--font-operator',
-});
-
 export const metadata: Metadata = {
 	title: {
-		default: 'Hello - Deus Gitonga',
-		template: '%s - Deus Gitonga'
+		default: 'Deus Gitonga',
+		template: '%s | Deus Gitonga',
 	},
-	description: 'Developer and Writer',
+	description: 'Developer and Writer.',
 	openGraph: {
-		title: 'Hello - Deus Gitonga',
-		description: 'Developer and Writer',
+		title: 'Deus Gitonga',
+		description: 'Developer and Writer.',
 		url: 'https://gitonga.me',
 		siteName: 'Deus Gitonga',
-		images: [],
-		locale: 'en_US',
-		type: 'website'
+		// images: [{}],
+		locale: 'en-US',
+		type: 'website',
 	},
 	robots: {
 		index: true,
@@ -48,60 +39,35 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
-	manifest: '../favicon/site.webmanifest',
 	icons: {
-		icon: '../favicon/favicon.ico',
-		shortcut: '../favicon/favicon.ico',
-		apple: [
-			{
-				url: '../favicon/apple-touch-icon.png',
-				sizes: '180x180',
-				type: 'image/png',
-			},
-		],
+		shortcut: '/favicon.ico',
 	},
 	verification: {
-		google: 'OdjLEq3FBtZ6ffW_Wuo83qQk9QsQtFVAe71q_yrkCGs',
-	}
-}
+
+	},
+};
 
 export default function RootLayout({
 	children,
 }: {
-	children: React.ReactNode
+	children: React.ReactNode;
 }) {
 	return (
 		<html
 			lang="en"
-			className={clsx(inter.className, operator.variable, 'scroll-smooth')}
+			className={clsx(
+				'text-black bg-gray-50 dark:text-white dark:bg-[#111010]',
+				roboto.variable
+			)}
 		>
-			<body className='select-text bg-theme selection:bg-shade-1 selection:text-black'>
-				<svg id="texture">
-					<filter id="noise">
-						<feTurbulence
-							numOctaves="4"
-							baseFrequency=".8"
-							type="fractalNoise"
-							stitchTiles="stitch"
-						/>
-						<feColorMatrix
-							values="0"
-							type="saturate"
-						/>
-					</filter>
-					<rect width="100%" height="100%" filter="url(#noise)"></rect>
-				</svg>
-
+			<body className='px-8'>
 				<Navbar />
-				<main className='relative max-w-3xl px-8 pb-16 mx-auto mb-12 antialiased'>
+				<main className='max-w-2xl mx-auto'>
 					{children}
+					<Analytics />
 				</main>
 				<Footer />
-				<CustomToaster />
-				<BackToTop />
-
-				<Analytics />
 			</body>
 		</html>
-	)
+	);
 }

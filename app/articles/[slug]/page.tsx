@@ -40,11 +40,6 @@ export const generateMetadata = (props: ArticlesPageProp): Metadata => {
 			type: 'article',
 			publishedTime: article.publishedAt,
 			url: `https://gitonga.me/articles/${params.slug}`,
-			images: [
-				// {
-				// 	url: ogImage
-				// }
-			]
 		},
 	}
 }

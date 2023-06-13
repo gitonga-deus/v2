@@ -1,13 +1,10 @@
-import Kbd from './kbd'
-import CustomLink from './link'
-import Pre from './pre'
+
+import CustomLink from './Link'
+import Pre from './Pre'
 
 const MDXComponents = {
 	a: CustomLink,
 	pre: Pre,
-
-	// Custom components
-	Kbd,
 }
 
 export default MDXComponents

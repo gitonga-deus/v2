@@ -5,10 +5,10 @@
 :root {
 	--theme: #0d1117;
 
-	--shade-1: #eaeaea;
+	--shade-1: #E8E8E8;
 	--shade-2: #999999;
 
-	--color-1: #69696940;
+	--color-1: #fafafa;
 	--color-2: #69696980;
 
 	--art-hv: #292c2f99;
@@ -42,16 +42,7 @@ body {
 	@apply bg-color-2;
 }
 
-.divider-x {
-	@apply h-px bg-color-1;
-}
-
-.prose strong {
-	color: var(--shade-1);
-}
-
 .prose blockquote {
-	color: var(--shade-1);
 	font-style: normal;
 }
 
@@ -89,6 +80,5 @@ code {
 }
 
 a.animated {
-	color: var(--shade-1);
 	@apply relative after:absolute after:bg-neutral-400 dark:bg-neutral-600 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }

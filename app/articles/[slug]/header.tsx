@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import { parseISO, format } from 'date-fns'
@@ -16,19 +15,19 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<>
-			<div className="pt-8">
-				<h1 className='text-xl font-bold text-shade-1 md:text-3xl tracking-wide'>
+			<div className="pt-4">
+				<h1 className='text-xl font-bold text-theme md:text-4xl tracking-tight'>
 					<Balancer ratio={0.3}>
 						{title}
 					</Balancer>
 				</h1>
 
 
-				<div className='flex items-center gap-2 py-2 text-sm tracking-tight text-shade-2'>
+				<div className='flex items-center gap-2 py-3 text-sm tracking-tight text-gray-700'>
 					<time dateTime={date}>
 						{format(parseISO(date), 'MMM dd, yyyy')}
 					</time>
-					&#8226;
+					/
 					<span>{readingTime}</span>
 				</div>
 			</div>

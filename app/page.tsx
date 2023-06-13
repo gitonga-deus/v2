@@ -1,55 +1,40 @@
-import Link from 'next/link'
-
-import { ArrowRight } from '@/components/icons';
-import ArticleCard from '@/components/article/ArticleCard';
+import ArticleCard from '@/components/ArticleCard';
 
 import { allArticles } from 'contentlayer/generated';
 import { compareDesc } from 'date-fns';
 
 export default function Home() {
-	const user = {
-		name: 'Deus Gitonga — Developer',
-		headline: [
-			'Hello and welcome to my website!',
-			'Here, I share my experience as a frontend developer 👨🏼‍💻 and everything I\'m learning about on Next.js, TypeScript and things I find interesting. Have a good read!'
-		],
-	}
 	return (
-		<>
-			<div className='pt-4'>
-				<h1 className='text-xl my-4 font-bold md:text-4xl text-shade-1'>
-					{user.name}
-				</h1>
 
-				{user.headline.map((item, i) => (
-					<p className='text-[15px] my-2 leading-7 text-left text-shade-2' key={i}>
-						{item}
+		<div className="flex flex-col justify-center items-start border-gray-200 dark:border-gray-700 mx-auto pb-16">
+			<div className="flex flex-col-reverse sm:flex-row items-start">
+				<div className="flex flex-col pr-8">
+					<h1 className="font-bold text-3xl md:text-5xl tracking-tight justify-start mb-4 text-black dark:text-white">
+						Deus N. Gitonga
+					</h1>
+
+					<p className="text-[#666] text-base font-medium px-[2px] dark:text-gray-400 mb-4">
+						Developer and Writer.
 					</p>
-				))}
+				</div>
 			</div>
 
-			<div className='w-48 my-10 border-b border-color-1' />
+			<div className='w-48 my-4 border-t border-gray-200' />
 
-			<h1 className='text-2xl my-2 font-bold leading-8 text-shade-1'>Featured Articles</h1>
+			<h3 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 text-black dark:text-white">
+				Featured Articles
+			</h3>
 
 			<div>
-				{allArticles.slice(0, 6).sort((a, b) => (
-					compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
+				{allArticles
+					.slice(0, 6).sort((a, b) => (
+						compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))))
 					.map((article) => (
 						<ArticleCard key={article._id} {...article} />
 					))
 				}
-
-				<button className='my-4'>
-					<Link
-						href='/articles'
-						className='animated lowercase flex items-center gap-2 text-[15px] font-medium py-1 text-shade-1'
-					>
-						All Articles
-						<ArrowRight />
-					</Link>
-				</button>
 			</div >
-		</>
-	)
+
+		</div>
+	);
 }

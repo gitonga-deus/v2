@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-import React from 'react'
 
 const Link = (props: any) => {
 	const { href, children, ...rest } = props
