@@ -23,7 +23,7 @@ const Header = (props: HeaderProps) => {
 				</h1>
 
 
-				<div className='flex items-center gap-2 py-3 text-sm tracking-tight text-gray-700'>
+				<div className='flex items-center gap-2 py-3 px-[2px] text-sm tracking-tight text-gray-500'>
 					<time dateTime={date}>
 						{format(parseISO(date), 'MMM dd, yyyy')}
 					</time>
