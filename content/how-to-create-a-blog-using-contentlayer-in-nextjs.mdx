@@ -18,13 +18,13 @@ With Contentlayer, you can create content models, define fields, and store your 
 ## Set up Next.js
 Let's start by creating a new Next.js application. We will be using **TypeScript** for this project, so we'll add the `--typescript` flag to the `create-next-app` command.
 
-```sh title="bash"
-$ npx create-next-app@latest next-blog --typescript
+```sh title="Terminal"
+npx create-next-app@latest next-blog --typescript
 ```
 
 Change directories into the new project
-```sh title="bash"
-$ cd next-blog
+```sh title="Terminal"
+cd next-blog
 ```
 
 Proceed to clean up the unnecessary files that come with the initial template.
@@ -32,8 +32,8 @@ Proceed to clean up the unnecessary files that come with the initial template.
 ## Set up Contentlayer
 Install Contentlayer
 
-```sh title="bash"
-$ npm install contentlayer next-contentlayer
+```sh title="Terminal"
+npm install contentlayer next-contentlayer
 ```
 
 Update `next.config.js` file to use the `withContentlayer` plugin
@@ -72,8 +72,8 @@ We need to update `tsconfig.json`:
 
 Before we define our document types, install a package called `reading-time`. This package will help us calculate the reading time of our blog posts.
 
-```sh title="bash"
-$ npm install reading-time
+```sh title="Terminal"
+npm install reading-time
 ```
 
 After completing that, create a new file called `contentlayer.config.ts` inside the root directory of your project. Inside the `contentlayer.config.ts` add the following
@@ -151,8 +151,8 @@ We can now generate our content. With this configuration, `contentlayer` will ge
 
 We can now run our app to generate the content:
 
-```sh title="bash"
-$ npm run dev
+```sh title="Terminal"
+npm run dev
 ```
 Contentlayer will generate a `.contentlayer` folder in your project directory. This folder will contain the parsed files and metadata for your content.
 
