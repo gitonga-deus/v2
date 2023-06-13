@@ -1,5 +1,4 @@
-import Pre from './Pre'
-import CustomLink from './Link'
+import { Pre, CustomLink } from '.'
 
 const MDXComponents = {
 	a: CustomLink,
