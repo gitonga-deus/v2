@@ -1,8 +1,6 @@
 import { Article } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
-import { parseISO, format } from 'date-fns'
-
 import MDXComponents from '@/components/mdx/MDXComponents'
 
 type ContentProps = {
