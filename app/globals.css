@@ -9,9 +9,6 @@
 	--shade-2: #999999;
 
 	--color-1: #fafafa;
-	--color-2: #69696980;
-
-	--art-hv: #292c2f99;
 }
 
 body {
@@ -20,26 +17,13 @@ body {
 	box-sizing: border-box;
 }
 
-#texture {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 999;
-	width: 100%;
-	height: calc(100vh + 200px);
-	opacity: .25;
-	pointer-events: none;
-	transform: translateY(0);
-	filter: contrast(40%) brightness(70%);
-}
-
 ::-webkit-scrollbar {
 	width: 5px;
 	height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-	@apply bg-color-2;
+	@apply bg-shade-2;
 }
 
 .prose blockquote {

@@ -47,13 +47,15 @@ module.exports = {
 							margin: '24px auto',
 						},
 						code: {
-							color: theme('var(--theme)'),
+							color: 'rgb(0, 0, 255)',
 							'&::before': {
 								content: `"" !important`,
 							},
 							'&::after': {
 								content: `"" !important`,
 							},
+							
+							fontWeight: 'normal'
 						},
 
 						'[data-rehype-pretty-code-title]': {
@@ -75,7 +77,7 @@ module.exports = {
 						},
 						pre: {
 							opacity: 0.98,
-							fontSize: '14px',
+							fontSize: '13px',
 							backgroundColor: 'var(--color-1)',
 							padding: '8px 0',
 							lineHeight: '1.7',
@@ -113,14 +115,14 @@ module.exports = {
 								},
 
 								'> .line.highlighted': {
-									borderLeftColor: 'rgba(105, 105, 105, 0.502)',
-									backgroundColor: 'rgba(105, 105, 105, 0.251)',
+									borderLeftColor: 'rgba(105, 105, 105, 0.5)',
+									backgroundColor: 'rgba(105, 105, 105, 0.2)',
 								},
 							},
 						},
 						':not(pre) > code': {
 							padding: '4px',
-							fontSize: '14px',
+							fontSize: '13px',
 							borderRadius: '4px',
 						},
 					}
