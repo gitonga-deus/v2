@@ -1,8 +1,6 @@
 # Personal Website
 View it [live](https://gitonga.me)
 
-Stay Awesome
-
 ## Running locally
 1. Clone the repo
 ```
