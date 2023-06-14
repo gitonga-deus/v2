@@ -65,7 +65,7 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={clsx(
-				'text-black bg-gray-50 dark:text-white dark:bg-[#111010]',
+				'text-black bg-gray-50',
 				roboto.variable
 			)}
 		>
