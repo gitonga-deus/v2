@@ -73,7 +73,7 @@ module.exports = {
 							borderTopWidth: '0',
 						},
 						'[data-rehype-pretty-code-title] ~ pre ~ button': {
-							top: '60px !important',
+							top: '15px !important',
 						},
 						pre: {
 							opacity: 0.98,
