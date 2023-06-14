@@ -6,14 +6,14 @@ import { compareDesc } from 'date-fns';
 export default function Home() {
 	return (
 
-		<div className="flex flex-col justify-center items-start border-gray-200 dark:border-gray-700 mx-auto pb-16">
+		<div className="flex flex-col justify-center items-start border-gray-200 mx-auto pb-16">
 			<div className="flex flex-col-reverse sm:flex-row items-start">
 				<div className="flex flex-col pr-8">
-					<h1 className="font-bold text-3xl md:text-5xl tracking-tight justify-start mb-4 text-black dark:text-white">
+					<h1 className="font-bold text-3xl md:text-5xl tracking-tight justify-start mb-4 text-black">
 						Deus N. Gitonga
 					</h1>
 
-					<p className="text-[#666] text-base font-medium px-[2px] dark:text-gray-400 mb-4">
+					<p className="text-[#666] text-base font-medium px-[2px] mb-4">
 						Developer and Writer.
 					</p>
 				</div>
@@ -21,7 +21,7 @@ export default function Home() {
 
 			<div className='w-48 my-4 border-t border-gray-200' />
 
-			<h3 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 text-black dark:text-white">
+			<h3 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 text-black">
 				Featured Articles
 			</h3>
 

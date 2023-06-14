@@ -26,7 +26,7 @@ export default function Navbar() {
 	return (
 		<>
 			<div className='flex flex-col justify-center'>
-				<div className='flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100'>
+				<div className='flex items-center justify-between w-full relative max-w-2xl border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-opacity-60'>
 					<div className="flex items-center gap-2">
 						{HEADER_LINKS.map((navItem, i) => (
 
@@ -35,11 +35,11 @@ export default function Navbar() {
 								className={clsx(
 									'rounded-md px-2 capitalize py-[6px] text-[15px] gap-2 transition-colors duration-500',
 									{
-										['font-normal text-gray-600 dark:text-gray-400 hover:bg-gray-100']:
+										['font-normal text-gray-600 hover:bg-gray-100']:
 											navItem.href !== pathname,
 									},
 									{
-										['font-semibold bg-gray-200 text-gray-800 dark:text-gray-200 ']: navItem.href === pathname,
+										['font-semibold bg-gray-200 text-gray-800']: navItem.href === pathname,
 									}
 								)}
 								href={navItem.href}
@@ -54,7 +54,7 @@ export default function Navbar() {
 					<button
 						aria-label="Toggle Dark Mode"
 						type="button"
-						className="w-9 h-9 bg-gray-200 rounded-md dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
+						className="w-9 h-9 bg-gray-200 rounded-md flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
 						onClick={() =>
 							setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
 						}
@@ -65,7 +65,7 @@ export default function Navbar() {
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
-								className="w-5 h-5 text-gray-800 dark:text-gray-200"
+								className="w-5 h-5 text-gray-800"
 							>
 								{resolvedTheme === 'dark' ? (
 									<path
