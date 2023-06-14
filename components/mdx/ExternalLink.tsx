@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 
-const Link = (props: any) => {
+const ExternalLink = (props: any) => {
 	const { href, children, ...rest } = props
 
 	if (href.startsWith('/')) {
@@ -32,4 +32,4 @@ const Link = (props: any) => {
 	)
 }
 
-export default Link;
+export default ExternalLink;

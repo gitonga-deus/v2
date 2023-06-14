@@ -6,7 +6,7 @@ import { Check, Copy } from '../icon'
 
 type PreProps = JSX.IntrinsicElements['pre']
 
-const Pre = (props: PreProps) => {
+const CustomPre = (props: PreProps) => {
 	const { children, ...rest } = props
 
 	const textInput = React.useRef<HTMLPreElement>(null)
@@ -59,4 +59,4 @@ const Pre = (props: PreProps) => {
 	)
 }
 
-export default Pre;
+export default CustomPre;

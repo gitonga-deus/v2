@@ -1,9 +1,9 @@
-import Pre from './Pre'
-import CustomLink from './Link'
+import CustomPre from './CustomPre'
+import ExternalLink from './ExternalLink'
 
 const MDXComponents = {
-	a: CustomLink,
-	pre: Pre,
+	a: ExternalLink,
+	pre: CustomPre,
 }
 
-export default MDXComponents
+export default MDXComponents;

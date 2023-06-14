@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 		description: 'Developer and Writer.',
 		url: 'https://gitonga.me',
 		siteName: 'Deus Gitonga',
-		// images: [{}],
+		images: [],
 		locale: 'en-US',
 		type: 'website',
 	},
@@ -39,8 +39,17 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
+	manifest: '../favicon/site.webmanifest',
 	icons: {
-		shortcut: '/favicon.ico',
+		icon: '../favicon/favicon.ico',
+		shortcut: '../favicon/favicon.ico',
+		apple: [
+			{
+				url: '../favicon/apple-touch-icon.png',
+				sizes: '180x180',
+				type: 'image/png',
+			},
+		],
 	},
 	verification: {
 
