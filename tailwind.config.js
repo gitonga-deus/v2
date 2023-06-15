@@ -47,15 +47,7 @@ module.exports = {
 							margin: '24px auto',
 						},
 						code: {
-							color: 'rgb(0, 0, 255)',
-							'&::before': {
-								content: `"" !important`,
-							},
-							'&::after': {
-								content: `"" !important`,
-							},
-							
-							fontWeight: 'normal'
+							fontFamily: 'Monaco',
 						},
 
 						'[data-rehype-pretty-code-title]': {
