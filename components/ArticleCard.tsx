@@ -14,20 +14,20 @@ export default function ArticleCard(article: ArticleCore) {
 			className='block p-2 -mx-2 my-1 transition-all duration-500 rounded-md select-none hover:bg-gray-100'
 			href={`articles/${slug}`}
 		>
-			<div className='flex items-center gap-2 pt-1 tracking-tight font-heading text-sm text-gray-600'>
+			<div className='flex items-center gap-2 pt-1 tracking-tight font-sans text-sm text-gray-600'>
 				<time dateTime={publishedAt}>
 					{format(parseISO(publishedAt), 'MMM dd, yyyy')}
 				</time>
-				&#8226;
+				/
 				<span>{readingTime.text}</span>
 			</div>
 
 			<h1
-				className='py-1 text-base text-black font-bold font-heading'
+				className='py-1 text-base text-black font-semibold font-sans'
 			>
 				{title}
 			</h1>
-			<p className='text-[15px] text-[#666]'>{summary}</p>
+			<p className='text-base text-[#666]'>{summary}</p>
 		</Link>
 	)
 };

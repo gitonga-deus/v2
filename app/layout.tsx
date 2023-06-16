@@ -2,7 +2,7 @@ import './globals.css';
 import clsx from 'clsx';
 
 import type { Metadata } from 'next';
-import { Roboto_Mono, Manrope, Inter } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
 import { Navbar, Footer } from '@/components/layout';
@@ -13,20 +13,6 @@ const roboto = Roboto_Mono({
 	display: 'swap',
 	subsets: ['latin']
 });
-
-const manrope = Manrope({
-	variable: '--font-manrope',
-	display: 'swap',
-	subsets: ['latin'],
-	weight: ['500', '600', '700']
-});
-
-const inter = Inter({
-	variable: '--font-inter',
-	display: 'swap',
-	subsets: ['latin'],
-	weight: ['400', '500', '600', '700']
-})
 
 export const metadata: Metadata = {
 	title: {
@@ -80,13 +66,11 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={clsx(
-				'text-black scroll-smooth bg-gray-50',
+				'text-black scroll-smooth bg-gray-50 antialiased',
 				roboto.variable,
-				manrope.variable,
-				inter.variable
 			)}
 		>
-			<body className='px-8 font-default'>
+			<body className='px-8'>
 				<Navbar />
 				<main className='max-w-2xl mx-auto'>
 					{children}

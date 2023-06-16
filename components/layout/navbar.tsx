@@ -33,7 +33,7 @@ export default function Navbar() {
 							<Link
 								key={i}
 								className={clsx(
-									'rounded px-2 font-medium capitalize py-[6px] text-[15px] tracking-tight gap-2 transition-colors duration-500',
+									'rounded px-2 font-medium capitalize py-[6px] text-[15px] gap-2 transition-colors duration-500',
 									{
 										['font-normal text-gray-600 hover:bg-gray-100']:
 											navItem.href !== pathname,

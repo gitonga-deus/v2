@@ -23,14 +23,14 @@ const FilteredArticles = (props: FilteredPostsProps) => {
 
 	return (
 		<>
-			<div className='relative my-2 text-shade-2 py-2'>
+			<div className='relative my-2 text-[#666] py-2'>
 				<input
 					type='text'
 					value={searchValue}
 					onChange={(e) => setSearchValue(e.target.value)}
 					placeholder='search articles'
 					aria-label='Search articles'
-					className='w-full rounded-md border border-shade-2 bg-gray-50 py-2 pl-12 transition-colors duration-200 ease-linear text-[15px] focus:border-color-2 focus:outline-none'
+					className='w-full rounded-md border border-shade-2 bg-gray-50 py-2 pl-12 transition-colors duration-200 ease-linear text-[15px] focus:border-shade-2 focus:outline-none'
 					id='search'
 				/>
 				<label htmlFor='search'>

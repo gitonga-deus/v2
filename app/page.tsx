@@ -13,7 +13,7 @@ export default function Home() {
 			<div className="flex flex-col justify-center items-start border-gray-200 mx-auto pb-16">
 
 				<div className="flex flex-col-reverse sm:flex-row items-start">
-					<div className="flex flex-col font-heading pr-8">
+					<div className="flex flex-col pr-8">
 						<h1 className="font-bold text-3xl md:text-5xl tracking-tight justify-start mb-4 text-black">
 							Deus N. Gitonga
 						</h1>
@@ -26,7 +26,7 @@ export default function Home() {
 
 				<div className='w-48 my-4 border-t border-gray-200' />
 
-				<h3 className="font-bold font-heading text-2xl md:text-2xl tracking-tight mb-2 text-black">
+				<h3 className="font-bold text-2xl md:text-2xl tracking-tight mb-2 text-black">
 					Featured Articles
 				</h3>
 
@@ -46,7 +46,7 @@ export default function Home() {
 					className='py-4 text-[15px] text-black'
 				>
 					<div
-						className="flex items-center gap-1 group text-black font-semibold font-heading hover:text-gray-600 transition ease-in-out duration-200"
+						className="flex items-center gap-1 group text-black font-semibold hover:text-gray-600 transition ease-in-out duration-200"
 					>	Read more
 						<span
 							aria-hidden="true"

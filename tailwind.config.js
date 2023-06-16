@@ -20,12 +20,6 @@ module.exports = {
 				code: [
 					'var(--font-roboto)',
 				],
-				default: [
-					'var(--font-inter)'
-				],
-				heading: [
-					'var(--font-manrope)'
-				],
 				emoji: ['Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 			},
 			typography: (theme) => ({
@@ -36,13 +30,12 @@ module.exports = {
 						},
 						'h2, h3, h4, h5, h6': {
 							position: 'relative',
-							scrollMarginTop: '112px',
+							scrollMarginTop: '80px',
 							color: 'var(--theme)',
 
 							'& a::before': {
 								content: 'none !important',
 							},
-							fontFamily: 'var(--font-manrope)'
 						},
 						'blockquote p:first-of-type::before': {
 							content: 'none'

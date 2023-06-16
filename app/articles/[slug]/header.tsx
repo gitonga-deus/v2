@@ -16,7 +16,7 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<>
-			<div className="py-2 font-heading">
+			<div className="py-2 font-sans">
 				<h1 className='text-xl font-bold text-theme md:text-4xl tracking-tight'>
 					<Balancer ratio={0.7}>
 						{title}
