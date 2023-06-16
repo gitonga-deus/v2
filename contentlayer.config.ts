@@ -30,11 +30,6 @@ const Article = defineDocumentType(() => ({
 			description: "The date of the article",
 			required: true,
 		},
-		lastUpdatedAt: {
-			type: "date",
-			description: "The date the article was last updated",
-			required: true
-		}
 	},
 	computedFields: {
 		slug: {
