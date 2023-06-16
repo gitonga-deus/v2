@@ -3,6 +3,7 @@
 import Balancer from 'react-wrap-balancer'
 
 import { parseISO, format } from 'date-fns'
+import { Clock, Calendar } from '@/components/icon'
 
 type HeaderProps = {
 	date: string
@@ -15,21 +16,26 @@ const Header = (props: HeaderProps) => {
 
 	return (
 		<>
-			<div className="pt-4">
+			<div className="py-2 font-heading">
 				<h1 className='text-xl font-bold text-theme md:text-4xl tracking-tight'>
-					<Balancer ratio={0.3}>
+					<Balancer ratio={0.7}>
 						{title}
 					</Balancer>
 				</h1>
 
 
-				<div className='flex items-center gap-2 py-3 px-[2px] text-sm tracking-tight text-gray-500'>
-					<time dateTime={date}>
-						{format(parseISO(date), 'MMM dd, yyyy')}
-					</time>
-					/
-					<span>{readingTime}</span>
-				</div>
+				<div className='flex items-center gap-2 py-3 text-sm text-gray-500'>
+					<div className='flex gap-1 items-center'>
+						<Calendar />
+						<time dateTime={date}>
+							{format(parseISO(date), 'MMM dd, yyyy')}
+						</time>
+					</div>
+					<div className='flex gap-1 items-center'>
+						<Clock />
+						<span>{readingTime}</span>
+					</div>
+				</div>			
 			</div>
 		</>
 	);
