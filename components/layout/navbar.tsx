@@ -26,14 +26,14 @@ export default function Navbar() {
 	return (
 		<>
 			<div className='flex flex-col justify-center'>
-				<div className='flex items-center justify-between w-full relative max-w-2xl border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-opacity-60'>
+				<div className='flex items-center justify-between w-full relative max-w-2xl border-gray-200 mx-auto pt-8 pb-8 sm:pb-16 text-gray-900 bg-opacity-60'>
 					<div className="flex items-center gap-2">
 						{HEADER_LINKS.map((navItem, i) => (
 
 							<Link
 								key={i}
 								className={clsx(
-									'rounded px-2 font-medium capitalize py-[6px] text-base gap-2 transition-colors duration-500',
+									'rounded px-2 font-medium capitalize py-[6px] text-[15px] tracking-tight gap-2 transition-colors duration-500',
 									{
 										['font-normal text-gray-600 hover:bg-gray-100']:
 											navItem.href !== pathname,
