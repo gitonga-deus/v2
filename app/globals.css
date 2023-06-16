@@ -9,6 +9,7 @@
 	--shade-2: #999999;
 
 	--color-1: #fafafa;
+	--color-2: #f5f5f5;
 }
 
 body {
@@ -46,7 +47,7 @@ body {
 
 .prose .anchor:after {
 	@apply text-neutral-300;
-	content: '#';
+	content: '*';
 }
 
 .prose *:hover>.anchor {
