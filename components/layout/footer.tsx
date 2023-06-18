@@ -4,10 +4,10 @@ import { SOCIAL_LINKS } from '@/config';
 
 const ExternalLink = ({ href, children }: any) => (
 	<a
-		className="text-gray-500 hover:text-gray-800 transition hover:font-semibold"
+		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
-		href={href}
+		className="text-gray-500 hover:text-gray-800 transition hover:font-semibold"
 	>
 		{children}
 	</a>
