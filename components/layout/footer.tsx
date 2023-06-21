@@ -48,11 +48,6 @@ export default function Footer() {
 				</div>
 				<div className="flex flex-col space-y-4">
 					<ExternalLink href={'https://gitonga.me/rss.xml'}>RSS</ExternalLink>
-					<Link href="/snippets">
-						<p className="hover:font-semibold transition">
-							Snippets
-						</p>
-					</Link>
 				</div>
 			</div>
 		</footer>
