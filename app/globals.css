@@ -3,13 +3,31 @@
 @tailwind utilities;
 
 :root {
-	--theme: #0d1117;
+	--v2-bg: #fff;
+	--v2-fg: #000;
 
-	--shade-1: #E8E8E8;
-	--shade-2: #999999;
+	--accent-1: #fafafa;
+	--accent-2: #eaeaea;
+	--accent-3: #999;
+	--accent-4: #888;
+	--accent-5: #666;
+	--accent-6: #444;
+	--accent-7: #333;
+	--accent-8: #111;
+}
 
-	--color-1: #fafafa;
-	--color-2: #f5f5f5;
+.dark:root {
+	--v2-bg: #000;
+	--v2-fg: #fff;
+
+	--accent-1: #111;
+	--accent-2: #333;
+	--accent-3: #444;
+	--accent-4: #666;
+	--accent-5: #888;
+	--accent-6: #999;
+	--accent-7: #eaeaea;
+	--accent-8: #fafafa;
 }
 
 body {
@@ -24,11 +42,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	@apply bg-shade-2;
+	@apply bg-accent-3;
+}
+
+::placeholder {
+	@apply text-accent-4 dark:text-accent-6
 }
 
 .prose blockquote {
 	font-style: normal;
+}
+
+.prose a{
+	background-color: inherit;
 }
 
 .prose .anchor {
@@ -64,6 +90,24 @@ code {
 	@apply relative;
 }
 
+div[data-rehype-pretty-code-title][data-theme='light'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='light'] {
+	@apply block dark:hidden;
+}
+
+div[data-rehype-pretty-code-title][data-theme='dark'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='dark'] {
+	@apply hidden dark:block;
+}
+
+span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
+	@apply inline dark:hidden;
+}
+
+span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
+	@apply hidden dark:inline;
+}
+
 a.animated {
-	@apply relative after:absolute after:bg-neutral-400 dark:bg-neutral-600 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
+	@apply relative after:absolute after:bg-neutral-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
 }

@@ -5,16 +5,21 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
-				"theme": "var(--theme)",
+				"v2-bg": "var(--v2-bg)",
+				"v2-fg": "var(--v2-fg)",
 
-				"shade-1": "var(--shade-1)",
-				"shade-2": "var(--shade-2)",
-
-				"color-1": "var(--color-1)",
-				"color-2": "var(--color-2)",
+				"accent-1": "var(--accent-1)",
+				"accent-2": "var(--accent-2)",
+				"accent-3": "var(--accent-3)",
+				"accent-4": "var(--accent-4)",
+				"accent-5": "var(--accent-5)",
+				"accent-6": "var(--accent-6)",
+				"accent-7": "var(--accent-7)",
+				"accent-8": "var(--accent-8)",
 			},
 			fontFamily: {
 				code: [
@@ -31,7 +36,6 @@ module.exports = {
 						'h2, h3, h4, h5, h6': {
 							position: 'relative',
 							scrollMarginTop: '80px',
-							color: 'var(--theme)',
 
 							'& a::before': {
 								content: 'none !important',
@@ -48,13 +52,13 @@ module.exports = {
 						},
 						code: {
 							fontFamily: 'Monaco',
-							backgroundColor: 'var(--color-2)',
+							backgroundColor: 'var(--accent-1)',
 							borderRadius: '2px'
 						},
 
 						'[data-rehype-pretty-code-title]': {
-							backgroundColor: 'var(--shade-1)',
-							border: '1px solid var(--shade-1)',
+							backgroundColor: 'var(--accent-2)',
+							border: '1px solid var(--accent-2)',
 							borderTopLeftRadius: '4px',
 							borderTopRightRadius: '4px',
 							padding: '5px 20px',
@@ -72,11 +76,11 @@ module.exports = {
 						pre: {
 							opacity: 0.98,
 							fontSize: '13px',
-							backgroundColor: 'var(--color-1)',
+							backgroundColor: 'var(--accent-1)',
 							padding: '8px 0',
 							lineHeight: '1.7',
 							borderRadius: '4px',
-							border: '1px solid var(--shade-1)',
+							border: '1px solid var(--accent-2)',
 
 							'[data-line-numbers]': {
 								'.line::before': {
@@ -86,10 +90,10 @@ module.exports = {
 									width: '16px',
 									marginRight: '16px',
 									textAlign: 'right',
-									color: 'var(--shade-2)',
+									color: 'var(--accent-3)',
 								},
 								'.line.highlighted::before': {
-									color: 'var(--shade-2)',
+									color: 'var(--accent-3)',
 								},
 							},
 

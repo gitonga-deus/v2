@@ -17,14 +17,14 @@ const Header = (props: HeaderProps) => {
 	return (
 		<>
 			<div className="py-2 font-sans">
-				<h1 className='text-xl font-bold text-theme md:text-4xl tracking-tight'>
+				<h1 className='text-xl font-bold dark:text-white md:text-4xl tracking-tight'>
 					<Balancer ratio={0.7}>
 						{title}
 					</Balancer>
 				</h1>
 
 
-				<div className='flex items-center gap-2 py-3 text-sm text-gray-500'>
+				<div className='flex items-center gap-2 py-3 text-sm text-accent-4 dark:text-accent-6'>
 					<div className='flex gap-1 items-center'>
 						<Calendar />
 						<time dateTime={date}>
