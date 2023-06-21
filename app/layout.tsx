@@ -8,7 +8,6 @@ import { ThemeProvider } from '@/lib/nextThemes'
 import { Analytics } from '@vercel/analytics/react'
 
 import { Navbar, Footer } from '@/components/layout'
-import CustomToaster from '@/components/CustomToaster'
 
 const roboto = Roboto_Mono({
 	variable: '--font-roboto',
@@ -81,7 +80,6 @@ export default function RootLayout({
 						<Analytics />
 					</main>
 					<Footer />
-					<CustomToaster />
 				</ThemeProvider>
 			</body>
 		</html>
