@@ -1,9 +1,12 @@
 import { Options } from 'rehype-pretty-code'
 
 export const rehypePrettyCodeOptions: Partial<Options> = {
-	theme: 'min-light',
+	theme: {
+		light: 'min-light',
+		dark: 'min-dark',
+	},
 	onVisitLine(node: any) {
-		
+
 		if (node.children.length === 0) {
 			node.children = [{ type: 'text', value: ' ' }]
 		}

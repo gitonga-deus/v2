@@ -14,19 +14,19 @@ export default function Home() {
 
 				<div className="flex flex-col-reverse sm:flex-row items-start">
 					<div className="flex flex-col pr-8">
-						<h1 className="font-bold text-3xl md:text-5xl tracking-tight justify-start mb-4 text-black">
+						<h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
 							Deus N. Gitonga
 						</h1>
 
-						<p className="text-[#666] text-base font-medium mb-4">
+						<p className="text-[#666] dark:text-accent-6 text-base font-medium mb-4">
 							Developer and Writer.
 						</p>
 					</div>
 				</div>
 
-				<div className='w-48 my-4 border-t border-gray-200' />
+				<div className='w-48 my-4 border-t border-accent-2 dark:border-accent-2' />
 
-				<h3 className="font-bold text-2xl md:text-2xl tracking-tight mb-2 text-black">
+				<h3 className="font-bold text-2xl md:text-2xl tracking-tight mb-2 text-black dark:text-white">
 					Featured Articles
 				</h3>
 
@@ -43,14 +43,14 @@ export default function Home() {
 
 				<Link
 					href={'/articles'}
-					className='py-4 text-[15px] text-black'
+					className='py-4 text-base'
 				>
 					<div
-						className="flex items-center gap-1 group text-black font-semibold hover:text-gray-600 transition ease-in-out duration-200"
-					>	Read more
+						className="flex items-center gap-1 group text-black dark:text-accent-5 font-semibold transition ease-in-out duration-200"
+					>	read more
 						<span
 							aria-hidden="true"
-							className="inline-block translate-x-0 group-hover:translate-x-2 transition-transform ease-in-out duration-200"
+							className="translate-x-0 group-hover:translate-x-2 transition-transform ease-in-out duration-200"
 						>
 							<ArrowRight />
 						</span>
