@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { toast } from 'react-hot-toast'
-import { Check, Copy } from '../icon'
 
 type PreProps = JSX.IntrinsicElements['pre']
 
@@ -43,18 +42,22 @@ const CustomPre = (props: PreProps) => {
 
 	return (
 		<>
-			<pre className='relative overflow-x-scroll' ref={textInput} {...rest}>
+			<pre
+				{...rest}
+				ref={textInput}
+				className='relative overflow-x-scroll'
+			>
 				{children}
 			</pre>
-			<button
-				className='absolute right-4 top-4 opacity-100 transition'
-				onClick={onCopy}
+			{/* <button
 				type='button'
-				aria-label='Copy to clipboard'
+				onClick={onCopy}
 				title='Copy to clipboard'
+				aria-label='Copy to clipboard'
+				className='absolute right-4 top-4 transition'
 			>
 				{isCopied ? <Check /> : <Copy />}
-			</button>
+			</button> */}
 		</>
 	)
 }

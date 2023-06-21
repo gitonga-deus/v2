@@ -4,7 +4,7 @@
 
 :root {
 	--v2-bg: #fff;
-	--v2-fg: #000;
+	--v2-fg: #111;
 
 	--accent-1: #fafafa;
 	--accent-2: #eaeaea;
@@ -17,7 +17,7 @@
 }
 
 .dark:root {
-	--v2-bg: #000;
+	--v2-bg: #111;
 	--v2-fg: #fff;
 
 	--accent-1: #111;

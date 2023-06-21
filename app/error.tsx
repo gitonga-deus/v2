@@ -20,25 +20,25 @@ export default function Error({
 			<div className="mx-auto px-4 md:px-8">
 				<div className="flex flex-col items-center">
 					<p
-						className="mb-4 text-sm font-semibold uppercase text-indigo-500 md:text-base"
+						className="mb-4 text-sm font-semibold uppercase text-accent-5 md:text-base"
 					>
 						That’s a 404
 					</p>
 					<h1
-						className="mb-2 text-center text-2xl font-bold text-gray-800 md:text-3xl"
+						className="mb-2 text-center text-2xl font-bold text-accent-8 dark:text-accent-6 md:text-3xl"
 					>
 						Page not found
 					</h1>
 
 					<p
-						className="mb-12 text-center text-gray-500 text-base"
+						className="mb-12 text-center text-accent-5 text-base"
 					>
 						The page you’re looking for doesn’t exist.
 					</p>
 
 					<Link
 						href="/"
-						className="inline-block rounded bg-gray-200 px-4 py-2 text-center text-sm font-semibold text-black outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
+						className="inline-block rounded bg-accent-2 dark:bg-accent-6 px-4 py-2 text-center text-sm font-semibold text-accent-7 outline-none ring-indigo-300 transition duration-100 focus-visible:ring active:text-gray-700 md:text-base"
 					>
 						Return home
 					</Link>
