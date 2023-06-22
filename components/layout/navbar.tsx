@@ -35,11 +35,11 @@ export default function Navbar() {
 								className={clsx(
 									'rounded px-2 font-medium capitalize py-[6px] text-[15px] gap-2',
 									{
-										['font-normal text-accent-4 dark:text-accent-5']:
+										['font-normal text-accent-5 hover:bg-accent-2']:
 											navItem.href !== pathname,
 									},
 									{
-										['font-semibold text-accent-8 dark:text-accent-7 bg-gray-200 dark:bg-[#444]']: navItem.href === pathname,
+										['font-semibold text-accent-8 bg-accent-2']: navItem.href === pathname,
 									}
 								)}
 								href={navItem.href}
@@ -54,7 +54,7 @@ export default function Navbar() {
 					<button
 						aria-label="Toggle Dark Mode"
 						type="button"
-						className="w-9 h-9 bg-gray-200 rounded-md flex items-center justify-center hover:ring-2 ring-gray-300 dark:ring-gray-500 transition-all dark:bg-[#444]"
+						className="w-9 h-9 bg-accent-2 rounded-md flex items-center justify-center hover:ring-2 ring-accent-3 transition-all"
 						onClick={() =>
 							setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
 						}
@@ -65,7 +65,7 @@ export default function Navbar() {
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
-								className="w-5 h-5 text-gray-800 dark:text-gray-200"
+								className="w-5 h-5 text-accent-7"
 							>
 								{resolvedTheme === 'dark' ? (
 									<path

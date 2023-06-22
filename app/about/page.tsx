@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 export default function About() {
 	return (
 		<>
-			<h1 className="mb-2 text-3xl font-bold tracking-tight text-black dark:text-white">About Me</h1>
+			<h1 className="mb-2 text-3xl font-bold tracking-tight text-accent-8">About Me</h1>
 
-			<p className='text-base leading-7 text-accent-4 dark:text-accent-6'>
+			<p className='text-base leading-7 text-accent-5'>
 				Under Construction...
 			</p>
 		</>

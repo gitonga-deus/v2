@@ -71,7 +71,7 @@ export default function RootLayout({
 				roboto.variable,
 			)}
 		>
-			<body className='px-8 text-black bg-v2-bg antialiased dark:bg-v2-bg'>
+			<body className='px-8 bg-v2-bg antialiased'>
 				<ThemeProvider attribute='class'>
 
 					<Navbar />

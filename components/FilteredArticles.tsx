@@ -30,7 +30,7 @@ const FilteredArticles = (props: FilteredPostsProps) => {
 					onChange={(e) => setSearchValue(e.target.value)}
 					placeholder='search articles'
 					aria-label='Search articles'
-					className='w-full rounded-md border border-accent-3 bg-gray-50 dark:bg-accent-1 dark:text-shade-2 py-2 pl-12 transition-colors duration-200 ease-linear text-[15px] focus:border-accent-3 focus:outline-none'
+					className='w-full rounded-md border border-accent-2 bg-accent-1 text-accent-5 placeholder:text-accent-5 p-2 md:-mx-1 pl-12 transition-colors duration-200 ease-linear text-base tracking-tight focus:border-accent-3 focus:outline-none'
 					id='search'
 				/>
 				<label htmlFor='search'>
@@ -39,7 +39,7 @@ const FilteredArticles = (props: FilteredPostsProps) => {
 			</div>
 
 			{!filteredArticles.length && (
-				<div className='text-center text-base text-shade-2'>No articles found</div>
+				<div className='text-center text-base text-accent-5'>No articles found</div>
 			)}
 
 			<div className=''>

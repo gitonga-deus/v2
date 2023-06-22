@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-	--v2-bg: #fff;
+	--v2-bg: #F9FAFB;
 	--v2-fg: #111;
 
 	--accent-1: #fafafa;
@@ -18,7 +18,7 @@
 
 .dark:root {
 	--v2-bg: #111;
-	--v2-fg: #fff;
+	--v2-fg: #F9FAFB;
 
 	--accent-1: #111;
 	--accent-2: #333;
@@ -43,10 +43,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	@apply bg-accent-3;
-}
-
-::placeholder {
-	@apply text-accent-4 dark:text-accent-6
 }
 
 .prose blockquote {
