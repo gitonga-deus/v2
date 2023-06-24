@@ -8,7 +8,7 @@ In modern web development, efficiently fetching data is a crucial aspect of buil
 
 Here are a few popular approaches for fetching data. Two commonly used methods are using the **Fetch API** or utilizing third-party libraries like **Axios**.
 
-## 1. Using the Fetch API (built-in browser feature):
+## 1. Using the Fetch API
 The Fetch API provides a native way to make HTTP requests in modern browsers. Here's an example of how you can fetch data using the Fetch API in a React component:
 
 ```js title="jsx" showLineNumbers {9}
@@ -50,7 +50,7 @@ export default function MyComponent() {
 
 In the example above, the `fetchData` function is called inside the `useEffect` hook to fetch data from the API endpoint `https://api.example.com/data`. Once the data is fetched, it is stored in the component's state using `setData`. The component then renders the fetched data or a loading message based on the availability of the data.
 
-## 2. Using Axios (third-party library):
+## 2. Using Axios
 
 Axios is a popular HTTP client library that simplifies the process of making HTTP requests. To use Axios in your React project, follow these steps:
 
@@ -103,7 +103,7 @@ In this example, Axios is imported and used to make a GET request to `https://ap
 
 Both of these approaches offer efficient ways to fetch data in ReactJS. The choice between them largely depends on your project requirements and personal preference.
 
-## 3. Using React Query (third-party library):
+## 3. Using React Query
 
 First, you’ll need to install React Query using `npm` or `yarn`:
 
