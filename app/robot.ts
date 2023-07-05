@@ -1,11 +1,17 @@
-export default function robots(){
+const siteUrl = 'https://gitonga.me'
+
+const robots = () => {
 	return {
 		rules: [
 			{
 				userAgent: '*',
+				allow: ['/'],
+				disallow: ['/404', '/500', '/api/*'],
 			},
 		],
-		sitemap: 'https://gitonga.me/sitemap.xml',
-		host: 'https://gitonga.me',
-	};
+		sitemap: `${siteUrl}/sitemap.xml`,
+		host: `${siteUrl}`,
+	}
 }
+
+export default robots
