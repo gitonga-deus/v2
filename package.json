@@ -2,6 +2,12 @@
 	"name": "v2",
 	"version": "0.1.0",
 	"private": true,
+	"description": "My personal website and blog built with TypeScript, Next.js, Contentlayer and Tailwind CSS",
+	"author": "Deus Gitonga <gitonga.deus@gmail.com> (https://github.com/gitonga-deus/v2/)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gitonga-deus/v2.git"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
