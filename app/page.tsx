@@ -13,17 +13,16 @@ export default function Home() {
 
 				<div className="flex flex-col-reverse sm:flex-row items-start">
 					<div className="flex flex-col pr-8">
+						<p className="text-accent-5 font-medium px-[2px] text-base mb-4">
+							hey 👋, I'm 
+						</p>
 						<h1 className="font-bold text-3xl md:text-5xl mb-4 text-accent-8">
 							Deus N. Gitonga
 						</h1>
-
-						<p className="text-accent-5 font-medium px-[2px] text-base mb-4">
-							Developer and Writer.
-						</p>
 					</div>
 				</div>
 
-				<div className='w-48 my-4 border-t border-accent-2' />
+				<div className='w-48 my-8 border-t border-accent-2' />
 
 				<h3 className="font-bold text-2xl md:text-2xl tracking-tight mb-2 text-accent-8">
 					Featured Articles
