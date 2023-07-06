@@ -16,7 +16,7 @@ const Image = (props: ImageProps) => {
 	return (
 		<div
 			className={clsx(
-				'rounded',
+				'rounded pb-1',
 				isLoading && 'animate-pulse',
 				className
 			)}
