@@ -25,11 +25,6 @@ export default function Footer() {
 							Home
 						</p>
 					</Link>
-					<Link href="/about">
-						<p className="hover:font-semibold transition">
-							About
-						</p>
-					</Link>
 					<Link href="/articles">
 						<p className="hover:font-semibold transition">
 							Articles
