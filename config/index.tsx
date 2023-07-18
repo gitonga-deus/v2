@@ -6,10 +6,6 @@ export const HEADER_LINKS = [
 	{
 		href: '/articles',
 		text: 'Articles',
-	},
-	{
-		href: '/about',
-		text: 'About',
 	}
 ]
 
